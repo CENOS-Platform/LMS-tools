@@ -1,0 +1,27 @@
+export threads=$(nproc)
+export LMS_TOOLS_DIR=$(pwd)
+#Install Elmer
+sudo rm -rf src
+mkdir src
+cd $LMS_TOOLS_DIR/src
+mkdir elmer-build
+cd elmer-build
+cmake -Wno-dev -DWITH_MPI=TRUE -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../elmer-install ../../elmerfem
+make -j $threads install
+cd ../
+rm -rf elmer-build
+export ELMER_HOME=$LMS_TOOLS_DIR/src/elmer-install/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
+export PATH=$PATH:$ELMER_HOME/bin
+#Install Elmer-circuitbuilder
+cd $LMS_TOOLS_DIR
+python3 -m pip install -e ./elmer_circuitbuilder
+#Install EOF-Library
+source /opt/openfoam10/etc/bashrc
+cd $LMS_TOOLS_DIR
+. EOF-Library/etc/bashrc
+eofCompile
+#Install MHDsolvers
+cd $LMS_TOOLS_DIR
+sudo chmod +x MHDsolvers/Allwmake
+./MHDsolvers/Allwmake
