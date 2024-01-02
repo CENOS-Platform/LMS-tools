@@ -1,0 +1,12 @@
+[submodule "elmerfem"]
+	path = elmerfem
+	url = https://github.com/ElmerCSC/elmerfem.git
+[submodule "elmer_circuitbuilder"]
+	path = elmer_circuitbuilder
+	url = https://github.com/ElmerCSC/elmer_circuitbuilder.git
+[submodule "EOF-Library"]
+	path = EOF-Library
+	url = https://github.com/jvencels/EOF-Library.git
+[submodule "MHDsolvers"]
+	path = MHDsolvers
+	url = https://github.com/CENOS-Platform/MHDsolvers.git

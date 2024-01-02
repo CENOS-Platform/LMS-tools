@@ -1,0 +1,20 @@
+#Note: Run from LMS-tools directory
+#Install Elmer-circuitbuilder
+python3 -m pip install -e ./elmer_circuitbuilder
+#Install EOF-Library
+source /opt/openfoam10/etc/bashrc
+export ELMER_HOME=$(pwd)/src/elmer-install/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
+export PATH=$PATH:$ELMER_HOME/bin
+. EOF-Library/etc/bashrc
+eofCompile
+#Install MHDsolvers
+sudo chmod +x MHDsolvers/Allwmake
+./MHDsolvers/Allwmake
+#Replace $(pwd) with current directory and add to .bashrc
+#source /opt/openfoam10/etc/bashrc
+#export ELMER_HOME=$(pwd)/src/elmer-install/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
+#export PATH=$PATH:$ELMER_HOME/bin
+#export EOF_HOME=$(pwd)/EOF-Library
+#source $EOF_HOME/etc/bashrc
