@@ -2,7 +2,7 @@
 #Install Elmer-circuitbuilder
 PYTHON_USER_LIB=$(python3 -m site --user-site)
 [ ! -d "$PYTHON_USER_LIB" ] && mkdir -p "$PYTHON_USER_LIB"
-cp ./elmer_circuitbuilder/lib/elmer_circuitbuilder.py $PYTHON_USER_LIB/
+cp ./elmer_circuitbuilder/build/lib/elmer_circuitbuilder.py $PYTHON_USER_LIB/
 #Install EOF-Library and MHDsolvers
 source /opt/openfoam10/etc/bashrc
 [ ! -d "$FOAM_USER_LIBBIN" ] && mkdir -p "$FOAM_USER_LIBBIN"
