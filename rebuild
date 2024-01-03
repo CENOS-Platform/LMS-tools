@@ -11,6 +11,7 @@ make -j $threads install
 cd ../
 #Cleanup
 rm -rf elmer-build
+cd ../
 #Install EOF-Library
 source /opt/openfoam10/etc/bashrc
 export ELMER_HOME=$(pwd)/src/elmer-install/
