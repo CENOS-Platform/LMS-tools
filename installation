@@ -9,6 +9,10 @@ source /opt/openfoam10/etc/bashrc
 cp ./src/OpenFOAM-10/lib/* $FOAM_USER_LIBBIN/
 [ ! -d "$FOAM_USER_APPBIN" ] && mkdir -p "$FOAM_USER_APPBIN"
 cp ./src/OpenFOAM-10/bin/* $FOAM_USER_APPBIN/
+cd MHDsolvers
+git pull
+git checkout main
+./Allwmake
 #Replace $(pwd) with LMS-tools path and add to $HOME/.bashrc
 #source /opt/openfoam10/etc/bashrc
 #export ELMER_HOME=$(pwd)/src/elmer-install/
