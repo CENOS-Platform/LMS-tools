@@ -13,12 +13,12 @@ cd ../
 rm -rf elmer-build
 cd ../
 #Install EOF-Library
-source /opt/openfoam10/etc/bashrc
+source /opt/openfoam11/etc/bashrc
 export ELMER_HOME=$(pwd)/src/elmer-install/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
 export PATH=$PATH:$ELMER_HOME/bin
-FOAM_USER_LIBBIN=$(pwd)/src/OpenFOAM-10/lib
-FOAM_USER_APPBIN=$(pwd)/src/OpenFOAM-10/bin
+FOAM_USER_LIBBIN=$(pwd)/src/OpenFOAM-11/lib
+FOAM_USER_APPBIN=$(pwd)/src/OpenFOAM-11/bin
 EOF_SRC=$(pwd)/EOF-Library/libs
 export LD_LIBRARY_PATH=$EOF_SRC:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
@@ -27,12 +27,6 @@ ELMER_LIBBIN=$(pwd)/src/elmer-install/lib/elmersolver
 elmerf90 -o $ELMER_LIBBIN/Elmer2OpenFOAM.so -J$EOF_SRC $EOF_SRC/Elmer2OpenFOAM.F90
 elmerf90 -o $ELMER_LIBBIN/OpenFOAM2Elmer.so -J$EOF_SRC $EOF_SRC/OpenFOAM2Elmer.F90
 #Install MHDsolvers
-wmake MHDsolvers/simpleFoamEpot
-wmake MHDsolvers/pimpleFoamEpot
-wmake MHDsolvers/pimpleFoamEpotTransient
-wmake MHDsolvers/buoyantFoamEpot
-wmake MHDsolvers/buoyantFoamEpotTransient
-wmake MHDsolvers/chtMultiRegionFoamEpot
-wmake MHDsolvers/chtMultiRegionFoamEpotTransient
-wmake MHDsolvers/initializeTemperature
-wmake MHDsolvers/initializeMultiRegionTemperature
+cd MHDsolvers
+./Allwmake
+cd ../
