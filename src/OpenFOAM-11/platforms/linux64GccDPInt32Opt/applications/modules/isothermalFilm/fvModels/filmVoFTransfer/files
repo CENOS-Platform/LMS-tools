@@ -1,0 +1,4 @@
+SOURCE += filmVoFTransfer.C
+SOURCE += VoFFilmTransfer.C
+
+LIB = $(FOAM_LIBBIN)/libfilmVoFTransfer

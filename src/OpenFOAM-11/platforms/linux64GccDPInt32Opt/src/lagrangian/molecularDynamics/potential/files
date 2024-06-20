@@ -1,0 +1,47 @@
+potential = potential
+
+SOURCE += $(potential)/potential.C
+
+pairPotential = pairPotential
+
+SOURCE += $(pairPotential)/pairPotentialList/pairPotentialList.C
+
+SOURCE += $(pairPotential)/basic/pairPotential.C
+SOURCE += $(pairPotential)/basic/pairPotentialIO.C
+SOURCE += $(pairPotential)/basic/pairPotentialNew.C
+
+SOURCE += $(pairPotential)/derived/lennardJones/lennardJones.C
+SOURCE += $(pairPotential)/derived/maitlandSmith/maitlandSmith.C
+SOURCE += $(pairPotential)/derived/azizChen/azizChen.C
+SOURCE += $(pairPotential)/derived/exponentialRepulsion/exponentialRepulsion.C
+SOURCE += $(pairPotential)/derived/coulomb/coulomb.C
+SOURCE += $(pairPotential)/derived/dampedCoulomb/dampedCoulomb.C
+SOURCE += $(pairPotential)/derived/noInteraction/noInteraction.C
+
+energyScalingFunction = energyScalingFunction
+
+SOURCE += $(energyScalingFunction)/basic/energyScalingFunction.C
+SOURCE += $(energyScalingFunction)/basic/energyScalingFunctionNew.C
+
+SOURCE += $(energyScalingFunction)/derived/shifted/shifted.C
+SOURCE += $(energyScalingFunction)/derived/shiftedForce/shiftedForce.C
+SOURCE += $(energyScalingFunction)/derived/noScaling/noScaling.C
+SOURCE += $(energyScalingFunction)/derived/sigmoid/sigmoid.C
+SOURCE += $(energyScalingFunction)/derived/doubleSigmoid/doubleSigmoid.C
+
+tetherPotential = tetherPotential
+
+SOURCE += $(tetherPotential)/tetherPotentialList/tetherPotentialList.C
+
+SOURCE += $(tetherPotential)/basic/tetherPotential.C
+SOURCE += $(tetherPotential)/basic/tetherPotentialNew.C
+
+SOURCE += $(tetherPotential)/derived/harmonicSpring/harmonicSpring.C
+SOURCE += $(tetherPotential)/derived/restrainedHarmonicSpring/restrainedHarmonicSpring.C
+SOURCE += $(tetherPotential)/derived/pitchForkRing/pitchForkRing.C
+
+electrostaticPotential = electrostaticPotential
+
+SOURCE += $(electrostaticPotential)/electrostaticPotential.C
+
+LIB = $(FOAM_LIBBIN)/libpotential

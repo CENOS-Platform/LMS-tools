@@ -1,0 +1,6 @@
+SOURCE += itoa.C
+SOURCE += ensightMesh.C
+SOURCE += ensightParticlePositions.C
+SOURCE += foamToEnsight.C
+
+EXE = $(FOAM_APPBIN)/foamToEnsight

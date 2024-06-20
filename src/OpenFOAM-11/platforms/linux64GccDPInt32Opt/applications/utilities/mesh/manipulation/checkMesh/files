@@ -1,0 +1,7 @@
+SOURCE += checkTools.C
+SOURCE += checkTopology.C
+SOURCE += checkGeometry.C
+SOURCE += checkMeshQuality.C
+SOURCE += checkMesh.C
+
+EXE = $(FOAM_APPBIN)/checkMesh

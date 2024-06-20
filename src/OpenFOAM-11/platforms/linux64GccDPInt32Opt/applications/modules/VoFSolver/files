@@ -1,0 +1,7 @@
+SOURCE += VoFMixture/VoFMixture.C
+SOURCE += setRDeltaT.C
+SOURCE += moveMesh.C
+SOURCE += momentumPredictor.C
+SOURCE += VoFSolver.C
+
+LIB = $(FOAM_LIBBIN)/libVoFSolver

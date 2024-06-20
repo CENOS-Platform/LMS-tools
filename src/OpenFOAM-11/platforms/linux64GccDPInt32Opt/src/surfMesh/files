@@ -1,0 +1,46 @@
+SOURCE += surfZone/surfZone/surfZone.C
+SOURCE += surfZone/surfZone/surfZoneIOList.C
+SOURCE += surfZone/surfZoneIdentifier/surfZoneIdentifier.C
+
+SOURCE += MeshedSurfaceAllocator/MeshedSurfaceIOAllocator.C
+
+SOURCE += MeshedSurface/MeshedSurfaceCore.C
+SOURCE += MeshedSurface/MeshedSurfaces.C
+SOURCE += UnsortedMeshedSurface/UnsortedMeshedSurfaces.C
+
+SOURCE += MeshedSurfaceProxy/MeshedSurfaceProxyCore.C
+
+SOURCE += surfaceRegistry/surfaceRegistry.C
+SOURCE += surfMesh/surfMesh.C
+SOURCE += surfMesh/surfMeshClear.C
+SOURCE += surfMesh/surfMeshIO.C
+SOURCE += surfFields/surfFields/surfFields.C
+SOURCE += surfFields/surfPointFields/surfPointFields.C
+
+surfaceFormats = surfaceFormats
+SOURCE += $(surfaceFormats)/surfaceFormatsCore.C
+
+SOURCE += $(surfaceFormats)/ac3d/AC3DsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/ac3d/AC3DsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/gts/GTSsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/nas/NASsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/obj/OBJsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/off/OFFsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/ofs/OFSsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/ofs/OFSsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/smesh/SMESHsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/starcd/STARCDsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/starcd/STARCDsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/stl/STLsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/stl/STLsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/stl/STLsurfaceFormatASCII.L
+SOURCE += $(surfaceFormats)/tri/TRIsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/tri/TRIsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/vtk/VTKsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/vtk/VTKsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/wrl/WRLsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/wrl/WRLsurfaceFormatRunTime.C
+SOURCE += $(surfaceFormats)/x3d/X3DsurfaceFormatCore.C
+SOURCE += $(surfaceFormats)/x3d/X3DsurfaceFormatRunTime.C
+
+LIB = $(FOAM_LIBBIN)/libsurfMesh

@@ -1,0 +1,35 @@
+SOURCE += sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C
+SOURCE += sixDoFRigidBodyMotion/sixDoFRigidBodyMotionIO.C
+SOURCE += sixDoFRigidBodyMotion/sixDoFRigidBodyMotionState.C
+SOURCE += sixDoFRigidBodyMotion/sixDoFRigidBodyMotionStateIO.C
+
+restraints = sixDoFRigidBodyMotion/restraints
+
+SOURCE += $(restraints)/sixDoFRigidBodyMotionRestraint/sixDoFRigidBodyMotionRestraint.C
+SOURCE += $(restraints)/sixDoFRigidBodyMotionRestraint/sixDoFRigidBodyMotionRestraintNew.C
+SOURCE += $(restraints)/linearAxialAngularSpring/linearAxialAngularSpring.C
+SOURCE += $(restraints)/linearSpring/linearSpring.C
+SOURCE += $(restraints)/sphericalAngularSpring/sphericalAngularSpring.C
+SOURCE += $(restraints)/axialAngularSpring/axialAngularSpring.C
+SOURCE += $(restraints)/linearDamper/linearDamper.C
+SOURCE += $(restraints)/sphericalAngularDamper/sphericalAngularDamper.C
+
+constraints = sixDoFRigidBodyMotion/constraints
+
+SOURCE += $(constraints)/sixDoFRigidBodyMotionConstraint/sixDoFRigidBodyMotionConstraint.C
+SOURCE += $(constraints)/sixDoFRigidBodyMotionConstraint/sixDoFRigidBodyMotionConstraintNew.C
+SOURCE += $(constraints)/axis/sixDoFRigidBodyMotionAxisConstraint.C
+SOURCE += $(constraints)/line/sixDoFRigidBodyMotionLineConstraint.C
+SOURCE += $(constraints)/orientation/sixDoFRigidBodyMotionOrientationConstraint.C
+SOURCE += $(constraints)/plane/sixDoFRigidBodyMotionPlaneConstraint.C
+SOURCE += $(constraints)/point/sixDoFRigidBodyMotionPointConstraint.C
+
+SOURCE += sixDoFRigidBodyMotionSolver/sixDoFRigidBodyMotionSolver.C
+
+SOURCE += sixDoFSolvers/sixDoFSolver/sixDoFSolver.C
+SOURCE += sixDoFSolvers/sixDoFSolver/sixDoFSolverNew.C
+SOURCE += sixDoFSolvers/symplectic/symplectic.C
+SOURCE += sixDoFSolvers/CrankNicolson/CrankNicolson.C
+SOURCE += sixDoFSolvers/Newmark/Newmark.C
+
+LIB = $(FOAM_LIBBIN)/libsixDoFRigidBodyMotion

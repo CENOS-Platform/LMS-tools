@@ -1,0 +1,7 @@
+SOURCE += setRDeltaT.C
+SOURCE += moveMesh.C
+SOURCE += momentumPredictor.C
+SOURCE += correctPressure.C
+SOURCE += incompressibleFluid.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleFluid

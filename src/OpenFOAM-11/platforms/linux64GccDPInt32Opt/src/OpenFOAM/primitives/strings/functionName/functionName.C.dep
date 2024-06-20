@@ -1,0 +1,22 @@
+$(OBJECTS_DIR)/primitives/strings/functionName/functionName.C.dep: \
+primitives/strings/functionName/functionName.C \
+primitives/strings/functionName/functionName.H \
+lnInclude/debug.H \
+lnInclude/word.H \
+primitives/strings/functionName/functionNameI.H \
+lnInclude/string.H \
+lnInclude/wordI.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+primitives/strings/functionName/functionName.H :
+lnInclude/debug.H :
+lnInclude/word.H :
+primitives/strings/functionName/functionNameI.H :
+lnInclude/string.H :
+lnInclude/wordI.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

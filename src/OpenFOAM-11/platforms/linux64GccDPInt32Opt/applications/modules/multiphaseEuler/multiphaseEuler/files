@@ -1,0 +1,11 @@
+SOURCE += setRDeltaT.C
+SOURCE += moveMesh.C
+SOURCE += momentumPredictor.C
+SOURCE += thermophysicalPredictor.C
+SOURCE += compressibilityEqns.C
+SOURCE += facePressureCorrector.C
+SOURCE += cellPressureCorrector.C
+SOURCE += pressureCorrector.C
+SOURCE += multiphaseEuler.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseEuler

@@ -1,0 +1,8 @@
+SOURCE += mixtureViscosityModel/mixtureViscosityModel.C
+SOURCE += mixtureViscosityModel/mixtureViscosityModelNew.C
+SOURCE += plastic/plastic.C
+SOURCE += BinghamPlastic/BinghamPlastic.C
+SOURCE += slurry/slurry.C
+SOURCE += Quemada/Quemada.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleDriftFluxViscosityModel

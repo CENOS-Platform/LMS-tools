@@ -1,0 +1,7 @@
+SOURCE += vtk/vtkWriteOps.C
+SOURCE += vtk/vtkUnstructuredReader.C
+SOURCE += nas/NASCore.C
+SOURCE += starcd/STARCDCore.C
+SOURCE += obj/OBJstream.C
+
+LIB = $(FOAM_LIBBIN)/libfileFormats

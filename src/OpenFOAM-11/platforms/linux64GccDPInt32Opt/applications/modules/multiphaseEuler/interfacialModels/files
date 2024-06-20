@@ -1,0 +1,93 @@
+SOURCE += dragModels/dragModel/dragModel.C
+SOURCE += dragModels/dragModel/dragModelNew.C
+SOURCE += dragModels/dispersedDragModel/dispersedDragModel.C
+SOURCE += dragModels/Beetstra/Beetstra.C
+SOURCE += dragModels/segregated/segregated.C
+SOURCE += dragModels/Ergun/Ergun.C
+SOURCE += dragModels/Gibilaro/Gibilaro.C
+SOURCE += dragModels/GidaspowErgunWenYu/GidaspowErgunWenYu.C
+SOURCE += dragModels/GidaspowSchillerNaumann/GidaspowSchillerNaumann.C
+SOURCE += dragModels/Lain/Lain.C
+SOURCE += dragModels/SchillerNaumann/SchillerNaumann.C
+SOURCE += dragModels/SyamlalOBrien/SyamlalOBrien.C
+SOURCE += dragModels/TomiyamaCorrelated/TomiyamaCorrelated.C
+SOURCE += dragModels/TomiyamaAnalytic/TomiyamaAnalytic.C
+SOURCE += dragModels/Tenneti/Tenneti.C
+SOURCE += dragModels/TomiyamaKataokaZunSakaguchi/TomiyamaKataokaZunSakaguchi.C
+SOURCE += dragModels/WenYu/WenYu.C
+SOURCE += dragModels/IshiiZuber/IshiiZuber.C
+SOURCE += dragModels/AttouFerschneider/AttouFerschneider.C
+SOURCE += dragModels/aerosolDrag/aerosolDrag.C
+SOURCE += dragModels/timeScaleFilteredDrag/timeScaleFilteredDrag.C
+
+SOURCE += swarmCorrections/swarmCorrection/swarmCorrection.C
+SOURCE += swarmCorrections/swarmCorrection/swarmCorrectionNew.C
+SOURCE += swarmCorrections/noSwarm/noSwarm.C
+SOURCE += swarmCorrections/TomiyamaSwarm/TomiyamaSwarm.C
+
+SOURCE += liftModels/liftModel/liftModel.C
+SOURCE += liftModels/liftModel/liftModelNew.C
+SOURCE += liftModels/dispersedLiftModel/dispersedLiftModel.C
+SOURCE += liftModels/noLift/noLift.C
+SOURCE += liftModels/constantLiftCoefficient/constantLiftCoefficient.C
+SOURCE += liftModels/Moraga/Moraga.C
+SOURCE += liftModels/LegendreMagnaudet/LegendreMagnaudet.C
+SOURCE += liftModels/SaffmanMei/SaffmanMei.C
+SOURCE += liftModels/TomiyamaLift/TomiyamaLift.C
+SOURCE += liftModels/wallDampedLift/wallDampedLift.C
+
+SOURCE += heatTransferModels/heatTransferModel/heatTransferModel.C
+SOURCE += heatTransferModels/heatTransferModel/heatTransferModelNew.C
+SOURCE += heatTransferModels/constantNu/constantNuHeatTransfer.C
+SOURCE += heatTransferModels/RanzMarshall/RanzMarshall.C
+SOURCE += heatTransferModels/Gunn/Gunn.C
+SOURCE += heatTransferModels/sphericalHeatTransfer/sphericalHeatTransfer.C
+SOURCE += heatTransferModels/nonSphericalHeatTransfer/nonSphericalHeatTransfer.C
+SOURCE += heatTransferModels/timeScaleFilteredHeatTransfer/timeScaleFilteredHeatTransfer.C
+
+SOURCE += virtualMassModels/virtualMassModel/virtualMassModel.C
+SOURCE += virtualMassModels/virtualMassModel/virtualMassModelNew.C
+SOURCE += virtualMassModels/dispersedVirtualMassModel/dispersedVirtualMassModel.C
+SOURCE += virtualMassModels/noVirtualMass/noVirtualMass.C
+SOURCE += virtualMassModels/constantVirtualMassCoefficient/constantVirtualMassCoefficient.C
+SOURCE += virtualMassModels/Lamb/Lamb.C
+
+SOURCE += wallLubricationModels/wallLubricationModel/wallLubricationModel.C
+SOURCE += wallLubricationModels/wallLubricationModel/wallLubricationModelNew.C
+SOURCE += wallLubricationModels/dispersedWallLubricationModel/dispersedWallLubricationModel.C
+SOURCE += wallLubricationModels/noWallLubrication/noWallLubrication.C
+SOURCE += wallLubricationModels/Antal/Antal.C
+SOURCE += wallLubricationModels/Frank/Frank.C
+SOURCE += wallLubricationModels/TomiyamaWallLubrication/TomiyamaWallLubrication.C
+
+SOURCE += turbulentDispersionModels/turbulentDispersionModel/turbulentDispersionModel.C
+SOURCE += turbulentDispersionModels/turbulentDispersionModel/turbulentDispersionModelNew.C
+SOURCE += turbulentDispersionModels/dispersedTurbulentDispersionModel/dispersedTurbulentDispersionModel.C
+SOURCE += turbulentDispersionModels/noTurbulentDispersion/noTurbulentDispersion.C
+SOURCE += turbulentDispersionModels/constantTurbulentDispersionCoefficient/constantTurbulentDispersionCoefficient.C
+SOURCE += turbulentDispersionModels/Burns/Burns.C
+SOURCE += turbulentDispersionModels/Gosman/Gosman.C
+SOURCE += turbulentDispersionModels/LopezDeBertodano/LopezDeBertodano.C
+
+SOURCE += aspectRatioModels/aspectRatioModel/aspectRatioModel.C
+SOURCE += aspectRatioModels/aspectRatioModel/aspectRatioModelNew.C
+SOURCE += aspectRatioModels/constantAspectRatio/constantAspectRatio.C
+SOURCE += aspectRatioModels/TomiyamaAspectRatio/TomiyamaAspectRatio.C
+SOURCE += aspectRatioModels/VakhrushevEfremov/VakhrushevEfremov.C
+SOURCE += aspectRatioModels/Wellek/Wellek.C
+
+SOURCE += wallDependentModel/wallDependentModel.C
+
+SOURCE += wallDampingModels/wallDampingModel/wallDampingModel.C
+SOURCE += wallDampingModels/wallDampingModel/wallDampingModelNew.C
+SOURCE += wallDampingModels/linear/linearWallDamping.C
+SOURCE += wallDampingModels/cosine/cosineWallDamping.C
+SOURCE += wallDampingModels/sine/sineWallDamping.C
+
+SOURCE += phaseTransferModels/phaseTransferModel/phaseTransferModel.C
+SOURCE += phaseTransferModels/phaseTransferModel/phaseTransferModelNew.C
+SOURCE += phaseTransferModels/cavitation/cavitation.C
+SOURCE += phaseTransferModels/deposition/deposition.C
+SOURCE += phaseTransferModels/reactionDriven/reactionDriven.C
+
+LIB = $(FOAM_LIBBIN)/libeulerianInterfacialModels

@@ -1,0 +1,21 @@
+SOURCE += waveModels/waveModel/waveModel.C
+SOURCE += waveModels/waveModel/waveModelNew.C
+SOURCE += waveModels/Airy/Airy.C
+SOURCE += waveModels/Stokes2/Stokes2.C
+SOURCE += waveModels/Stokes5/Stokes5.C
+SOURCE += waveModels/solitary/solitary.C
+
+SOURCE += waveSuperpositions/waveSuperposition/waveSuperposition.C
+SOURCE += waveSuperpositions/waveSuperposition/waveSuperpositionNew.C
+SOURCE += waveSuperpositions/waveAtmBoundaryLayerSuperposition/waveAtmBoundaryLayerSuperposition.C
+
+SOURCE += derivedFvPatchFields/waveAlpha/waveAlphaFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/waveInletOutlet/waveInletOutletFvPatchFields.C
+SOURCE += derivedFvPatchFields/waveVelocity/waveVelocityFvPatchVectorField.C
+
+SOURCE += fvModels/forcing/forcing.C
+SOURCE += fvModels/isotropicDamping/isotropicDamping.C
+SOURCE += fvModels/verticalDamping/verticalDamping.C
+SOURCE += fvModels/waveForcing/waveForcing.C
+
+LIB = $(FOAM_LIBBIN)/libwaves

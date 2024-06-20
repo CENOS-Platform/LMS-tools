@@ -1,0 +1,13 @@
+# Parcels
+SOURCE += parcels/derived/dsmcParcel/dsmcParcel.C
+
+# Cloud name
+SOURCE += clouds/Templates/DSMCCloud/DSMCCloudName.C
+
+# Sub-models
+SOURCE += parcels/derived/dsmcParcel/defineDSMCParcel.C
+SOURCE += parcels/derived/dsmcParcel/makeDSMCParcelBinaryCollisionModels.C
+SOURCE += parcels/derived/dsmcParcel/makeDSMCParcelWallInteractionModels.C
+SOURCE += parcels/derived/dsmcParcel/makeDSMCParcelInflowBoundaryModels.C
+
+LIB = $(FOAM_LIBBIN)/libDSMC

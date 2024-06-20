@@ -1,0 +1,4 @@
+SOURCE += scalarTransport/scalarTransport.C
+SOURCE += phaseScalarTransport/phaseScalarTransport.C
+
+LIB = $(FOAM_LIBBIN)/libsolverFunctionObjects

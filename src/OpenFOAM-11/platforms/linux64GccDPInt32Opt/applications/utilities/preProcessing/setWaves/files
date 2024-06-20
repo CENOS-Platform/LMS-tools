@@ -1,0 +1,3 @@
+SOURCE += setWaves.C
+
+EXE = $(FOAM_APPBIN)/setWaves

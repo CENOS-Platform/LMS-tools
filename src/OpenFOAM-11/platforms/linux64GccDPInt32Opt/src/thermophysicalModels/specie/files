@@ -1,0 +1,20 @@
+SOURCE += atomicWeights/atomicWeights.C
+SOURCE += specie/specie.C
+SOURCE += reaction/specieCoeffs/specieCoeffs.C
+SOURCE += reaction/reaction/reaction.C
+
+SOURCE += thermophysicalFunctions/integratedNonUniformTable1/integratedNonUniformTable1.C
+SOURCE += thermophysicalFunctions/APIdiffCoef/APIdiffCoef.C
+
+NSRDS = thermophysicalFunctions/NSRDS
+SOURCE += $(NSRDS)/NSRDS0/NSRDS0.C
+SOURCE += $(NSRDS)/NSRDS1/NSRDS1.C
+SOURCE += $(NSRDS)/NSRDS2/NSRDS2.C
+SOURCE += $(NSRDS)/NSRDS3/NSRDS3.C
+SOURCE += $(NSRDS)/NSRDS4/NSRDS4.C
+SOURCE += $(NSRDS)/NSRDS5/NSRDS5.C
+SOURCE += $(NSRDS)/NSRDS6/NSRDS6.C
+SOURCE += $(NSRDS)/NSRDS7/NSRDS7.C
+SOURCE += $(NSRDS)/NSRDS14/NSRDS14.C
+
+LIB = $(FOAM_LIBBIN)/libspecie

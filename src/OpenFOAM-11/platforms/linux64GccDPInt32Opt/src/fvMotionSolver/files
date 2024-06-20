@@ -1,0 +1,42 @@
+SOURCE += fvMotionSolvers/fvMotionSolver/fvMotionSolver.C
+SOURCE += fvMotionSolvers/displacement/SBRStress/displacementSBRStressFvMotionSolver.C
+SOURCE += fvMotionSolvers/displacement/laplacian/displacementLaplacianFvMotionSolver.C
+
+SOURCE += fvMotionSolvers/componentDisplacement/componentLaplacian/displacementComponentLaplacianFvMotionSolver.C
+
+SOURCE += fvMotionSolvers/velocity/laplacian/velocityLaplacianFvMotionSolver.C
+
+SOURCE += fvMotionSolvers/componentVelocity/componentLaplacian/velocityComponentLaplacianFvMotionSolver.C
+
+SOURCE += motionDiffusivity/motionDiffusivity/motionDiffusivity.C
+SOURCE += motionDiffusivity/uniform/uniformDiffusivity.C
+SOURCE += motionDiffusivity/inverseDistance/inverseDistanceDiffusivity.C
+SOURCE += motionDiffusivity/inverseFaceDistance/inverseFaceDistanceDiffusivity.C
+SOURCE += motionDiffusivity/inversePointDistance/inversePointDistanceDiffusivity.C
+SOURCE += motionDiffusivity/inverseVolume/inverseVolumeDiffusivity.C
+SOURCE += motionDiffusivity/directional/directionalDiffusivity.C
+SOURCE += motionDiffusivity/motionDirectional/motionDirectionalDiffusivity.C
+SOURCE += motionDiffusivity/file/fileDiffusivity.C
+
+SOURCE += motionDiffusivity/manipulators/quadratic/quadraticDiffusivity.C
+SOURCE += motionDiffusivity/manipulators/exponential/exponentialDiffusivity.C
+
+SOURCE += fvPatchFields/derived/cellMotion/cellMotionFvPatchFields.C
+SOURCE += fvPatchFields/derived/surfaceSlipDisplacement/surfaceSlipDisplacementFvPatchFields.C
+
+derivedPoint = pointPatchFields/derived
+
+SOURCE += $(derivedPoint)/oscillatingVelocity/oscillatingVelocityPointPatchVectorField.C
+SOURCE += $(derivedPoint)/angularOscillatingVelocity/angularOscillatingVelocityPointPatchVectorField.C
+
+SOURCE += $(derivedPoint)/oscillatingDisplacement/oscillatingDisplacementPointPatchVectorField.C
+SOURCE += $(derivedPoint)/angularOscillatingDisplacement/angularOscillatingDisplacementPointPatchVectorField.C
+SOURCE += $(derivedPoint)/surfaceSlipDisplacement/surfaceSlipDisplacementPointPatchVectorField.C
+SOURCE += $(derivedPoint)/surfaceDisplacement/surfaceDisplacementPointPatchVectorField.C
+SOURCE += $(derivedPoint)/waveDisplacement/waveDisplacementPointPatchVectorField.C
+
+SOURCE += $(derivedPoint)/timeVaryingMappedFixedValue/timeVaryingMappedFixedValuePointPatchFields.C
+SOURCE += $(derivedPoint)/uniformInterpolatedDisplacement/uniformInterpolatedDisplacementPointPatchVectorField.C
+
+
+LIB = $(FOAM_LIBBIN)/libfvMotionSolvers

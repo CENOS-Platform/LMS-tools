@@ -1,0 +1,5 @@
+SOURCE += edgeStats.C
+SOURCE += selectCells.C
+
+EXE = $(FOAM_APPBIN)/selectCells
+

@@ -1,0 +1,6 @@
+SOURCE += phaseCompressibleMomentumTransportModel.C
+SOURCE += phaseCompressibleMomentumTransportModels.C
+
+SOURCE += derivedFvPatchFields/wallFunctions/epsilonWallFunctions/epsilonmWallFunction/epsilonmWallFunctionFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libphaseCompressibleMomentumTransportModels

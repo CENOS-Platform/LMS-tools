@@ -1,0 +1,3 @@
+SOURCE += surfaceAdd.C
+
+EXE = $(FOAM_APPBIN)/surfaceAdd

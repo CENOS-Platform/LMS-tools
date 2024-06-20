@@ -1,0 +1,9 @@
+SOURCE += reducedUnits/reducedUnits.C
+SOURCE += reducedUnits/reducedUnitsIO.C
+
+SOURCE += molecule/molecule.C
+SOURCE += molecule/moleculeIO.C
+
+SOURCE += moleculeCloud/moleculeCloud.C
+
+LIB = $(FOAM_LIBBIN)/libmolecule

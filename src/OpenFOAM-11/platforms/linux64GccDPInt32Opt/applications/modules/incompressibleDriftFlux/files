@@ -1,0 +1,5 @@
+SOURCE += incompressibleDriftFluxMixture/incompressibleDriftFluxMixture.C
+SOURCE += alphaSuSp.C
+SOURCE += incompressibleDriftFlux.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleDriftFlux

@@ -1,0 +1,4 @@
+SOURCE += rigidBodyState/rigidBodyState.C
+SOURCE += rigidBodyPoints/rigidBodyPoints.C
+
+LIB = $(FOAM_LIBBIN)/librigidBodyState

@@ -1,0 +1,7 @@
+SOURCE += multiphaseVoFMixture/VoFphase/VoFphase.C
+SOURCE += multiphaseVoFMixture/multiphaseVoFMixture.C
+SOURCE += setInterfaceRDeltaT.C
+SOURCE += #alphaPredictor.C
+SOURCE += multiphaseVoFSolver.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseVoFSolver

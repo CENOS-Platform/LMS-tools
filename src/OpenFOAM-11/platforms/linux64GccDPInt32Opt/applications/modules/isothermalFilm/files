@@ -1,0 +1,33 @@
+SOURCE += patches/filmFvPatch/filmFvPatch.C
+
+SOURCE += patches/filmWall/filmWallPolyPatch/filmWallPolyPatch.C
+SOURCE += patches/filmWall/filmWallPointPatch/filmWallPointPatch.C
+SOURCE += patches/filmWall/filmWallFvPatch/filmWallFvPatch.C
+
+SOURCE += patches/filmSurface/filmSurfacePolyPatch/filmSurfacePolyPatch.C
+SOURCE += patches/filmSurface/filmSurfacePointPatch/filmSurfacePointPatch.C
+SOURCE += patches/filmSurface/filmSurfaceFvPatch/filmSurfaceFvPatch.C
+
+SOURCE += patches/mappedFilmWall/mappedFilmWallFvPatch/mappedFilmWallFvPatch.C
+SOURCE += patches/mappedFilmWall/mappedFilmWallPointPatch/mappedFilmWallPointPatch.C
+SOURCE += patches/mappedFilmWall/mappedFilmWallPolyPatch/mappedFilmWallPolyPatch.C
+
+SOURCE += patches/mappedFilmSurface/mappedFilmSurfacePolyPatch/mappedFilmSurfacePolyPatch.C
+SOURCE += patches/mappedFilmSurface/mappedFilmSurfacePointPatch/mappedFilmSurfacePointPatch.C
+SOURCE += patches/mappedFilmSurface/mappedFilmSurfaceFvPatch/mappedFilmSurfaceFvPatch.C
+
+SOURCE += derivedFvPatchFields/alphaOne/alphaOneFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/filmContactAngle/filmContactAngleFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/mappedFilmPressure/mappedFilmPressureFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/filmSurfaceVelocity/filmSurfaceVelocityFvPatchVectorField.C
+
+SOURCE += filmGaussGrad/filmGaussGrads.C
+
+SOURCE += contactForce.C
+SOURCE += continuityPredictor.C
+SOURCE += prePredictor.C
+SOURCE += momentumPredictor.C
+SOURCE += correctAlpha.C
+SOURCE += isothermalFilm.C
+
+LIB = $(FOAM_LIBBIN)/libisothermalFilm

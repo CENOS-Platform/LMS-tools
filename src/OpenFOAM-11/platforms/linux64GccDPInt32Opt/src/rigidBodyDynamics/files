@@ -1,0 +1,57 @@
+SOURCE += bodies/rigidBody/rigidBody.C
+SOURCE += bodies/masslessBody/masslessBody.C
+SOURCE += bodies/jointBody/jointBody.C
+SOURCE += bodies/compositeBody/compositeBody.C
+SOURCE += bodies/subBody/subBody.C
+SOURCE += bodies/sphere/sphere.C
+SOURCE += bodies/cuboid/cuboid.C
+
+SOURCE += joints/joint/joint.C
+SOURCE += joints/null/nullJoint.C
+SOURCE += joints/composite/compositeJoint.C
+SOURCE += joints/floating/floatingJoint.C
+
+SOURCE += joints/Rx/Rx.C
+SOURCE += joints/Ry/Ry.C
+SOURCE += joints/Rz/Rz.C
+SOURCE += joints/Ra/Ra.C
+SOURCE += joints/Rs/Rs.C
+SOURCE += joints/Rzyx/Rzyx.C
+SOURCE += joints/Rxyz/Rxyz.C
+SOURCE += joints/Ryxz/Ryxz.C
+
+SOURCE += joints/Px/Px.C
+SOURCE += joints/Py/Py.C
+SOURCE += joints/Pz/Pz.C
+SOURCE += joints/Pa/Pa.C
+SOURCE += joints/Pxyz/Pxyz.C
+
+SOURCE += joints/rigid/rigid.C
+SOURCE += joints/rotating/rotating.C
+SOURCE += joints/function/function.C
+SOURCE += joints/functionDot/functionDot.C
+
+SOURCE += restraints/restraint/rigidBodyRestraint.C
+SOURCE += restraints/restraint/rigidBodyRestraintNew.C
+SOURCE += restraints/linearSpring/linearSpring.C
+SOURCE += restraints/linearDamper/linearDamper.C
+SOURCE += restraints/linearAxialAngularSpring/linearAxialAngularSpring.C
+SOURCE += restraints/sphericalAngularDamper/sphericalAngularDamper.C
+SOURCE += restraints/externalForce/externalForce.C
+
+SOURCE += rigidBodyModel/rigidBodyModel.C
+SOURCE += rigidBodyModel/forwardDynamics.C
+
+SOURCE += rigidBodyModelState/rigidBodyModelState.C
+SOURCE += rigidBodyModelState/rigidBodyModelStateIO.C
+
+SOURCE += rigidBodyMotion/rigidBodyMotion.C
+SOURCE += rigidBodyMotion/rigidBodyMotionIO.C
+
+SOURCE += rigidBodySolvers/rigidBodySolver/rigidBodySolver.C
+SOURCE += rigidBodySolvers/rigidBodySolver/rigidBodySolverNew.C
+SOURCE += rigidBodySolvers/symplectic/symplectic.C
+SOURCE += rigidBodySolvers/Newmark/Newmark.C
+SOURCE += rigidBodySolvers/CrankNicolson/CrankNicolson.C
+
+LIB = $(FOAM_LIBBIN)/librigidBodyDynamics

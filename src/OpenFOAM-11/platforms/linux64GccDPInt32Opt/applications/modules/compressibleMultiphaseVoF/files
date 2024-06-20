@@ -1,0 +1,11 @@
+SOURCE += compressibleMultiphaseVoFMixture/compressibleVoFphase/compressibleVoFphase.C
+SOURCE += compressibleMultiphaseVoFMixture/compressibleMultiphaseVoFMixtureThermo/compressibleMultiphaseVoFMixtureThermo.C
+SOURCE += compressibleMultiphaseVoFMixture/compressibleMultiphaseVoFMixture.C
+
+SOURCE += alphaPredictor.C
+SOURCE += momentumPredictor.C
+SOURCE += thermophysicalPredictor.C
+SOURCE += pressureCorrector.C
+SOURCE += compressibleMultiphaseVoF.C
+
+LIB = $(FOAM_LIBBIN)/libcompressibleMultiphaseVoF

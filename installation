@@ -3,14 +3,22 @@
 PYTHON_USER_LIB=$(python3 -m site --user-site)
 [ ! -d "$PYTHON_USER_LIB" ] && mkdir -p "$PYTHON_USER_LIB"
 cp ./elmer_circuitbuilder/build/lib/elmer_circuitbuilder.py $PYTHON_USER_LIB/
+#Install ThirdParty-11
+rm -rf ThirdParty-11/platforms
+cp -r src/ThirdParty-11/platforms ThirdParty-11/platforms
+#Install OpenFOAM-11
+rm -rf OpenFOAM-11/wmake/platforms
+cp -r src/OpenFOAM-11/wmake/platforms OpenFOAM-11/wmake/platforms
+rm -rf OpenFOAM-11/platforms
+cp -r src/OpenFOAM-11/platforms OpenFOAM-11/platforms
 #Install EOF-Library and MHDsolvers
-source /opt/openfoam11/etc/bashrc
+source OpenFOAM-11/etc/bashrc
 [ ! -d "$FOAM_USER_LIBBIN" ] && mkdir -p "$FOAM_USER_LIBBIN"
 cp ./src/OpenFOAM-11/lib/* $FOAM_USER_LIBBIN/
 [ ! -d "$FOAM_USER_APPBIN" ] && mkdir -p "$FOAM_USER_APPBIN"
 cp ./src/OpenFOAM-11/bin/* $FOAM_USER_APPBIN/
 #Replace $(pwd) with LMS-tools path and add to $HOME/.bashrc
-#source /opt/openfoam11/etc/bashrc
+#source /home/cenos/LMS-tools/OpenFOAM-11/etc/bashrc
 #export ELMER_HOME=$(pwd)/src/elmer-install/
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
 #export PATH=$PATH:$ELMER_HOME/bin

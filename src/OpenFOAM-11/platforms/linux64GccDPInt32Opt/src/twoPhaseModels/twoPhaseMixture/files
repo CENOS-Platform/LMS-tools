@@ -1,0 +1,4 @@
+SOURCE += twoPhases.C
+SOURCE += twoPhaseMixture.C
+
+LIB = $(FOAM_LIBBIN)/libtwoPhaseMixture

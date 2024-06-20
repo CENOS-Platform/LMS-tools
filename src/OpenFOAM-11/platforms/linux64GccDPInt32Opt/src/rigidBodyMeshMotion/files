@@ -1,0 +1,4 @@
+SOURCE += rigidBodyMeshMotion/rigidBodyMeshMotion.C
+SOURCE += rigidBodyMeshMotionSolver/rigidBodyMeshMotionSolver.C
+
+LIB = $(FOAM_LIBBIN)/librigidBodyMeshMotion

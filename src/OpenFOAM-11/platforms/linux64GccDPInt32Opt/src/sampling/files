@@ -1,0 +1,61 @@
+SOURCE += probes/probes.C
+SOURCE += probes/patchProbes.C
+SOURCE += probes/probesGrouping.C
+
+SOURCE += coordSet/coordSet.C
+
+SOURCE += sampledSet/sampledSet/sampledSet.C
+SOURCE += sampledSet/sampledSet/sampledSetParticle.C
+SOURCE += sampledSet/sampledSet/sampledSetCloud.C
+SOURCE += sampledSet/sampledSets/sampledSets.C
+
+SOURCE += sampledSet/arcUniform/arcUniform.C
+SOURCE += sampledSet/boxUniform/boxUniform.C
+SOURCE += sampledSet/circleRandom/circleRandom.C
+SOURCE += sampledSet/lineCell/lineCell.C
+SOURCE += sampledSet/lineCellFace/lineCellFace.C
+SOURCE += sampledSet/lineFace/lineFace.C
+SOURCE += sampledSet/lineUniform/lineUniform.C
+SOURCE += sampledSet/boundaryPoints/boundaryPoints.C
+SOURCE += sampledSet/boundaryRandom/boundaryRandom.C
+SOURCE += sampledSet/points/points.C
+SOURCE += sampledSet/sphereRandom/sphereRandom.C
+SOURCE += sampledSet/triSurfaceMeshSampledSet/triSurfaceMeshSampledSet.C
+SOURCE += sampledSet/cellSetSampledSet/cellSetSampledSet.C
+SOURCE += sampledSet/faceSetSampledSet/faceSetSampledSet.C
+
+setWriters = sampledSet/writers
+
+SOURCE += $(setWriters)/setWriter.C
+SOURCE += $(setWriters)/ensight/ensightSetWriter.C
+SOURCE += $(setWriters)/raw/rawSetWriter.C
+SOURCE += $(setWriters)/vtk/vtkSetWriter.C
+SOURCE += $(setWriters)/csv/csvSetWriter.C
+SOURCE += $(setWriters)/gnuplot/gnuplotSetWriter.C
+SOURCE += $(setWriters)/none/noSetWriter.C
+
+SOURCE += sampledSurface/sampledPatch/sampledPatch.C
+SOURCE += sampledSurface/sampledPatchInternalField/sampledPatchInternalField.C
+SOURCE += sampledSurface/sampledIsoSurfaceSurface/sampledIsoSurfaceSurface.C
+SOURCE += sampledSurface/sampledIsoSurface/sampledIsoSurface.C
+SOURCE += sampledSurface/sampledDistanceSurface/sampledDistanceSurface.C
+SOURCE += sampledSurface/sampledCutPlane/sampledCutPlane.C
+SOURCE += sampledSurface/sampledSurface/sampledSurface.C
+SOURCE += sampledSurface/sampledSurfaces/sampledSurfaces.C
+SOURCE += sampledSurface/sampledTriSurfaceMesh/sampledTriSurfaceMesh.C
+SOURCE += sampledSurface/sampledThresholdCellFaces/thresholdCellFaces.C
+SOURCE += sampledSurface/sampledThresholdCellFaces/sampledThresholdCellFaces.C
+
+surfWriters = sampledSurface/writers
+
+SOURCE += $(surfWriters)/surfaceWriter.C
+SOURCE += $(surfWriters)/none/noSurfaceWriter.C
+SOURCE += $(surfWriters)/ensight/ensightSurfaceWriter.C
+SOURCE += $(surfWriters)/ensight/ensightPTraits.C
+SOURCE += $(surfWriters)/foam/foamSurfaceWriter.C
+SOURCE += $(surfWriters)/proxy/proxySurfaceWriter.C
+SOURCE += $(surfWriters)/raw/rawSurfaceWriter.C
+SOURCE += $(surfWriters)/vtk/vtkSurfaceWriter.C
+
+
+LIB = $(FOAM_LIBBIN)/libsampling

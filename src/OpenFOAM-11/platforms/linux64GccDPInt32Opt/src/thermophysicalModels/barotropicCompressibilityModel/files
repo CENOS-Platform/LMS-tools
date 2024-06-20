@@ -1,0 +1,7 @@
+SOURCE += barotropicCompressibilityModel/barotropicCompressibilityModel.C
+SOURCE += barotropicCompressibilityModel/barotropicCompressibilityModelNew.C
+SOURCE += linear/linear.C
+SOURCE += Wallis/Wallis.C
+SOURCE += Chung/Chung.C
+
+LIB = $(FOAM_LIBBIN)/libbarotropicCompressibilityModel

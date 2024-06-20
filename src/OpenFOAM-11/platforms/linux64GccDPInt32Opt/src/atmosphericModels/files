@@ -1,0 +1,10 @@
+SOURCE += derivedFvPatchFields/atmBoundaryLayer/atmBoundaryLayer.C
+SOURCE += derivedFvPatchFields/atmBoundaryLayerInletVelocity/atmBoundaryLayerInletVelocityFvPatchVectorField.C
+SOURCE += derivedFvPatchFields/atmBoundaryLayerInletK/atmBoundaryLayerInletKFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/atmBoundaryLayerInletEpsilon/atmBoundaryLayerInletEpsilonFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/nutkAtmRoughWallFunction/nutkAtmRoughWallFunctionFvPatchScalarField.C
+
+SOURCE += atmosphericTurbulentTransportModels.C
+SOURCE += porosityModels/powerLawLopesdaCosta/powerLawLopesdaCosta.C
+
+LIB = $(FOAM_LIBBIN)/libatmosphericModels

@@ -1,0 +1,45 @@
+# Radiation model
+SOURCE += radiationModels/radiationModel/radiationModel.C
+SOURCE += radiationModels/radiationModel/radiationModelNew.C
+SOURCE += radiationModels/noRadiation/noRadiation.C
+SOURCE += radiationModels/P1/P1.C
+SOURCE += radiationModels/fvDOM/fvDOM.C
+SOURCE += radiationModels/fvDOM/radiativeIntensityRay/radiativeIntensityRay.C
+SOURCE += radiationModels/fvDOM/blackBodyEmission/blackBodyEmission.C
+SOURCE += radiationModels/fvDOM/absorptionCoeffs/absorptionCoeffs.C
+SOURCE += radiationModels/viewFactor/viewFactor.C
+SOURCE += radiationModels/opaqueSolid/opaqueSolid.C
+
+# Scatter model
+SOURCE += scatterModels/scatterModel/scatterModel.C
+SOURCE += scatterModels/scatterModel/scatterModelNew.C
+SOURCE += scatterModels/noScatter/noScatter.C
+SOURCE += scatterModels/constantScatter/constantScatter.C
+
+# Absorption/Emission model
+SOURCE += absorptionEmissionModels/absorptionEmissionModel/absorptionEmissionModel.C
+SOURCE += absorptionEmissionModels/absorptionEmissionModel/absorptionEmissionModelNew.C
+SOURCE += absorptionEmissionModels/noAbsorptionEmission/noAbsorptionEmission.C
+SOURCE += absorptionEmissionModels/constantAbsorptionEmission/constantAbsorptionEmission.C
+SOURCE += absorptionEmissionModels/binary/binary.C
+SOURCE += absorptionEmissionModels/greyMean/greyMean.C
+SOURCE += absorptionEmissionModels/wideBand/wideBand.C
+SOURCE += absorptionEmissionModels/interpolationLookUpTable/interpolationLookUpTable.C
+
+# Soot model
+SOURCE += sootModels/sootModel/sootModel.C
+SOURCE += sootModels/sootModel/sootModelNew.C
+SOURCE += sootModels/noSoot/noSoot.C
+
+# Boundary conditions
+SOURCE += derivedFvPatchFields/MarshakRadiation/MarshakRadiationFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/MarshakRadiationFixedTemperature/MarshakRadiationFixedTemperatureFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/greyDiffusiveRadiation/greyDiffusiveRadiationMixedFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/wideBandDiffusiveRadiation/wideBandDiffusiveRadiationMixedFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/radiationCoupledBase/radiationCoupledBase.C
+SOURCE += derivedFvPatchFields/greyDiffusiveViewFactor/greyDiffusiveViewFactorFixedValueFvPatchScalarField.C
+
+# fvModels
+SOURCE += fvModels/radiation/radiation.C
+
+LIB = $(FOAM_LIBBIN)/libradiationModels

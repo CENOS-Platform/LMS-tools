@@ -1,0 +1,4 @@
+SOURCE += regionSide.C
+SOURCE += splitMesh.C
+
+EXE = $(FOAM_APPBIN)/splitMesh
