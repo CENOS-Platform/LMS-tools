@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     tags:
-      - "LMS-v*"
+      - "v*"
 
 permissions:
   contents: write
