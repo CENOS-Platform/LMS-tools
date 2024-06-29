@@ -1,0 +1,17 @@
+SOURCE += interfaceProperties.C
+
+SOURCE += surfaceTensionModels/surfaceTensionModel/surfaceTensionModel.C
+SOURCE += surfaceTensionModels/surfaceTensionModel/surfaceTensionModelNew.C
+SOURCE += surfaceTensionModels/constant/constantSurfaceTension.C
+SOURCE += surfaceTensionModels/temperatureDependent/temperatureDependentSurfaceTension.C
+
+SOURCE += contactAngleModels/contactAngleModel/contactAngleModel.C
+SOURCE += contactAngleModels/contactAngleModel/contactAngleModelNew.C
+SOURCE += contactAngleModels/constant/constantContactAngle.C
+SOURCE += contactAngleModels/temperatureDependent/temperatureDependentContactAngle.C
+SOURCE += contactAngleModels/dynamic/dynamicContactAngle.C
+SOURCE += contactAngleModels/gravitational/gravitationalContactAngle.C
+
+SOURCE += contactAngle/contactAngleFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libinterfaceProperties

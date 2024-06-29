@@ -1,0 +1,88 @@
+SOURCE += fieldAverage/fieldAverage.C
+SOURCE += fieldAverage/fieldAverageItem/fieldAverageItem.C
+SOURCE += fieldAverage/fieldAverageItem/fieldAverageItemIO.C
+
+SOURCE += fieldCoordinateSystemTransform/fieldCoordinateSystemTransform.C
+
+SOURCE += fieldValues/fieldValue/fieldValue.C
+SOURCE += fieldValues/fieldValue/fieldValueNew.C
+SOURCE += fieldValues/fieldValueDelta/fieldValueDelta.C
+SOURCE += fieldValues/volFieldValue/volFieldValue.C
+SOURCE += fieldValues/surfaceFieldValue/surfaceFieldValue.C
+
+SOURCE += nearWallFields/nearWallFields.C
+SOURCE += nearWallFields/findCellParticle.C
+
+SOURCE += processorField/processorField.C
+SOURCE += readFields/readFields.C
+
+SOURCE += streamlines/streamlines.C
+SOURCE += streamlines/streamlinesParticle.C
+SOURCE += streamlines/streamlinesCloud.C
+
+SOURCE += surfaceInterpolate/surfaceInterpolate.C
+
+SOURCE += regionSizeDistribution/regionSizeDistribution.C
+SOURCE += histogram/histogram.C
+
+SOURCE += fieldExpression/fieldExpression.C
+SOURCE += components/components.C
+SOURCE += randomise/randomise.C
+SOURCE += div/div.C
+SOURCE += grad/grad.C
+SOURCE += ddt/ddt.C
+SOURCE += mag/mag.C
+SOURCE += magSqr/magSqr.C
+SOURCE += scale/scale.C
+SOURCE += log/log.C
+SOURCE += vorticity/vorticity.C
+SOURCE += enstrophy/enstrophy.C
+SOURCE += Q/Q.C
+SOURCE += Lambda2/Lambda2.C
+SOURCE += flowType/flowType.C
+SOURCE += CourantNo/CourantNo.C
+SOURCE += PecletNo/PecletNo.C
+SOURCE += blendingFactor/blendingFactor.C
+SOURCE += pressure/pressure.C
+SOURCE += MachNo/MachNo.C
+SOURCE += shearStress/shearStress.C
+SOURCE += totalEnthalpy/totalEnthalpy.C
+SOURCE += reconstruct/reconstruct.C
+
+SOURCE += turbulenceFields/turbulenceFields.C
+SOURCE += yPlus/yPlus.C
+SOURCE += turbulenceIntensity/turbulenceIntensity.C
+SOURCE += wallShearStress/wallShearStress.C
+SOURCE += wallHeatFlux/wallHeatFlux.C
+
+SOURCE += wallHeatTransferCoeff/wallHeatTransferCoeff.C
+SOURCE += wallHeatTransferCoeff/wallHeatTransferCoeffModels/wallHeatTransferCoeffModel/wallHeatTransferCoeffModel.C
+SOURCE += wallHeatTransferCoeff/wallHeatTransferCoeffModels/kappaEff/kappaEff.C
+SOURCE += wallHeatTransferCoeff/wallHeatTransferCoeffModels/ReynoldsAnalogy/ReynoldsAnalogy.C
+
+SOURCE += writeCellCentres/writeCellCentres.C
+SOURCE += writeCellVolumes/writeCellVolumes.C
+
+SOURCE += XiReactionRate/XiReactionRate.C
+SOURCE += streamFunction/streamFunction.C
+
+SOURCE += fieldsExpression/fieldsExpression.C
+SOURCE += add/add.C
+SOURCE += subtract/subtract.C
+SOURCE += multiply/multiply.C
+SOURCE += divide/divide.C
+
+SOURCE += interfaceHeight/interfaceHeight.C
+
+SOURCE += age/age.C
+
+SOURCE += comfort/comfort.C
+
+SOURCE += cylindrical/cylindricalFunctionObject.C
+
+SOURCE += uniform/uniform.C
+
+SOURCE += layerAverage/layerAverage.C
+SOURCE += patchCutLayerAverage/patchCutLayerAverage.C
+
+LIB = $(FOAM_LIBBIN)/libfieldFunctionObjects

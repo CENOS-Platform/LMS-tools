@@ -1,0 +1,43 @@
+SOURCE += general/codedFvModel/codedFvModel.C
+SOURCE += general/semiImplicitSource/semiImplicitSource.C
+
+SOURCE += derived/actuationDiskSource/actuationDiskSource.C
+SOURCE += derived/effectivenessHeatExchangerSource/effectivenessHeatExchangerSource.C
+SOURCE += derived/explicitPorositySource/explicitPorositySource.C
+SOURCE += derived/radialActuationDiskSource/radialActuationDiskSource.C
+SOURCE += derived/rotorDiskSource/rotorDiskSource.C
+SOURCE += derived/rotorDiskSource/bladeModel/bladeModel.C
+SOURCE += derived/rotorDiskSource/profileModel/profileModel.C
+SOURCE += derived/rotorDiskSource/profileModel/profileModelList.C
+SOURCE += derived/rotorDiskSource/profileModel/lookup/lookupProfile.C
+SOURCE += derived/rotorDiskSource/profileModel/series/seriesProfile.C
+SOURCE += derived/rotorDiskSource/trimModel/trimModel/trimModel.C
+SOURCE += derived/rotorDiskSource/trimModel/trimModel/trimModelNew.C
+SOURCE += derived/rotorDiskSource/trimModel/fixed/fixedTrim.C
+SOURCE += derived/rotorDiskSource/trimModel/targetCoeff/targetCoeffTrim.C
+SOURCE += derived/solidificationMeltingSource/solidificationMeltingSource.C
+SOURCE += derived/sixDoFAccelerationSource/sixDoFAccelerationSource.C
+SOURCE += derived/buoyancyForce/buoyancyForce.C
+SOURCE += derived/buoyancyEnergy/buoyancyEnergy.C
+SOURCE += derived/phaseLimitStabilisation/phaseLimitStabilisation.C
+SOURCE += derived/accelerationSource/accelerationSource.C
+SOURCE += derived/volumeFractionSource/volumeFractionSource.C
+SOURCE += derived/solidEquilibriumEnergySource/solidEquilibriumEnergySource.C
+SOURCE += derived/massSource/massSource.C
+SOURCE += derived/heatSource/heatSource.C
+SOURCE += derived/heatTransfer/heatTransfer.C
+SOURCE += derived/zeroDimensionalMassSource/zeroDimensionalMassSource.C
+
+SOURCE += interRegion/interRegionModel/interRegionModel.C
+SOURCE += interRegion/interRegionExplicitPorositySource/interRegionExplicitPorositySource.C
+SOURCE += interRegion/interRegionHeatTransfer/interRegionHeatTransfer.C
+
+SOURCE += derived/heatTransfer/heatTransferAv/heatTransferAv.C
+
+SOURCE += derived/heatTransfer/heatTransferCoefficientModels/heatTransferCoefficientModel/heatTransferCoefficientModel.C
+SOURCE += derived/heatTransfer/heatTransferCoefficientModels/constant/constant.C
+SOURCE += derived/heatTransfer/heatTransferCoefficientModels/function1/function1.C
+SOURCE += derived/heatTransfer/heatTransferCoefficientModels/function2/function2.C
+SOURCE += derived/heatTransfer/heatTransferCoefficientModels/variable/variable.C
+
+LIB = $(FOAM_LIBBIN)/libfvModels

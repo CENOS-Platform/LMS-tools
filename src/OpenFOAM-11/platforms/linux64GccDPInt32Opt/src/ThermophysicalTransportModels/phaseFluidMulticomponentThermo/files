@@ -1,0 +1,3 @@
+SOURCE += phaseFluidMulticomponentThermophysicalTransportModels.C
+
+LIB = $(FOAM_LIBBIN)/libphaseFluidMulticomponentThermophysicalTransportModels

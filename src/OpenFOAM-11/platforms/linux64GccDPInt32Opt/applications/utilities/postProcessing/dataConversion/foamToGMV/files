@@ -1,0 +1,4 @@
+SOURCE += foamToGMV.C
+SOURCE += itoa.C
+
+EXE = $(FOAM_APPBIN)/foamToGMV

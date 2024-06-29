@@ -1,0 +1,12 @@
+SOURCE += meshingSurface.C
+SOURCE += meshingSurfaceList.C
+SOURCE += caseFileConfiguration.C
+SOURCE += blockMeshConfigurationBase.C
+SOURCE += blockMeshCartesianConfiguration.C
+SOURCE += blockMeshCylindricalConfiguration.C
+SOURCE += snappyHexMeshConfiguration.C
+SOURCE += meshQualityConfiguration.C
+SOURCE += surfaceFeaturesConfiguration.C
+SOURCE += snappyHexMeshConfig.C
+
+EXE = $(FOAM_APPBIN)/snappyHexMeshConfig

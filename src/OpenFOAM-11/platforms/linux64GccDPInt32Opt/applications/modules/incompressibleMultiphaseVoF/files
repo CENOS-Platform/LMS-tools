@@ -1,0 +1,7 @@
+SOURCE += incompressibleMultiphaseVoFMixture/incompressibleVoFphase/incompressibleVoFphase.C
+SOURCE += incompressibleMultiphaseVoFMixture/incompressibleMultiphaseVoFMixture.C
+SOURCE += alphaPredictor.C
+SOURCE += pressureCorrector.C
+SOURCE += incompressibleMultiphaseVoF.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleMultiphaseVoF

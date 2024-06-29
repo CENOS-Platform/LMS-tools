@@ -1,0 +1,4 @@
+SOURCE += cellSplitter.C
+SOURCE += modifyMesh.C
+
+EXE = $(FOAM_APPBIN)/modifyMesh

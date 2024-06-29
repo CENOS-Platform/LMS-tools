@@ -1,0 +1,7 @@
+SOURCE += cavitationModel/cavitationModel.C
+SOURCE += cavitationModel/cavitationModelNew.C
+SOURCE += Kunz/Kunz.C
+SOURCE += Merkle/Merkle.C
+SOURCE += SchnerrSauer/SchnerrSauer.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleCavitationModels

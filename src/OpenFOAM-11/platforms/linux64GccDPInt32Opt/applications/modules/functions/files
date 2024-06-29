@@ -1,0 +1,3 @@
+SOURCE += functions.C
+
+LIB = $(FOAM_LIBBIN)/libfunctions

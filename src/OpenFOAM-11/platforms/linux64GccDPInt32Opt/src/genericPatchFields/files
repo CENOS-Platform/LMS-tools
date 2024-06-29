@@ -1,0 +1,6 @@
+SOURCE += genericFvPatch/genericFvPatch.C
+SOURCE += genericPatchField/genericPatchField.C
+SOURCE += genericFvPatchField/genericFvPatchFields.C
+SOURCE += genericPointPatchField/genericPointPatchFields.C
+
+LIB = $(FOAM_LIBBIN)/libgenericPatchFields

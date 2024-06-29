@@ -1,0 +1,13 @@
+SOURCE += particle/particle.C
+SOURCE += particle/particleIO.C
+
+SOURCE += IOPosition/IOPositionName.C
+
+SOURCE += cloud/cloud.C
+
+SOURCE += passiveParticle/passiveParticleCloud.C
+SOURCE += indexedParticle/indexedParticleCloud.C
+
+SOURCE += InteractionLists/referredWallFace/referredWallFace.C
+
+LIB = $(FOAM_LIBBIN)/liblagrangian

@@ -1,0 +1,3 @@
+SOURCE += mergeBaffles.C
+
+EXE = $(FOAM_APPBIN)/mergeBaffles

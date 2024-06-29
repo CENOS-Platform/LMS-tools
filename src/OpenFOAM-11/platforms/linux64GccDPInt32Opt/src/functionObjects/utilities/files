@@ -1,0 +1,18 @@
+SOURCE += codedFunctionObject/codedFunctionObject.C
+SOURCE += residuals/residuals.C
+SOURCE += timeActivatedFileUpdate/timeActivatedFileUpdate.C
+SOURCE += timeStep/timeStepFunctionObject.C
+SOURCE += setTimeStep/setTimeStepFunctionObject.C
+SOURCE += setWriteInterval/setWriteIntervalFunctionObject.C
+SOURCE += systemCall/systemCall.C
+SOURCE += stopAt/stopAt.C
+SOURCE += stopAt/stopAtFile/stopAtFile.C
+SOURCE += stopAt/stopAtClockTime/stopAtClockTime.C
+SOURCE += stopAt/stopAtTimeStep/stopAtTimeStep.C
+SOURCE += removeRegisteredObject/removeRegisteredObject.C
+SOURCE += writeDictionary/writeDictionary.C
+SOURCE += writeObjects/writeObjects.C
+SOURCE += time/timeFunctionObject.C
+SOURCE += checkMesh/checkMesh.C
+
+LIB = $(FOAM_LIBBIN)/libutilityFunctionObjects

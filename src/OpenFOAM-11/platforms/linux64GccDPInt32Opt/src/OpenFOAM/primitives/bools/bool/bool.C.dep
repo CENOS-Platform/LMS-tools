@@ -1,0 +1,22 @@
+$(OBJECTS_DIR)/primitives/bools/bool/bool.C.dep: \
+primitives/bools/bool/bool.C \
+primitives/bools/bool/bool.H \
+lnInclude/word.H \
+lnInclude/pTraits.H \
+lnInclude/direction.H \
+lnInclude/string.H \
+lnInclude/wordI.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+primitives/bools/bool/bool.H :
+lnInclude/word.H :
+lnInclude/pTraits.H :
+lnInclude/direction.H :
+lnInclude/string.H :
+lnInclude/wordI.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

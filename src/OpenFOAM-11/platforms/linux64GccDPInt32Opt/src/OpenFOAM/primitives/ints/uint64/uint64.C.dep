@@ -1,0 +1,22 @@
+$(OBJECTS_DIR)/primitives/ints/uint64/uint64.C.dep: \
+primitives/ints/uint64/uint64.C \
+primitives/ints/uint64/uint64.H \
+lnInclude/word.H \
+lnInclude/pTraits.H \
+lnInclude/direction.H \
+lnInclude/string.H \
+lnInclude/wordI.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+primitives/ints/uint64/uint64.H :
+lnInclude/word.H :
+lnInclude/pTraits.H :
+lnInclude/direction.H :
+lnInclude/string.H :
+lnInclude/wordI.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

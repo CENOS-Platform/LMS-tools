@@ -1,0 +1,9 @@
+SOURCE += motionSolver/fvMeshMoversMotionSolver.C
+SOURCE += interpolator/fvMeshMoversInterpolator.C
+SOURCE += inkJet/fvMeshMoversInkJet.C
+SOURCE += engine/engine/fvMeshMoversEngine.C
+SOURCE += engine/layered/fvMeshMoversLayeredEngine.C
+SOURCE += engine/engineValve/engineValve.C
+SOURCE += engine/enginePiston/enginePiston.C
+
+LIB = $(FOAM_LIBBIN)/libfvMeshMovers

@@ -12,8 +12,18 @@ cd ../
 #Cleanup
 rm -rf elmer-build
 cd ../
+#Install ThirdParty-11 and OpenFOAM-11
+source $(pwd)/OpenFOAM-11/etc/bashrc
+cd ThirdParty-11
+./Allwmake
+cd ../
+cp -r ThirdParty-11/platforms src/ThirdParty-11/platforms
+cd OpenFOAM-11
+./Allwmake -j
+cd ../
+cp -r OpenFOAM-11/wmake/platforms src/OpenFOAM-11/wmake/platforms
+cp -r OpenFOAM-11/platforms src/OpenFOAM-11/platforms
 #Install EOF-Library
-source /opt/openfoam11/etc/bashrc
 export ELMER_HOME=$(pwd)/src/elmer-install/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
 export PATH=$PATH:$ELMER_HOME/bin

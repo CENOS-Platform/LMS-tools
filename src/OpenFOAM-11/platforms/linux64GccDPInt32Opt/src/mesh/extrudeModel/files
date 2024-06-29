@@ -1,0 +1,13 @@
+SOURCE += extrudeModel/extrudeModel.C
+SOURCE += extrudeModel/extrudeModelNew.C
+SOURCE += linearNormal/linearNormal.C
+SOURCE += planeExtrusion/planeExtrusion.C
+SOURCE += linearDirection/linearDirection.C
+SOURCE += linearRadial/linearRadial.C
+SOURCE += radial/radial.C
+SOURCE += sigmaRadial/sigmaRadial.C
+SOURCE += sector/sector.C
+SOURCE += cyclicSector/cyclicSector.C
+SOURCE += wedge/wedge.C
+
+LIB = $(FOAM_LIBBIN)/libextrudeModel

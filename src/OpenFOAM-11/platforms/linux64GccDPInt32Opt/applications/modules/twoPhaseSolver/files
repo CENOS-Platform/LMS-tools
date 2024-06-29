@@ -1,0 +1,6 @@
+SOURCE += twoPhaseVoFMixture/twoPhaseVoFMixture.C
+SOURCE += alphaPredictor.C
+SOURCE += pressureCorrector.C
+SOURCE += twoPhaseSolver.C
+
+LIB = $(FOAM_LIBBIN)/libtwoPhaseSolver

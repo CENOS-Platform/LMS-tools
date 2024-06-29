@@ -1,0 +1,3 @@
+SOURCE += splitBaffles.C
+
+EXE = $(FOAM_APPBIN)/splitBaffles

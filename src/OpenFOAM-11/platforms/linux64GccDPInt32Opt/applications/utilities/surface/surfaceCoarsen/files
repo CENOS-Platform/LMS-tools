@@ -1,0 +1,5 @@
+SOURCE += bunnylod/progmesh.C
+SOURCE += bunnylod/vector.C
+SOURCE += surfaceCoarsen.C
+
+EXE = $(FOAM_APPBIN)/surfaceCoarsen

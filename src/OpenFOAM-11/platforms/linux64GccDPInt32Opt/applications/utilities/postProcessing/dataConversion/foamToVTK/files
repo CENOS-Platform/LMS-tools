@@ -1,0 +1,3 @@
+SOURCE += foamToVTK.C
+
+EXE = $(FOAM_APPBIN)/foamToVTK

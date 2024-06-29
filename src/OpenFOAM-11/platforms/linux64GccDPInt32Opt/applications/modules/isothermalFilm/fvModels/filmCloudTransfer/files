@@ -1,0 +1,14 @@
+SOURCE += filmCloudTransfer.C
+SOURCE += ejectionModels/ejectionModel/ejectionModel.C
+SOURCE += ejectionModels/ejectionModel/ejectionModelNew.C
+SOURCE += ejectionModels/dripping/dripping.C
+SOURCE += ejectionModels/BrunDripping/BrunDripping.C
+SOURCE += ejectionModels/curvatureSeparation/curvatureSeparation.C
+
+SOURCE += cloudFilmTransfer/CloudFilmTransfer/CloudFilmTransferBase.C
+SOURCE += cloudFilmTransfer/makeThermoParcelCloudFilmTransfer.C
+SOURCE += cloudFilmTransfer/makeReactingParcelCloudFilmTransfer.C
+SOURCE += cloudFilmTransfer/makeReactingMultiphaseParcelCloudFilmTransfer.C
+SOURCE += cloudFilmTransfer/makeSprayParcelCloudFilmTransfer.C
+
+LIB = $(FOAM_LIBBIN)/libfilmCloudTransfer

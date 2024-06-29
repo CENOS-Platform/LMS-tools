@@ -1,0 +1,11 @@
+SOURCE += fluidThermophysicalTransportModel/fluidThermophysicalTransportModel.C
+
+BCs = derivedFvPatchFields
+SOURCE += $(BCs)/thermalBaffle1D/thermalBaffle1DFvPatchScalarFields.C
+SOURCE += $(BCs)/totalFlowRateAdvectiveDiffusive/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.C
+SOURCE += $(BCs)/externalCoupledTemperatureMixed/externalCoupledTemperatureMixedFvPatchScalarField.C
+SOURCE += $(BCs)/convectiveHeatTransfer/convectiveHeatTransferFvPatchScalarField.C
+SOURCE += $(BCs)/alphatWallFunctions/alphatWallFunction/alphatWallFunctionFvPatchScalarField.C
+SOURCE += $(BCs)/alphatWallFunctions/alphatJayatillekeWallFunction/alphatJayatillekeWallFunctionFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libfluidThermophysicalTransportModel

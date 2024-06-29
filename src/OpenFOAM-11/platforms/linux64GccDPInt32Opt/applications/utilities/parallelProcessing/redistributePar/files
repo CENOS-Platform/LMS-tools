@@ -1,0 +1,4 @@
+SOURCE += loadOrCreateMesh.C
+SOURCE += redistributePar.C
+
+EXE = $(FOAM_APPBIN)/redistributePar

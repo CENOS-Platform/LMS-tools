@@ -1,0 +1,25 @@
+SOURCE += signals/sigFpe.C
+SOURCE += signals/sigSegv.C
+SOURCE += signals/sigInt.C
+SOURCE += signals/sigQuit.C
+SOURCE += signals/sigStopAtWriteNow.C
+SOURCE += signals/sigWriteNow.C
+SOURCE += regExp.C
+SOURCE += timer.C
+SOURCE += fileStat.C
+SOURCE += POSIX.C
+SOURCE += cpuTime/cpuTime.C
+SOURCE += clockTime/clockTime.C
+SOURCE += memInfo/memInfo.C
+
+# Note: fileMonitor assumes inotify by default. Compile with -DFOAM_USE_STAT
+# to use stat (=timestamps) instead of inotify
+SOURCE += fileMonitor.C
+
+ifeq "$(WM_ARCH)" "SunOS64"
+    SOURCE += dummyPrintStack.C
+else
+    SOURCE += printStack.C
+endif
+
+LIB = $(FOAM_LIBBIN)/libOSspecific

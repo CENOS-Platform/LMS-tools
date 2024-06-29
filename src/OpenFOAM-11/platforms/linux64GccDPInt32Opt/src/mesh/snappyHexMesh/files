@@ -1,0 +1,30 @@
+SOURCE += snappyHexMeshDriver/snappyLayerDriver.C
+# snappyHexMeshDriver/snappyLayerDriverShrink.C
+SOURCE += snappyHexMeshDriver/snappySnapDriver.C
+SOURCE += snappyHexMeshDriver/snappySnapDriverFeature.C
+SOURCE += snappyHexMeshDriver/snappyRefineDriver.C
+
+SOURCE += snappyHexMeshDriver/layerParameters/layerParameters.C
+SOURCE += snappyHexMeshDriver/refinementParameters/refinementParameters.C
+SOURCE += snappyHexMeshDriver/snapParameters/snapParameters.C
+SOURCE += snappyHexMeshDriver/pointData/pointData.C
+
+SOURCE += meshRefinement/meshRefinementBaffles.C
+SOURCE += meshRefinement/meshRefinement.C
+SOURCE += meshRefinement/meshRefinementMerge.C
+SOURCE += meshRefinement/meshRefinementProblemCells.C
+SOURCE += meshRefinement/meshRefinementRefine.C
+SOURCE += meshRefinement/patchFaceOrientation.C
+
+SOURCE += refinementFeatures/refinementFeatures.C
+SOURCE += refinementSurfaces/surfaceZonesInfo.C
+SOURCE += refinementSurfaces/refinementSurfaces.C
+SOURCE += refinementRegions/refinementRegions.C
+SOURCE += trackedParticle/trackedParticle.C
+
+SOURCE += externalDisplacementMeshMover/displacementMeshMoverMotionSolver.C
+SOURCE += externalDisplacementMeshMover/externalDisplacementMeshMover.C
+SOURCE += externalDisplacementMeshMover/medialAxisMeshMover.C
+SOURCE += externalDisplacementMeshMover/zeroFixedValue/zeroFixedValuePointPatchFields.C
+
+LIB = $(FOAM_LIBBIN)/libsnappyHexMesh

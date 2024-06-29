@@ -1,0 +1,14 @@
+SOURCE += Kmesh/Kmesh.C
+
+SOURCE += fft/fft.C
+SOURCE += fft/fftRenumber.C
+SOURCE += fft/writeEk.C
+SOURCE += fft/kShellIntegration.C
+
+SOURCE += processes/UOprocess/UOprocess.C
+
+SOURCE += turbulence/turbGen.C
+
+SOURCE += noise/noiseFFT.C
+
+LIB = $(FOAM_LIBBIN)/librandomProcesses

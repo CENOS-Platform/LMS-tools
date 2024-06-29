@@ -1,0 +1,6 @@
+SOURCE += extrudedTriangleCellShape.C
+SOURCE += extrudedQuadCellShape.C
+SOURCE += create3DCellShape.C
+SOURCE += fluentMeshToFoam.L
+
+EXE = $(FOAM_APPBIN)/fluentMeshToFoam
