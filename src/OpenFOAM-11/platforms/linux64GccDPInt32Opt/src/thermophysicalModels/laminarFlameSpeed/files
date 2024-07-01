@@ -1,0 +1,8 @@
+SOURCE += laminarFlameSpeed/laminarFlameSpeed.C
+SOURCE += laminarFlameSpeed/laminarFlameSpeedNew.C
+SOURCE += constant/constant.C
+SOURCE += Gulders/Gulders.C
+SOURCE += GuldersEGR/GuldersEGR.C
+SOURCE += RaviPetersen/RaviPetersen.C
+
+LIB = $(FOAM_LIBBIN)/liblaminarFlameSpeedModels

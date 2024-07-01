@@ -1,0 +1,3 @@
+SOURCE += fluidSolver.C
+
+LIB = $(FOAM_LIBBIN)/libfluidSolver

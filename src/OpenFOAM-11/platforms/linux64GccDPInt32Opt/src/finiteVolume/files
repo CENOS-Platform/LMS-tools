@@ -1,0 +1,526 @@
+SOURCE += fvMesh/fvMeshGeometry.C
+SOURCE += fvMesh/fvMesh.C
+
+SOURCE += fvMesh/singleCellFvMesh/singleCellFvMesh.C
+
+SOURCE += fvMesh/zeroDimensionalFvMesh/zeroDimensionalFvMesh.C
+
+SOURCE += fvMesh/fvCellSet/fvCellSet.C
+
+fvBoundaryMesh = fvMesh/fvBoundaryMesh
+SOURCE += $(fvBoundaryMesh)/fvBoundaryMesh.C
+
+fvPatches = fvMesh/fvPatches
+SOURCE += $(fvPatches)/fvPatch/fvPatch.C
+SOURCE += $(fvPatches)/fvPatch/fvPatchNew.C
+
+basicFvPatches = $(fvPatches)/basic
+SOURCE += $(basicFvPatches)/coupled/coupledFvPatch.C
+
+constraintFvPatches = $(fvPatches)/constraint
+SOURCE += $(constraintFvPatches)/cyclic/cyclicFvPatch.C
+SOURCE += $(constraintFvPatches)/cyclicSlip/cyclicSlipFvPatch.C
+SOURCE += $(constraintFvPatches)/empty/emptyFvPatch.C
+SOURCE += $(constraintFvPatches)/processor/processorFvPatch.C
+SOURCE += $(constraintFvPatches)/processorCyclic/processorCyclicFvPatch.C
+SOURCE += $(constraintFvPatches)/symmetryPlane/symmetryPlaneFvPatch.C
+SOURCE += $(constraintFvPatches)/symmetry/symmetryFvPatch.C
+SOURCE += $(constraintFvPatches)/wedge/wedgeFvPatch.C
+SOURCE += $(constraintFvPatches)/internal/internalFvPatch.C
+SOURCE += $(constraintFvPatches)/nonConformal/nonConformalFvPatch.C
+SOURCE += $(constraintFvPatches)/nonConformalCoupled/nonConformalCoupledFvPatch.C
+SOURCE += $(constraintFvPatches)/nonConformalCyclic/nonConformalCyclicFvPatch.C
+SOURCE += $(constraintFvPatches)/nonConformalError/nonConformalErrorFvPatch.C
+SOURCE += $(constraintFvPatches)/nonConformalProcessorCyclic/nonConformalProcessorCyclicFvPatch.C
+
+derivedFvPatches = $(fvPatches)/derived
+SOURCE += $(derivedFvPatches)/wall/wallFvPatch.C
+SOURCE += $(derivedFvPatches)/mapped/mappedFvPatch.C
+SOURCE += $(derivedFvPatches)/mapped/mappedWallFvPatch.C
+SOURCE += $(derivedFvPatches)/mapped/mappedExtrudedWallFvPatch.C
+SOURCE += $(derivedFvPatches)/mapped/mappedInternalFvPatch.C
+
+
+meshWave = algorithms/FvFaceCellWave
+SOURCE += $(meshWave)/FvFaceCellWaveName.C
+
+
+wallDist = fvMesh/wallDist
+SOURCE += $(wallDist)/fvPatchDistWave/fvPatchDistWave.C
+SOURCE += $(wallDist)/nearWallDist/nearWallDist.C
+SOURCE += $(wallDist)/wallDist/wallDist.C
+SOURCE += $(wallDist)/patchDistMethods/patchDistMethod/patchDistMethod.C
+SOURCE += $(wallDist)/patchDistMethods/meshWave/meshWavePatchDistMethod.C
+SOURCE += $(wallDist)/patchDistMethods/Poisson/PoissonPatchDistMethod.C
+SOURCE += $(wallDist)/patchDistMethods/advectionDiffusion/advectionDiffusionPatchDistMethod.C
+
+
+fvMeshMapper = fvMesh/fvMeshMapper
+SOURCE += $(fvMeshMapper)/fvPatchMapper.C
+SOURCE += $(fvMeshMapper)/fvSurfaceMapper.C
+
+
+extendedStencil = fvMesh/extendedStencil
+
+cellToCell = $(extendedStencil)/cellToCell
+SOURCE += $(cellToCell)/extendedCellToCellStencil.C
+SOURCE += $(cellToCell)/extendedCentredCellToCellStencil.C
+SOURCE += $(cellToCell)/globalIndexStencils/cellToCellStencil.C
+SOURCE += $(cellToCell)/globalIndexStencils/CFCCellToCellStencil.C
+SOURCE += $(cellToCell)/globalIndexStencils/CPCCellToCellStencil.C
+SOURCE += $(cellToCell)/globalIndexStencils/CECCellToCellStencil.C
+SOURCE += $(cellToCell)/MeshObjects/centredCECCellToCellStencilObject.C
+SOURCE += $(cellToCell)/MeshObjects/centredCFCCellToCellStencilObject.C
+SOURCE += $(cellToCell)/MeshObjects/centredCPCCellToCellStencilObject.C
+
+cellToFace = $(extendedStencil)/cellToFace
+SOURCE += $(cellToFace)/globalIndexStencils/cellToFaceStencil.C
+SOURCE += $(cellToFace)/globalIndexStencils/CFCCellToFaceStencil.C
+SOURCE += $(cellToFace)/globalIndexStencils/CECCellToFaceStencil.C
+SOURCE += $(cellToFace)/globalIndexStencils/CPCCellToFaceStencil.C
+SOURCE += $(cellToFace)/globalIndexStencils/FECCellToFaceStencil.C
+SOURCE += $(cellToFace)/extendedCellToFaceStencil.C
+SOURCE += $(cellToFace)/extendedCentredCellToFaceStencil.C
+SOURCE += $(cellToFace)/extendedUpwindCellToFaceStencil.C
+SOURCE += $(cellToFace)/MeshObjects/centredCECCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/centredCFCCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/centredCPCCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/centredFECCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/upwindCECCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/upwindCFCCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/upwindCPCCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/upwindFECCellToFaceStencilObject.C
+SOURCE += $(cellToFace)/MeshObjects/pureUpwindCFCCellToFaceStencilObject.C
+
+faceToCell = $(extendedStencil)/faceToCell
+SOURCE += $(faceToCell)/globalIndexStencils/faceToCellStencil.C
+SOURCE += $(faceToCell)/globalIndexStencils/CFCFaceToCellStencil.C
+SOURCE += $(faceToCell)/extendedFaceToCellStencil.C
+SOURCE += $(faceToCell)/extendedCentredFaceToCellStencil.C
+SOURCE += $(faceToCell)/MeshObjects/centredCFCFaceToCellStencilObject.C
+
+fvMeshTopoChangers = fvMesh/fvMeshTopoChangers
+
+SOURCE += $(fvMeshTopoChangers)/fvMeshTopoChanger/fvMeshTopoChanger.C
+SOURCE += $(fvMeshTopoChangers)/fvMeshTopoChanger/fvMeshTopoChangerNew.C
+SOURCE += $(fvMeshTopoChangers)/none/fvMeshTopoChangersNone.C
+SOURCE += $(fvMeshTopoChangers)/list/fvMeshTopoChangersList.C
+
+fvMeshDistributors = fvMesh/fvMeshDistributors
+
+SOURCE += $(fvMeshDistributors)/fvMeshDistributor/fvMeshDistributor.C
+SOURCE += $(fvMeshDistributors)/fvMeshDistributor/fvMeshDistributorNew.C
+SOURCE += $(fvMeshDistributors)/none/fvMeshDistributorsNone.C
+SOURCE += $(fvMeshDistributors)/cpuLoad/cpuLoad.C
+
+fvMeshMovers = fvMesh/fvMeshMovers
+
+SOURCE += $(fvMeshMovers)/fvMeshMover/fvMeshMover.C
+SOURCE += $(fvMeshMovers)/fvMeshMover/fvMeshMoverNew.C
+SOURCE += $(fvMeshMovers)/none/fvMeshMoversNone.C
+
+fvMeshStitchers = fvMesh/fvMeshStitchers
+
+SOURCE += $(fvMeshStitchers)/fvMeshStitcher/fvMeshStitcher.C
+SOURCE += $(fvMeshStitchers)/fvMeshStitcher/fvMeshStitcherNew.C
+SOURCE += $(fvMeshStitchers)/stationary/fvMeshStitchersStationary.C
+
+SOURCE += functionObjects/fvMeshFunctionObject/fvMeshFunctionObject.C
+SOURCE += functionObjects/fvModelFunctionObject/fvModelFunctionObject.C
+
+fvPatchFields = fields/fvPatchFields
+SOURCE += $(fvPatchFields)/fvPatchField/fvPatchFields.C
+
+basicFvPatchFields = $(fvPatchFields)/basic
+SOURCE += $(basicFvPatchFields)/basicSymmetry/basicSymmetryFvPatchScalarField.C
+SOURCE += $(basicFvPatchFields)/calculated/calculatedFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/extrapolatedCalculated/extrapolatedCalculatedFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/coupled/coupledFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/directionMixed/directionMixedFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/fixedGradient/fixedGradientFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/fixedValue/fixedValueFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/mixed/mixedFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/sliced/slicedFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/transform/transformFvPatchFields.C
+SOURCE += $(basicFvPatchFields)/transform/transformFvPatchScalarField.C
+SOURCE += $(basicFvPatchFields)/zeroGradient/zeroGradientFvPatchFields.C
+
+constraintFvPatchFields = $(fvPatchFields)/constraint
+SOURCE += $(constraintFvPatchFields)/cyclic/cyclicFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/cyclicSlip/cyclicSlipFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/empty/emptyFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/jumpCyclic/jumpCyclicFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/processor/processorFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/processor/processorFvPatchScalarField.C
+SOURCE += $(constraintFvPatchFields)/processorCyclic/processorCyclicFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/symmetryPlane/symmetryPlaneFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/symmetryPlane/symmetryPlaneFvPatchScalarField.C
+SOURCE += $(constraintFvPatchFields)/symmetry/symmetryFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/wedge/wedgeFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/wedge/wedgeFvPatchScalarField.C
+SOURCE += $(constraintFvPatchFields)/internal/internalFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/nonConformalCyclic/nonConformalCyclicFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/nonConformalError/nonConformalErrorFvPatchFields.C
+SOURCE += $(constraintFvPatchFields)/nonConformalProcessorCyclic/nonConformalProcessorCyclicFvPatchFields.C
+
+derivedFvPatchFields = $(fvPatchFields)/derived
+SOURCE += $(derivedFvPatchFields)/activeBaffleVelocity/activeBaffleVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/activePressureForceBaffleVelocity/activePressureForceBaffleVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/advective/advectiveFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/codedFixedValue/codedFixedValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/codedMixed/codedMixedFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/cylindricalInletVelocity/cylindricalInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/externalCoupledMixed/externalCoupledMixedFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fanPressureJump/fanPressureJumpFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/fanPressure/fanPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/fixedFluxPressure/fixedFluxPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/fixedFluxExtrapolatedPressure/fixedFluxExtrapolatedPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/fixedInternalValue/fixedInternalValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fixedJump/fixedJumpFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fixedMean/fixedMeanFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fixedNormalSlip/fixedNormalSlipFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fixedPressureCompressibleDensity/fixedPressureCompressibleDensityFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/flowRateInletVelocity/flowRateInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/flowRateInletVelocity/laminarBL/laminarBL.C
+SOURCE += $(derivedFvPatchFields)/flowRateInletVelocity/turbulentBL/turbulentBL.C
+SOURCE += $(derivedFvPatchFields)/flowRateOutletVelocity/flowRateOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/fluxCorrectedVelocity/fluxCorrectedVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/freestream/freestreamFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/freestreamVelocity/freestreamVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/freestreamPressure/freestreamPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/inletOutlet/inletOutletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/zeroInletOutlet/zeroInletOutletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/inletOutletTotalTemperature/inletOutletTotalTemperatureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/mappedFlowRateVelocity/mappedFlowRateVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/mappedInternalValue/mappedInternalValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/mapped/mappedFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/mappedValue/mappedValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/mappedValueAndPatchInternalValue/mappedValueAndPatchInternalValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/mappedVelocityFlux/mappedVelocityFluxFvPatchField.C
+SOURCE += $(derivedFvPatchFields)/matchedFlowRateOutletVelocity/matchedFlowRateOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/noSlip/noSlipFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/movingWallVelocity/movingWallVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/movingWallSlipVelocity/movingWallSlipVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/outletInlet/outletInletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/outletMappedUniformInlet/outletMappedUniformInletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/fixedMeanOutletInlet/fixedMeanOutletInletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/partialSlip/partialSlipFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/phaseHydrostaticPressure/phaseHydrostaticPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/pressureDirectedInletOutletVelocity/pressureDirectedInletOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureDirectedInletVelocity/pressureDirectedInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureInletOutletParSlipVelocity/pressureInletOutletParSlipVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureInletOutletVelocity/pressureInletOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureInletUniformVelocity/pressureInletUniformVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureInletVelocity/pressureInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/pressureNormalInletOutletVelocity/pressureNormalInletOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/fixedNormalInletOutletVelocity/fixedNormalInletOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/rotatingPressureInletOutletVelocity/rotatingPressureInletOutletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/rotatingTotalPressure/rotatingTotalPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/rotatingWallVelocity/rotatingWallVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/slip/slipFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/supersonicFreestream/supersonicFreestreamFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/surfaceNormalFixedValue/surfaceNormalFixedValueFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/surfaceNormalUniformFixedValue/surfaceNormalUniformFixedValueFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/swirlFlowRateInletVelocity/swirlFlowRateInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/swirlInletVelocity/swirlInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/syringePressure/syringePressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/timeVaryingMappedFixedValue/timeVaryingMappedFvPatchField/timeVaryingMapped.C
+SOURCE += $(derivedFvPatchFields)/timeVaryingMappedFixedValue/timeVaryingMappedFixedValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/dynamicPressure/dynamicPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/totalPressure/totalPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/entrainmentPressure/entrainmentPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/totalTemperature/totalTemperatureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/translatingWallVelocity/translatingWallVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/turbulentInlet/turbulentInletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/turbulentIntensityKineticEnergyInlet/turbulentIntensityKineticEnergyInletFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/uniformDensityHydrostaticPressure/uniformDensityHydrostaticPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/uniformFixedGradient/uniformFixedGradientFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/uniformFixedValue/uniformFixedValueFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/uniformInletOutlet/uniformInletOutletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/uniformJump/uniformJumpFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/uniformTotalPressure/uniformTotalPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/variableHeightFlowRate/variableHeightFlowRateFvPatchField.C
+SOURCE += $(derivedFvPatchFields)/variableHeightFlowRateInletVelocity/variableHeightFlowRateInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/outletPhaseMeanVelocity/outletPhaseMeanVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/waveTransmissive/waveTransmissiveFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/waveSurfacePressure/waveSurfacePressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/interstitialInletVelocity/interstitialInletVelocityFvPatchVectorField.C
+SOURCE += $(derivedFvPatchFields)/fixedProfile/fixedProfileFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/plenumPressure/plenumPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/interfaceCompression/interfaceCompressionFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/pressure/pressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/PrghPressure/prghPressureFvPatchScalarFields.C
+SOURCE += $(derivedFvPatchFields)/prghTotalHydrostaticPressure/prghTotalHydrostaticPressureFvPatchScalarField.C
+SOURCE += $(derivedFvPatchFields)/fixedValueInletOutlet/fixedValueInletOutletFvPatchFields.C
+SOURCE += $(derivedFvPatchFields)/transonicEntrainmentPressure/transonicEntrainmentPressureFvPatchScalarField.C
+
+fvsPatchFields = fields/fvsPatchFields
+SOURCE += $(fvsPatchFields)/fvsPatchField/fvsPatchFields.C
+
+basicFvsPatchFields = $(fvsPatchFields)/basic
+SOURCE += $(basicFvsPatchFields)/calculated/calculatedFvsPatchFields.C
+SOURCE += $(basicFvsPatchFields)/coupled/coupledFvsPatchFields.C
+SOURCE += $(basicFvsPatchFields)/fixedValue/fixedValueFvsPatchFields.C
+SOURCE += $(basicFvsPatchFields)/sliced/slicedFvsPatchFields.C
+
+constraintFvsPatchFields = $(fvsPatchFields)/constraint
+SOURCE += $(constraintFvsPatchFields)/cyclic/cyclicFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/cyclicSlip/cyclicSlipFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/empty/emptyFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/processor/processorFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/processorCyclic/processorCyclicFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/symmetryPlane/symmetryPlaneFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/symmetry/symmetryFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/wedge/wedgeFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/internal/internalFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/nonConformalCyclic/nonConformalCyclicFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/nonConformalError/nonConformalErrorFvsPatchFields.C
+SOURCE += $(constraintFvsPatchFields)/nonConformalProcessorCyclic/nonConformalProcessorCyclicFvsPatchFields.C
+
+derivedFvsPatchFields = $(fvsPatchFields)/derived
+SOURCE += $(derivedFvsPatchFields)/polyFaces/polyFacesFvsPatchLabelField.C
+SOURCE += $(derivedFvsPatchFields)/nonConformalPolyFaces/nonConformalPolyFacesFvsPatchLabelField.C
+
+SOURCE += fields/volFields/volFields.C
+SOURCE += fields/surfaceFields/surfaceFields.C
+
+SOURCE += fvMatrices/fvMatrices.C
+SOURCE += fvMatrices/fvScalarMatrix/fvScalarMatrix.C
+SOURCE += fvMatrices/solvers/MULES/MULES.C
+SOURCE += fvMatrices/solvers/GAMGSymSolver/GAMGAgglomerations/faceAreaPairGAMGAgglomeration/faceAreaPairGAMGAgglomeration.C
+
+interpolation = interpolation/interpolation
+SOURCE += $(interpolation)/interpolation/interpolations.C
+
+SOURCE += $(interpolation)/interpolationCell/makeInterpolationCell.C
+SOURCE += $(interpolation)/interpolationCellPatchConstrained/makeInterpolationCellPatchConstrained.C
+SOURCE += $(interpolation)/interpolationVolPointInterpolation/makeInterpolationVolPointInterpolation.C
+SOURCE += $(interpolation)/interpolationCellPoint/cellPointWeight/cellPointWeight.C
+SOURCE += $(interpolation)/interpolationCellPoint/makeInterpolationCellPoint.C
+SOURCE += $(interpolation)/interpolationCellPointFace/makeInterpolationCellPointFace.C
+SOURCE += $(interpolation)/interpolationCellPointWallModified/makeInterpolationCellPointWallModified.C
+SOURCE += $(interpolation)/interpolationPointMVC/pointMVCWeight.C
+SOURCE += $(interpolation)/interpolationPointMVC/makeInterpolationPointMVC.C
+
+volPointInterpolation = interpolation/volPointInterpolation
+SOURCE += $(volPointInterpolation)/volPointInterpolation.C
+SOURCE += $(volPointInterpolation)/pointConstraints.C
+
+surfaceInterpolation = interpolation/surfaceInterpolation
+SOURCE += $(surfaceInterpolation)/surfaceInterpolation/surfaceInterpolation.C
+SOURCE += $(surfaceInterpolation)/surfaceInterpolationScheme/surfaceInterpolationSchemes.C
+
+SOURCE += $(surfaceInterpolation)/blendedSchemeBase/blendedSchemeBaseName.C
+
+schemes = $(surfaceInterpolation)/schemes
+SOURCE += $(schemes)/linear/linear.C
+SOURCE += $(schemes)/pointLinear/pointLinear.C
+SOURCE += $(schemes)/midPoint/midPoint.C
+SOURCE += $(schemes)/downwind/downwind.C
+SOURCE += $(schemes)/weighted/weighted.C
+SOURCE += $(schemes)/cubic/cubic.C
+SOURCE += $(schemes)/skewCorrected/skewCorrectionVectors.C
+SOURCE += $(schemes)/skewCorrected/skewCorrected.C
+SOURCE += $(schemes)/outletStabilised/outletStabilised.C
+SOURCE += $(schemes)/phaseStabilised/phaseStabilised.C
+SOURCE += $(schemes)/reverseLinear/reverseLinear.C
+SOURCE += $(schemes)/clippedLinear/clippedLinear.C
+SOURCE += $(schemes)/harmonic/harmonic.C
+SOURCE += $(schemes)/fixedBlended/fixedBlended.C
+SOURCE += $(schemes)/localBlended/localBlended.C
+SOURCE += $(schemes)/limiterBlended/limiterBlended.C
+SOURCE += $(schemes)/CoBlended/CoBlended.C
+SOURCE += $(schemes)/cellCoBlended/cellCoBlended.C
+SOURCE += $(schemes)/deferred/deferred.C
+SOURCE += $(schemes)/localMax/localMax.C
+SOURCE += $(schemes)/localMin/localMin.C
+
+SOURCE += $(schemes)/linearFit/linearFit.C
+SOURCE += $(schemes)/biLinearFit/biLinearFit.C
+SOURCE += $(schemes)/quadraticLinearFit/quadraticLinearFit.C
+SOURCE += $(schemes)/quadraticFit/quadraticFit.C
+
+SOURCE += $(schemes)/quadraticLinearUpwindFit/quadraticLinearUpwindFit.C
+SOURCE += $(schemes)/quadraticUpwindFit/quadraticUpwindFit.C
+SOURCE += $(schemes)/cubicUpwindFit/cubicUpwindFit.C
+# $(schemes)/quadraticLinearPureUpwindFit/quadraticLinearPureUpwindFit.C
+SOURCE += $(schemes)/linearPureUpwindFit/linearPureUpwindFit.C
+SOURCE += $(schemes)/linearUpwind/linearUpwind.C
+SOURCE += $(schemes)/linearUpwind/linearUpwindV.C
+SOURCE += $(schemes)/LUST/LUST.C
+
+limitedSchemes = $(surfaceInterpolation)/limitedSchemes
+SOURCE += $(limitedSchemes)/limitedSurfaceInterpolationScheme/limitedSurfaceInterpolationSchemes.C
+SOURCE += $(limitedSchemes)/upwind/upwind.C
+SOURCE += $(limitedSchemes)/blended/blended.C
+SOURCE += $(limitedSchemes)/Gamma/Gamma.C
+SOURCE += $(limitedSchemes)/SFCD/SFCD.C
+SOURCE += $(limitedSchemes)/Minmod/Minmod.C
+SOURCE += $(limitedSchemes)/vanLeer/vanLeer.C
+SOURCE += $(limitedSchemes)/vanAlbada/vanAlbada.C
+SOURCE += $(limitedSchemes)/OSPRE/OSPRE.C
+SOURCE += $(limitedSchemes)/limitedLinear/limitedLinear.C
+SOURCE += $(limitedSchemes)/limitedCubic/limitedCubic.C
+SOURCE += $(limitedSchemes)/SuperBee/SuperBee.C
+SOURCE += $(limitedSchemes)/QUICK/QUICK.C
+SOURCE += $(limitedSchemes)/MUSCL/MUSCL.C
+SOURCE += $(limitedSchemes)/UMIST/UMIST.C
+SOURCE += $(limitedSchemes)/Phi/Phi.C
+SOURCE += $(limitedSchemes)/filteredLinear/filteredLinear.C
+SOURCE += $(limitedSchemes)/filteredLinear2/filteredLinear2.C
+SOURCE += $(limitedSchemes)/filteredLinear3/filteredLinear3.C
+SOURCE += $(limitedSchemes)/limitWith/limitWith.C
+
+multivariateSchemes = $(surfaceInterpolation)/multivariateSchemes
+SOURCE += $(multivariateSchemes)/multivariateSurfaceInterpolationScheme/multivariateSurfaceInterpolationSchemes.C
+SOURCE += $(multivariateSchemes)/multivariateSelectionScheme/multivariateSelectionSchemes.C
+SOURCE += $(multivariateSchemes)/multivariateIndependentScheme/multivariateIndependentSchemes.C
+SOURCE += $(multivariateSchemes)/upwind/multivariateUpwind.C
+SOURCE += $(multivariateSchemes)/Gamma/multivariateGamma.C
+SOURCE += $(multivariateSchemes)/vanLeer/multivariateVanLeer.C
+SOURCE += $(multivariateSchemes)/Minmod/multivariateMinmod.C
+SOURCE += $(multivariateSchemes)/SuperBee/multivariateSuperBee.C
+SOURCE += $(multivariateSchemes)/MUSCL/multivariateMUSCL.C
+SOURCE += $(multivariateSchemes)/limitedLinear/multivariateLimitedLinear.C
+SOURCE += $(multivariateSchemes)/limitedCubic/multivariateLimitedCubic.C
+
+SOURCE += finiteVolume/fv/fv.C
+SOURCE += finiteVolume/fvSchemes/fvSchemes.C
+
+ddtSchemes = finiteVolume/ddtSchemes
+SOURCE += $(ddtSchemes)/ddtScheme/ddtSchemes.C
+SOURCE += $(ddtSchemes)/steadyStateDdtScheme/steadyStateDdtSchemes.C
+SOURCE += $(ddtSchemes)/EulerDdtScheme/EulerDdtSchemes.C
+SOURCE += $(ddtSchemes)/CoEulerDdtScheme/CoEulerDdtSchemes.C
+SOURCE += $(ddtSchemes)/SLTSDdtScheme/SLTSDdtSchemes.C
+SOURCE += $(ddtSchemes)/localEulerDdtScheme/localEulerDdt.C
+SOURCE += $(ddtSchemes)/localEulerDdtScheme/localEulerDdtSchemes.C
+SOURCE += $(ddtSchemes)/backwardDdtScheme/backwardDdtSchemes.C
+SOURCE += $(ddtSchemes)/CrankNicolsonDdtScheme/CrankNicolsonDdtSchemes.C
+SOURCE += $(ddtSchemes)/boundedDdtScheme/boundedDdtSchemes.C
+
+d2dt2Schemes = finiteVolume/d2dt2Schemes
+SOURCE += $(d2dt2Schemes)/d2dt2Scheme/d2dt2Schemes.C
+SOURCE += $(d2dt2Schemes)/steadyStateD2dt2Scheme/steadyStateD2dt2Schemes.C
+SOURCE += $(d2dt2Schemes)/EulerD2dt2Scheme/EulerD2dt2Schemes.C
+
+divSchemes = finiteVolume/divSchemes
+SOURCE += $(divSchemes)/divScheme/divSchemes.C
+SOURCE += $(divSchemes)/gaussDivScheme/gaussDivSchemes.C
+
+gradSchemes = finiteVolume/gradSchemes
+SOURCE += $(gradSchemes)/gradScheme/gradSchemes.C
+SOURCE += $(gradSchemes)/gaussGrad/gaussGrads.C
+
+SOURCE += $(gradSchemes)/leastSquaresGrad/leastSquaresVectors.C
+SOURCE += $(gradSchemes)/leastSquaresGrad/leastSquaresGrads.C
+SOURCE += $(gradSchemes)/LeastSquaresGrad/LeastSquaresGrads.C
+SOURCE += $(gradSchemes)/fourthGrad/fourthGrads.C
+
+limitedGradSchemes = $(gradSchemes)/limitedGradSchemes
+SOURCE += $(limitedGradSchemes)/faceLimitedGrad/faceLimitedGrads.C
+SOURCE += $(limitedGradSchemes)/cellLimitedGrad/cellLimitedGrads.C
+SOURCE += $(limitedGradSchemes)/faceMDLimitedGrad/faceMDLimitedGrads.C
+SOURCE += $(limitedGradSchemes)/cellMDLimitedGrad/cellMDLimitedGrads.C
+
+snGradSchemes = finiteVolume/snGradSchemes
+SOURCE += $(snGradSchemes)/snGradScheme/snGradSchemes.C
+SOURCE += $(snGradSchemes)/correctedSnGrad/correctedSnGrads.C
+SOURCE += $(snGradSchemes)/faceCorrectedSnGrad/faceCorrectedSnGrads.C
+SOURCE += $(snGradSchemes)/limitedSnGrad/limitedSnGrads.C
+SOURCE += $(snGradSchemes)/uncorrectedSnGrad/uncorrectedSnGrads.C
+SOURCE += $(snGradSchemes)/orthogonalSnGrad/orthogonalSnGrads.C
+SOURCE += $(snGradSchemes)/quadraticFitSnGrad/quadraticFitSnGrads.C
+SOURCE += $(snGradSchemes)/linearFitSnGrad/linearFitSnGrads.C
+SOURCE += $(snGradSchemes)/phaseStabilisedSnGrad/phaseStabilisedSnGrads.C
+
+convectionSchemes = finiteVolume/convectionSchemes
+SOURCE += $(convectionSchemes)/convectionScheme/convectionSchemes.C
+SOURCE += $(convectionSchemes)/gaussConvectionScheme/gaussConvectionSchemes.C
+SOURCE += $(convectionSchemes)/multivariateGaussConvectionScheme/multivariateGaussConvectionSchemes.C
+SOURCE += $(convectionSchemes)/boundedConvectionScheme/boundedConvectionSchemes.C
+
+laplacianSchemes = finiteVolume/laplacianSchemes
+SOURCE += $(laplacianSchemes)/laplacianScheme/laplacianSchemes.C
+SOURCE += $(laplacianSchemes)/gaussLaplacianScheme/gaussLaplacianSchemes.C
+
+SOURCE += finiteVolume/fvc/fvcMeshPhi.C
+SOURCE += finiteVolume/fvc/fvcSmooth/fvcSmooth.C
+SOURCE += finiteVolume/fvc/fvcReconstructMag.C
+
+general = cfdTools/general
+SOURCE += $(general)/findRefCell/findRefCell.C
+SOURCE += $(general)/constrainHbyA/constrainHbyA.C
+SOURCE += $(general)/adjustPhi/adjustPhi.C
+SOURCE += $(general)/bound/bound.C
+SOURCE += $(general)/correctPhi/fvCorrectPhi.C
+SOURCE += $(general)/correctPhi/correctUphiBCs.C
+SOURCE += $(general)/pressureReference/pressureReference.C
+SOURCE += $(general)/levelSet/levelSet.C
+SOURCE += $(general)/surfaceToVolVelocity/surfaceToVolVelocity.C
+SOURCE += $(general)/buoyancy/buoyancy.C
+
+solutionControl = $(general)/solutionControl
+SOURCE += $(solutionControl)/solutionControl/solutionControl/solutionControl.C
+SOURCE += $(solutionControl)/solutionControl/singleRegionSolutionControl/singleRegionSolutionControl.C
+SOURCE += $(solutionControl)/solutionControl/multiRegionSolutionControl/multiRegionSolutionControl.C
+SOURCE += $(solutionControl)/solutionControl/nonOrthogonalSolutionControl/nonOrthogonalSolutionControl.C
+SOURCE += $(solutionControl)/solutionControl/fluidSolutionControl/fluidSolutionControl.C
+SOURCE += $(solutionControl)/simpleControl/simpleControl.C
+SOURCE += $(solutionControl)/pisoControl/pisoControl.C
+
+pimpleControl = $(solutionControl)/pimpleControl
+SOURCE += $(pimpleControl)/pimpleControl/pimpleControl.C
+SOURCE += $(pimpleControl)/pimpleNoLoopControl/pimpleNoLoopControl.C
+SOURCE += $(pimpleControl)/pimpleLoop/pimpleLoop.C
+SOURCE += $(pimpleControl)/pimpleSingleRegionControl/pimpleSingleRegionControl.C
+SOURCE += $(pimpleControl)/pimpleMultiRegionControl/pimpleMultiRegionControl.C
+
+convergenceControl = $(solutionControl)/convergenceControl
+SOURCE += $(convergenceControl)/convergenceControl/convergenceControl.C
+SOURCE += $(convergenceControl)/singleRegionConvergenceControl/singleRegionConvergenceControl.C
+SOURCE += $(convergenceControl)/correctorConvergenceControl/correctorConvergenceControl.C
+SOURCE += $(convergenceControl)/singleRegionCorrectorConvergenceControl/singleRegionCorrectorConvergenceControl.C
+
+porosity = $(general)/porosityModel
+SOURCE += $(porosity)/porosityModel/porosityModel.C
+SOURCE += $(porosity)/porosityModel/porosityModelNew.C
+SOURCE += $(porosity)/porosityModel/porosityModelList.C
+SOURCE += $(porosity)/porosityModel/IOporosityModelList.C
+SOURCE += $(porosity)/DarcyForchheimer/DarcyForchheimer.C
+SOURCE += $(porosity)/fixedCoeff/fixedCoeff.C
+SOURCE += $(porosity)/powerLaw/powerLaw.C
+SOURCE += $(porosity)/solidification/solidification.C
+
+MRF = $(general)/MRF
+SOURCE += $(MRF)/MRFZone.C
+SOURCE += $(MRF)/MRFZoneList.C
+SOURCE += $(MRF)/IOMRFZoneList.C
+SOURCE += $(MRF)/derivedFvPatchFields/MRFPatchField/MRFPatchField.C
+SOURCE += $(MRF)/derivedFvPatchFields/MRFnoSlip/MRFnoSlipFvPatchVectorField.C
+SOURCE += $(MRF)/derivedFvPatchFields/MRFslip/MRFslipFvPatchVectorField.C
+SOURCE += $(MRF)/derivedFvPatchFields/MRFFreestreamVelocity/MRFFreestreamVelocityFvPatchVectorField.C
+
+fvModels = $(general)/fvModels
+SOURCE += $(fvModels)/fvModel.C
+SOURCE += $(fvModels)/fvModels.C
+SOURCE += $(fvModels)/includeFvModelEntry/includeFvModelEntry.C
+
+fvConstraints = $(general)/fvConstraints
+SOURCE += $(fvConstraints)/fvConstraint.C
+SOURCE += $(fvConstraints)/fvConstraints.C
+SOURCE += $(fvConstraints)/includeFvConstraintEntry/includeFvConstraintEntry.C
+
+cellSources = sets/cellSources
+SOURCE += $(cellSources)/fieldToCell/fieldToCell.C
+
+faceSources = sets/faceSources
+SOURCE += $(faceSources)/patchFluxToFace/patchFluxToFace.C
+
+SOURCE += solver/solver.C
+SOURCE += solver/solverNew.C
+
+SOURCE += fvMeshToFvMesh/fvMeshToFvMesh.C
+SOURCE += fvMeshToFvMesh/patchToPatchFvPatchFieldMapper.C
+
+LIB = $(FOAM_LIBBIN)/libfiniteVolume

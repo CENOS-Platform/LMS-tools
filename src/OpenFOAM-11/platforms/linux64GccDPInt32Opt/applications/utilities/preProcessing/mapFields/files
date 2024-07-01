@@ -1,0 +1,6 @@
+SOURCE += mapLagrangian.C
+SOURCE += mapMeshes.C
+SOURCE += mapFields.C
+SOURCE += meshToMesh0.C
+
+EXE = $(FOAM_APPBIN)/mapFields

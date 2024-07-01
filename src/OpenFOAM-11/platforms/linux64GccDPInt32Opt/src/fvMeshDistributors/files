@@ -1,0 +1,4 @@
+SOURCE += distributor/fvMeshDistributorsDistributor.C
+SOURCE += loadBalancer/fvMeshDistributorsLoadBalancer.C
+
+LIB = $(FOAM_LIBBIN)/libfvMeshDistributors

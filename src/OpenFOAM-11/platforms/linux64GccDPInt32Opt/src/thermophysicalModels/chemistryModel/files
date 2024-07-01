@@ -1,0 +1,32 @@
+SOURCE += basicChemistryModel/basicChemistryModel.C
+SOURCE += basicChemistryModel/basicChemistryModelNew.C
+
+SOURCE += chemistrySolver/chemistrySolver/chemistrySolvers.C
+SOURCE += chemistrySolver/noChemistrySolver/noChemistrySolvers.C
+SOURCE += chemistrySolver/EulerImplicit/EulerImplicitChemistrySolvers.C
+SOURCE += chemistrySolver/ode/odeChemistrySolvers.C
+
+SOURCE += odeChemistryModel/odeChemistryModel.C
+
+SOURCE += chemistryModel/reduction/chemistryReductionMethod/chemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/noChemistryReduction/noChemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/DAC/DACChemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/DRG/DRGChemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/DRGEP/DRGEPChemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/EFA/EFAChemistryReductionMethods.C
+SOURCE += chemistryModel/reduction/PFA/PFAChemistryReductionMethods.C
+
+SOURCE += chemistryModel/tabulation/chemistryTabulationMethod/chemistryTabulationMethod.C
+SOURCE += chemistryModel/tabulation/chemistryTabulationMethod/chemistryTabulationMethodNew.C
+SOURCE += chemistryModel/tabulation/noChemistryTabulation/noChemistryTabulation.C
+SOURCE += chemistryModel/tabulation/ISAT/ISAT.C
+SOURCE += chemistryModel/tabulation/ISAT/chemPointISAT/chemPointISAT.C
+SOURCE += chemistryModel/tabulation/ISAT/binaryNode/binaryNode.C
+SOURCE += chemistryModel/tabulation/ISAT/binaryTree/binaryTree.C
+
+SOURCE += reaction/makeReactions.C
+
+SOURCE += functionObjects/adjustTimeStepToChemistry/adjustTimeStepToChemistry.C
+SOURCE += functionObjects/specieReactionRates/specieReactionRates.C
+
+LIB = $(FOAM_LIBBIN)/libchemistryModel

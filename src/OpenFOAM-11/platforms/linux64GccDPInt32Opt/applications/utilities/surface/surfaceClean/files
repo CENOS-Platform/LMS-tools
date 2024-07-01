@@ -1,0 +1,6 @@
+SOURCE += collapseBase.C
+SOURCE += collapseEdge.C
+
+SOURCE += surfaceClean.C
+
+EXE = $(FOAM_APPBIN)/surfaceClean

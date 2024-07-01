@@ -1,0 +1,33 @@
+SOURCE += combustionModel/combustionModel.C
+SOURCE += combustionModel/combustionModelNew.C
+
+SOURCE += singleStepCombustion/singleStepCombustion.C
+
+SOURCE += diffusion/diffusion.C
+
+SOURCE += infinitelyFastChemistry/infinitelyFastChemistry.C
+
+SOURCE += PaSR/PaSR.C
+
+SOURCE += EDC/EDC.C
+
+SOURCE += laminar/laminar.C
+
+SOURCE += FSD/reactionRateFlameAreaModels/consumptionSpeed/consumptionSpeed.C
+SOURCE += FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameArea.C
+SOURCE += FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameAreaNew.C
+SOURCE += FSD/reactionRateFlameAreaModels/relaxation/relaxation.C
+SOURCE += FSD/FSD.C
+
+SOURCE += zoneCombustion/zoneCombustion.C
+
+SOURCE += noCombustion/noCombustion.C
+
+SOURCE += functionObjects/adjustTimeStepToCombustion/adjustTimeStepToCombustion.C
+SOURCE += functionObjects/Qdot/Qdot.C
+
+SOURCE += radiationModels/absorptionEmissionModels/greyMeanCombustion/greyMeanCombustion.C
+SOURCE += radiationModels/absorptionEmissionModels/wideBandCombustion/wideBandCombustion.C
+SOURCE += radiationModels/sootModels/mixtureFraction/mixtureFraction.C
+
+LIB = $(FOAM_LIBBIN)/libcombustionModels

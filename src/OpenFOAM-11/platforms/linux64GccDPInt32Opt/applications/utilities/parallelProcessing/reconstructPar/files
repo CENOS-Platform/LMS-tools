@@ -1,0 +1,6 @@
+SOURCE += reconstructPar.C
+SOURCE += fvFieldReconstructor.C
+SOURCE += pointFieldReconstructor.C
+SOURCE += reconstructLagrangianPositions.C
+
+EXE = $(FOAM_APPBIN)/reconstructPar

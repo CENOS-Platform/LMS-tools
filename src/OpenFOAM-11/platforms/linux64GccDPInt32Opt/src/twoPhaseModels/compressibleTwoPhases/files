@@ -1,0 +1,3 @@
+SOURCE += compressibleTwoPhases.C
+
+LIB = $(FOAM_LIBBIN)/libcompressibleTwoPhases

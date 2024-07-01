@@ -1,0 +1,14 @@
+SOURCE += saturationPressureModel/saturationPressureModel.C
+SOURCE += saturationPressureModel/saturationPressureModelNew.C
+SOURCE += saturationTemperatureModel/saturationTemperatureModel.C
+SOURCE += saturationTemperatureModel/saturationTemperatureModelNew.C
+
+SOURCE += Antoine/Antoine.C
+SOURCE += #AntoineExtended/AntoineExtended.C
+SOURCE += ArdenBuck/ArdenBuck.C
+SOURCE += constantPressure/constantPressure.C
+SOURCE += constantTemperature/constantTemperature.C
+SOURCE += function1Temperature/function1Temperature.C
+SOURCE += polynomialTemperature/polynomialTemperature.C
+
+LIB = $(FOAM_LIBBIN)/libsaturationModels

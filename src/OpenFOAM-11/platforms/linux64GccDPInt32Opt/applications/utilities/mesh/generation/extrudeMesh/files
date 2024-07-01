@@ -1,0 +1,4 @@
+SOURCE += extrudedMesh/extrudedMesh.C
+SOURCE += extrudeMesh.C
+
+EXE = $(FOAM_APPBIN)/extrudeMesh

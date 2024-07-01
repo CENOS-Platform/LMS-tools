@@ -1,0 +1,19 @@
+SOURCE += coupledFacePair.C
+SOURCE += starMesh.C
+SOURCE += readPoints.C
+# readSeparatedPoints.C
+SOURCE += readCells.C
+SOURCE += readBoundary.C
+SOURCE += fixCollapsedEdges.C
+SOURCE += readCouples.C
+SOURCE += createCoupleMatches.C
+SOURCE += mergeCoupleFacePoints.C
+SOURCE += calcPointCells.C
+SOURCE += createPolyCells.C
+SOURCE += createBoundaryFaces.C
+SOURCE += createPolyBoundary.C
+SOURCE += purgeCellShapes.C
+SOURCE += writeMesh.C
+SOURCE += star3ToFoam.C
+
+EXE = $(FOAM_APPBIN)/star3ToFoam

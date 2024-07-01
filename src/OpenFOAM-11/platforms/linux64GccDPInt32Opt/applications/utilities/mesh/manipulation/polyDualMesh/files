@@ -1,0 +1,4 @@
+SOURCE += meshDualiser.C
+SOURCE += polyDualMesh.C
+
+EXE = $(FOAM_APPBIN)/polyDualMesh

@@ -1,0 +1,9 @@
+SOURCE += derivedFvPatchFields/specieTransferMassFraction/specieTransferMassFractionFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/adsorptionMassFraction/adsorptionMassFractionFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/semiPermeableBaffleMassFraction/semiPermeableBaffleMassFractionFvPatchScalarField.C
+
+SOURCE += derivedFvPatchFields/specieTransferVelocity/specieTransferVelocityFvPatchVectorField.C
+
+SOURCE += derivedFvPatchFields/specieTransferTemperature/specieTransferTemperatureFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libspecieTransfer

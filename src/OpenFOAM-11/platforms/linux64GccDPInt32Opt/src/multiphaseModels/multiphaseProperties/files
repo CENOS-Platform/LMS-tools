@@ -1,0 +1,4 @@
+SOURCE += alphaContactAngle/alphaContactAngleFvPatchScalarField.C
+SOURCE += correctContactAngle/correctContactAngle.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseProperties

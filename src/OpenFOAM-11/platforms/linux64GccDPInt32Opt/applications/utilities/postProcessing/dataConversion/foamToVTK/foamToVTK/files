@@ -1,0 +1,13 @@
+SOURCE += surfaceMeshWriter.C
+SOURCE += internalWriter.C
+SOURCE += lagrangianWriter.C
+SOURCE += patchWriter.C
+SOURCE += writeFaceSet.C
+SOURCE += writePointSet.C
+SOURCE += writeSurfFields.C
+SOURCE += vtkMesh.C
+SOURCE += vtkTopo.C
+
+SOURCE += writeVTK/writeVTK.C
+
+LIB = $(FOAM_LIBBIN)/libfoamToVTK

@@ -1,0 +1,6 @@
+SOURCE += cloudInfo/cloudInfo.C
+SOURCE += dsmcFields/dsmcFields.C
+SOURCE += particles/particles.C
+SOURCE += stopAtEmptyClouds/stopAtEmptyClouds.C
+
+LIB = $(FOAM_LIBBIN)/liblagrangianFunctionObjects

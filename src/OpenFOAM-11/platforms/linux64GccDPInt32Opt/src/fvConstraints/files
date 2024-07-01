@@ -1,0 +1,12 @@
+SOURCE += fixedValue/fixedValueConstraint.C
+SOURCE += fixedTemperature/fixedTemperatureConstraint.C
+SOURCE += limitTemperature/limitTemperature.C
+SOURCE += limitPressure/limitPressure.C
+SOURCE += limitMag/limitMag.C
+SOURCE += bound/boundConstraint.C
+SOURCE += meanVelocityForce/meanVelocityForce.C
+SOURCE += meanVelocityForce/patchMeanVelocityForce/patchMeanVelocityForce.C
+SOURCE += zeroDimensionalFixedPressure/zeroDimensionalFixedPressureConstraint.C
+SOURCE += zeroDimensionalFixedPressure/zeroDimensionalFixedPressureModel.C
+
+LIB = $(FOAM_LIBBIN)/libfvConstraints

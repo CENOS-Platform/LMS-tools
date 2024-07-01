@@ -1,0 +1,5 @@
+SOURCE += mapGeometricFields.C
+SOURCE += mapClouds.C
+SOURCE += mapFieldsPar.C
+
+EXE = $(FOAM_APPBIN)/mapFieldsPar

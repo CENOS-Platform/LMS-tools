@@ -1,0 +1,50 @@
+SOURCE += thermophysicalProperties/thermophysicalProperties.C
+
+
+SOURCE += liquidProperties/liquidProperties/liquidProperties.C
+SOURCE += liquidProperties/liquidMixtureProperties/liquidMixtureProperties.C
+
+SOURCE += liquidProperties/liquid/liquid.C
+SOURCE += liquidProperties/H2O/H2O.C
+SOURCE += liquidProperties/C7H16/C7H16.C
+SOURCE += liquidProperties/C12H26/C12H26.C
+SOURCE += liquidProperties/C10H22/C10H22.C
+SOURCE += liquidProperties/C8H18/C8H18.C
+SOURCE += liquidProperties/IC8H18/IC8H18.C
+SOURCE += liquidProperties/C4H10O/C4H10O.C
+SOURCE += liquidProperties/C2H6O/C2H6O.C
+SOURCE += liquidProperties/IDEA/IDEA.C
+SOURCE += liquidProperties/aC10H7CH3/aC10H7CH3.C
+SOURCE += liquidProperties/bC10H7CH3/bC10H7CH3.C
+SOURCE += liquidProperties/C8H10/C8H10.C
+SOURCE += liquidProperties/C16H34/C16H34.C
+SOURCE += liquidProperties/C9H20/C9H20.C
+SOURCE += liquidProperties/C6H6/C6H6.C
+SOURCE += liquidProperties/C7H8/C7H8.C
+SOURCE += liquidProperties/C6H14/C6H14.C
+SOURCE += liquidProperties/C13H28/C13H28.C
+SOURCE += liquidProperties/C14H30/C14H30.C
+SOURCE += liquidProperties/C3H8/C3H8.C
+SOURCE += liquidProperties/C3H6O/C3H6O.C
+SOURCE += liquidProperties/C2H6/C2H6.C
+SOURCE += liquidProperties/CH3OH/CH3OH.C
+SOURCE += liquidProperties/C2H5OH/C2H5OH.C
+SOURCE += liquidProperties/Ar/Ar.C
+SOURCE += liquidProperties/N2/N2.C
+SOURCE += liquidProperties/MB/MB.C
+SOURCE += liquidProperties/CH4N2O/CH4N2O.C
+SOURCE += liquidProperties/nC3H8O/nC3H8O.C
+SOURCE += liquidProperties/iC3H8O/iC3H8O.C
+SOURCE += liquidProperties/NH3/NH3.C
+
+
+SOURCE += solidProperties/solidProperties/solidProperties.C
+SOURCE += solidProperties/solidProperties/solidPropertiesNew.C
+SOURCE += solidProperties/solidMixtureProperties/solidMixtureProperties.C
+
+SOURCE += solidProperties/ash/ash.C
+SOURCE += solidProperties/C/C.C
+SOURCE += solidProperties/CaCO3/CaCO3.C
+
+
+LIB = $(FOAM_LIBBIN)/libthermophysicalProperties

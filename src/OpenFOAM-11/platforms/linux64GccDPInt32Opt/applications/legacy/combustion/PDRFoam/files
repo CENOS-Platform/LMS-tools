@@ -1,0 +1,32 @@
+SOURCE += XiModels/XiModel/XiModel.C
+SOURCE += XiModels/XiModel/XiModelNew.C
+SOURCE += XiModels/fixed/fixed.C
+SOURCE += XiModels/algebraic/algebraic.C
+SOURCE += XiModels/transport/transport.C
+
+SOURCE += XiModels/XiEqModels/XiEqModel/XiEqModel.C
+SOURCE += XiModels/XiEqModels/XiEqModel/XiEqModelNew.C
+SOURCE += XiModels/XiEqModels/Gulder/Gulder.C
+SOURCE += XiModels/XiEqModels/instabilityXiEq/instabilityXiEq.C
+SOURCE += XiModels/XiEqModels/SCOPEBlendXiEq/SCOPEBlendXiEq.C
+SOURCE += XiModels/XiEqModels/SCOPEXiEq/SCOPEXiEq.C
+
+SOURCE += XiModels/XiGModels/XiGModel/XiGModel.C
+SOURCE += XiModels/XiGModels/XiGModel/XiGModelNew.C
+SOURCE += XiModels/XiGModels/KTS/KTS.C
+SOURCE += XiModels/XiGModels/instabilityG/instabilityG.C
+
+SOURCE += PDRModels/turbulence/PDRkEpsilon/PDRkEpsilon.C
+
+SOURCE += PDRModels/dragModels/PDRDragModel/PDRDragModel.C
+SOURCE += PDRModels/dragModels/PDRDragModel/PDRDragModelNew.C
+SOURCE += PDRModels/dragModels/basic/basic.C
+
+SOURCE += PDRModels/XiEqModels/basicXiSubXiEq/basicXiSubXiEq.C
+SOURCE += PDRModels/XiGModels/basicXiSubG/basicXiSubG.C
+
+SOURCE += laminarFlameSpeed/SCOPE/SCOPELaminarFlameSpeed.C
+
+SOURCE += PDRFoam.C
+
+EXE = $(FOAM_APPBIN)/PDRFoam

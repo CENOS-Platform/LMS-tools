@@ -1,0 +1,4 @@
+SOURCE += phaseTurbulenceStabilisation/phaseTurbulenceStabilisation.C
+SOURCE += interfaceTurbulenceDamping/interfaceTurbulenceDamping.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseEulerFoamFvModels

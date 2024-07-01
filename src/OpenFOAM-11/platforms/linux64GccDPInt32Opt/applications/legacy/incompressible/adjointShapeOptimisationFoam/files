@@ -1,0 +1,5 @@
+SOURCE += adjointOutletPressure/adjointOutletPressureFvPatchScalarField.C
+SOURCE += adjointOutletVelocity/adjointOutletVelocityFvPatchVectorField.C
+SOURCE += adjointShapeOptimisationFoam.C
+
+EXE = $(FOAM_APPBIN)/adjointShapeOptimisationFoam

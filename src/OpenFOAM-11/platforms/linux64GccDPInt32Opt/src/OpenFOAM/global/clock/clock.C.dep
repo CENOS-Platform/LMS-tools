@@ -1,0 +1,14 @@
+$(OBJECTS_DIR)/global/clock/clock.C.dep: \
+global/clock/clock.C \
+global/clock/clock.H \
+lnInclude/string.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+global/clock/clock.H :
+lnInclude/string.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

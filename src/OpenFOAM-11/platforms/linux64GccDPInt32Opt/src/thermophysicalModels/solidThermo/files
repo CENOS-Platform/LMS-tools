@@ -1,0 +1,6 @@
+SOURCE += solidThermo/solidThermo.C
+SOURCE += solidThermo/solidThermos.C
+SOURCE += constSolidThermo/constSolidThermo.C
+SOURCE += constAnisoSolidThermo/constAnisoSolidThermo.C
+
+LIB = $(FOAM_LIBBIN)/libsolidThermo

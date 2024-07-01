@@ -1,0 +1,18 @@
+$(OBJECTS_DIR)/primitives/strings/word/word.C.dep: \
+primitives/strings/word/word.C \
+primitives/strings/word/word.H \
+lnInclude/debug.H \
+lnInclude/string.H \
+primitives/strings/word/wordI.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+primitives/strings/word/word.H :
+lnInclude/debug.H :
+lnInclude/string.H :
+primitives/strings/word/wordI.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

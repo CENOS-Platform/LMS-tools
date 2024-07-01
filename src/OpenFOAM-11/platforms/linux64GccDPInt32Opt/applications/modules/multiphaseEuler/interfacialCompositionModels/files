@@ -1,0 +1,20 @@
+SOURCE += diffusiveMassTransferModels/diffusiveMassTransferModel/diffusiveMassTransferModel.C
+SOURCE += diffusiveMassTransferModels/diffusiveMassTransferModel/diffusiveMassTransferModelNew.C
+SOURCE += diffusiveMassTransferModels/Frossling/Frossling.C
+SOURCE += diffusiveMassTransferModels/sphericalDiffusiveMassTransfer/sphericalDiffusiveMassTransfer.C
+
+SOURCE += interfaceSurfaceTensionModels/interfaceSurfaceTensionModel/interfaceSurfaceTensionModel.C
+SOURCE += interfaceSurfaceTensionModels/interfaceSurfaceTensionModel/interfaceSurfaceTensionModelNew.C
+SOURCE += interfaceSurfaceTensionModels/constantSurfaceTensionCoefficient/constantSurfaceTensionCoefficient.C
+
+SOURCE += interfaceCompositionModels/interfaceCompositionModel/interfaceCompositionModel.C
+SOURCE += interfaceCompositionModels/interfaceCompositionModel/interfaceCompositionModelNew.C
+SOURCE += interfaceCompositionModels/Henry/Henry.C
+SOURCE += interfaceCompositionModels/nonRandomTwoLiquid/nonRandomTwoLiquid.C
+SOURCE += interfaceCompositionModels/Raoult/Raoult.C
+SOURCE += interfaceCompositionModels/saturated/saturated.C
+
+SOURCE += interfaceSaturationTemperatureModel/interfaceSaturationTemperatureModel.C
+SOURCE += interfaceSaturationTemperatureModel/interfaceSaturationTemperatureModelNew.C
+
+LIB = $(FOAM_LIBBIN)/libeulerianInterfacialCompositionModels

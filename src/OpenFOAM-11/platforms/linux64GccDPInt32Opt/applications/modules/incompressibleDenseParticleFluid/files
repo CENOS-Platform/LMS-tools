@@ -1,0 +1,6 @@
+SOURCE += moveMesh.C
+SOURCE += momentumPredictor.C
+SOURCE += correctPressure.C
+SOURCE += incompressibleDenseParticleFluid.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleDenseParticleFluid

@@ -1,0 +1,5 @@
+SOURCE += solidParticle.C
+SOURCE += solidParticleIO.C
+SOURCE += solidParticleCloud.C
+
+LIB = $(FOAM_LIBBIN)/libsolidParticle

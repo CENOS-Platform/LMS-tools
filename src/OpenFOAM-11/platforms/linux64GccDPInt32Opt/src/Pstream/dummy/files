@@ -1,0 +1,5 @@
+SOURCE += UPstream.C
+SOURCE += UIPread.C
+SOURCE += UOPwrite.C
+
+LIB = $(FOAM_LIBBIN)/dummy/libPstream

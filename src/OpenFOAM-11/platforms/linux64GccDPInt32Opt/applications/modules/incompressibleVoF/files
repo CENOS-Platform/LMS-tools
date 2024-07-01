@@ -1,0 +1,6 @@
+SOURCE += incompressibleTwoPhaseVoFMixture/incompressibleTwoPhaseVoFMixture.C
+SOURCE += incompressibleInterPhaseTransportModel/incompressibleInterPhaseTransportModel.C
+SOURCE += alphaSuSp.C
+SOURCE += incompressibleVoF.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleVoF
