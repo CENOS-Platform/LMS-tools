@@ -1,0 +1,41 @@
+SOURCE += blockVertices/blockVertex/blockVertex.C
+SOURCE += blockVertices/pointVertex/pointVertex.C
+SOURCE += blockVertices/projectVertex/projectVertex.C
+SOURCE += blockVertices/namedVertex/namedVertex.C
+
+SOURCE += blockEdges/blockEdge/blockEdge.C
+SOURCE += blockEdges/lineDivide/lineDivide.C
+SOURCE += blockEdges/lineEdge/lineEdge.C
+SOURCE += blockEdges/polyLineEdge/polyLine.C
+SOURCE += blockEdges/polyLineEdge/polyLineEdge.C
+SOURCE += blockEdges/arcEdge/arcEdge.C
+SOURCE += blockEdges/BSplineEdge/BSpline.C
+SOURCE += blockEdges/BSplineEdge/BSplineEdge.C
+SOURCE += blockEdges/splineEdge/CatmullRomSpline.C
+SOURCE += blockEdges/splineEdge/splineEdge.C
+SOURCE += blockEdges/projectEdge/projectEdge.C
+SOURCE += blockEdges/projectCurveEdge/projectCurveEdge.C
+
+SOURCE += blockFaces/blockFace/blockFace.C
+SOURCE += blockFaces/projectFace/projectFace.C
+
+SOURCE += gradingDescriptor/gradingDescriptor.C
+SOURCE += gradingDescriptor/gradingDescriptors.C
+
+SOURCE += blockDescriptor/blockDescriptor.C
+SOURCE += blockDescriptor/blockDescriptorEdges.C
+
+SOURCE += blocks/block/block.C
+SOURCE += blocks/block/blockCreate.C
+SOURCE += blocks/namedBlock/namedBlock.C
+
+SOURCE += blockMesh/blockMesh.C
+SOURCE += blockMesh/blockMeshCreate.C
+SOURCE += blockMesh/blockMeshTopology.C
+SOURCE += blockMesh/blockMeshCheck.C
+SOURCE += blockMesh/blockMeshMerge.C
+SOURCE += blockMesh/blockMeshMergeFast.C
+
+SOURCE += blockMeshTools/blockMeshTools.C
+
+LIB = $(FOAM_LIBBIN)/libblockMesh

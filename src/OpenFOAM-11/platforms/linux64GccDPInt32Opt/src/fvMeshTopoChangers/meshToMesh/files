@@ -1,0 +1,4 @@
+SOURCE += fvMeshTopoChangersMeshToMesh.C
+SOURCE += meshToMeshAdjustTimeStep/meshToMeshAdjustTimeStepFunctionObject.C
+
+LIB = $(FOAM_LIBBIN)/libmeshToMeshTopoChanger

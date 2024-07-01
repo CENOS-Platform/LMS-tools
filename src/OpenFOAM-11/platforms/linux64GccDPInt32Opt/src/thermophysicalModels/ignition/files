@@ -1,0 +1,6 @@
+SOURCE += ignition.C
+SOURCE += ignitionIO.C
+SOURCE += ignitionSite.C
+SOURCE += ignitionSiteIO.C
+
+LIB = $(FOAM_LIBBIN)/libXiIgnition

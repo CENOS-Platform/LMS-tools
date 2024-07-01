@@ -1,0 +1,273 @@
+em = edgeMesh
+
+SOURCE += $(em)/edgeMesh.C
+SOURCE += $(em)/edgeMeshIO.C
+SOURCE += $(em)/edgeMeshNew.C
+
+edgeMeshFormats = $(em)/edgeMeshFormats
+SOURCE += $(edgeMeshFormats)/edgeMeshFormatsCore.C
+
+SOURCE += $(edgeMeshFormats)/edgeMesh/edgeMeshFormat.C
+SOURCE += $(edgeMeshFormats)/edgeMesh/edgeMeshFormatRunTime.C
+
+SOURCE += $(edgeMeshFormats)/extendedFeatureEdgeMesh/extendedFeatureEdgeMeshFormat.C
+SOURCE += $(edgeMeshFormats)/extendedFeatureEdgeMesh/extendedFeatureEdgeMeshFormatRunTime.C
+
+SOURCE += $(edgeMeshFormats)/nas/NASedgeFormat.C
+SOURCE += $(edgeMeshFormats)/nas/NASedgeFormatRunTime.C
+
+SOURCE += $(edgeMeshFormats)/obj/OBJedgeFormat.C
+SOURCE += $(edgeMeshFormats)/obj/OBJedgeFormatRunTime.C
+
+SOURCE += $(edgeMeshFormats)/starcd/STARCDedgeFormat.C
+SOURCE += $(edgeMeshFormats)/starcd/STARCDedgeFormatRunTime.C
+
+SOURCE += $(edgeMeshFormats)/vtk/VTKedgeFormat.C
+SOURCE += $(edgeMeshFormats)/vtk/VTKedgeFormatRunTime.C
+
+SOURCE += $(em)/featureEdgeMesh/featureEdgeMesh.C
+
+eem = $(em)/extendedEdgeMesh
+
+SOURCE += $(eem)/extendedEdgeMesh.C
+SOURCE += $(eem)/extendedEdgeMeshNew.C
+
+SOURCE += $(eem)/extendedEdgeMeshFormats/extendedEdgeMeshFormat/extendedEdgeMeshFormat.C
+SOURCE += $(eem)/extendedEdgeMeshFormats/extendedEdgeMeshFormat/extendedEdgeMeshFormatRunTime.C
+
+efm = $(eem)/extendedFeatureEdgeMesh
+
+SOURCE += $(efm)/extendedFeatureEdgeMesh.C
+
+SOURCE += cellClassification/cellClassification.C
+SOURCE += cellClassification/cellInfo.C
+
+SOURCE += cellQuality/cellQuality.C
+
+SOURCE += patchDist/patchDistWave/patchDistWave.C
+
+SOURCE += cellFeatures/cellFeatures.C
+
+csys = coordinateSystems
+SOURCE += $(csys)/coordinateSystem.C
+SOURCE += $(csys)/coordinateSystemNew.C
+SOURCE += $(csys)/coordinateSystems.C
+SOURCE += $(csys)/cylindricalCS.C
+SOURCE += $(csys)/cartesianCS.C
+SOURCE += $(csys)/coordinateRotation/axesRotation.C
+SOURCE += $(csys)/coordinateRotation/coordinateRotation.C
+SOURCE += $(csys)/coordinateRotation/coordinateRotationNew.C
+SOURCE += $(csys)/coordinateRotation/EulerCoordinateRotation.C
+SOURCE += $(csys)/coordinateRotation/STARCDCoordinateRotation.C
+SOURCE += $(csys)/coordinateRotation/cylindrical.C
+
+SOURCE += edgeFaceCirculator/edgeFaceCirculator.C
+
+SOURCE += polyMeshZipUpCells/polyMeshZipUpCells.C
+
+SOURCE += meshSearch/meshSearch.C
+SOURCE += meshSearch/meshSearchFACE_CENTRE_TRISMeshObject.C
+SOURCE += meshSearch/meshSearchMeshObject.C
+
+SOURCE += meshTools/meshTools.C
+
+SOURCE += algorithms/FaceCellWave/FaceCellWaveName.C
+SOURCE += algorithms/PointEdgeWave/PointEdgeWaveName.C
+SOURCE += algorithms/PatchEdgeFaceWave/PatchEdgeFaceWaveName.C
+SOURCE += algorithms/PatchEdgeFaceWave/patchPatchDist.C
+
+SOURCE += regionSplit/regionSplit.C
+SOURCE += regionSplit/localPointRegion.C
+
+SOURCE += indexedOctree/treeDataEdge.C
+SOURCE += indexedOctree/treeDataFace.C
+SOURCE += indexedOctree/treeDataPoint.C
+SOURCE += indexedOctree/treeDataPrimitivePatchName.C
+SOURCE += indexedOctree/treeDataTriSurface.C
+
+SOURCE += searchableSurfaces/searchableSurface/searchableSurface.C
+SOURCE += searchableSurfaces/searchableBox/searchableBox.C
+SOURCE += searchableSurfaces/searchableCylinder/searchableCylinder.C
+SOURCE += searchableSurfaces/searchableDisk/searchableDisk.C
+SOURCE += searchableSurfaces/searchablePlane/searchablePlane.C
+SOURCE += searchableSurfaces/searchablePlate/searchablePlate.C
+SOURCE += searchableSurfaces/searchableSphere/searchableSphere.C
+SOURCE += searchableSurfaces/searchableSurfaceCollection/searchableSurfaceCollection.C
+SOURCE += searchableSurfaces/searchableSurfaces/searchableSurfaces.C
+SOURCE += searchableSurfaces/searchableSurfacesQueries/searchableSurfacesQueries.C
+SOURCE += searchableSurfaces/searchableSurfaceWithGaps/searchableSurfaceWithGaps.C
+SOURCE += searchableSurfaces/triSurfaceMesh/triSurfaceMesh.C
+SOURCE += searchableSurfaces/triSurfaceMesh/extractCloseness.C
+SOURCE += searchableSurfaces/closedTriSurfaceMesh/closedTriSurfaceMesh.C
+SOURCE += searchableSurfaces/searchableExtrudedCircle/searchableExtrudedCircle.C
+
+topoSets = sets/topoSets
+SOURCE += $(topoSets)/cellSet.C
+SOURCE += $(topoSets)/topoSet.C
+SOURCE += $(topoSets)/faceSet.C
+SOURCE += $(topoSets)/pointSet.C
+SOURCE += $(topoSets)/cellZoneSet.C
+SOURCE += $(topoSets)/faceZoneSet.C
+SOURCE += $(topoSets)/pointZoneSet.C
+
+SOURCE += sets/topoSetSource/topoSetSource.C
+
+cellSources = sets/cellSources
+SOURCE += $(cellSources)/faceToCell/faceToCell.C
+SOURCE += $(cellSources)/pointToCell/pointToCell.C
+SOURCE += $(cellSources)/shapeToCell/shapeToCell.C
+SOURCE += $(cellSources)/boxToCell/boxToCell.C
+SOURCE += $(cellSources)/regionToCell/regionToCell.C
+SOURCE += $(cellSources)/rotatedBoxToCell/rotatedBoxToCell.C
+SOURCE += $(cellSources)/labelToCell/labelToCell.C
+SOURCE += $(cellSources)/surfaceToCell/surfaceToCell.C
+SOURCE += $(cellSources)/cellToCell/cellToCell.C
+SOURCE += $(cellSources)/nearestToCell/nearestToCell.C
+SOURCE += $(cellSources)/nbrToCell/nbrToCell.C
+SOURCE += $(cellSources)/zoneToCell/zoneToCell.C
+SOURCE += $(cellSources)/sphereToCell/sphereToCell.C
+SOURCE += $(cellSources)/cylinderToCell/cylinderToCell.C
+SOURCE += $(cellSources)/faceZoneToCell/faceZoneToCell.C
+SOURCE += $(cellSources)/cylinderAnnulusToCell/cylinderAnnulusToCell.C
+SOURCE += $(cellSources)/targetVolumeToCell/targetVolumeToCell.C
+SOURCE += $(cellSources)/patchDistanceToCell/patchDistanceToCell.C
+
+faceSources = sets/faceSources
+SOURCE += $(faceSources)/faceToFace/faceToFace.C
+SOURCE += $(faceSources)/labelToFace/labelToFace.C
+SOURCE += $(faceSources)/cellToFace/cellToFace.C
+SOURCE += $(faceSources)/normalToFace/normalToFace.C
+SOURCE += $(faceSources)/patchToFace/patchToFace.C
+SOURCE += $(faceSources)/pointToFace/pointToFace.C
+SOURCE += $(faceSources)/boundaryToFace/boundaryToFace.C
+SOURCE += $(faceSources)/zoneToFace/zoneToFace.C
+SOURCE += $(faceSources)/boxToFace/boxToFace.C
+SOURCE += $(faceSources)/rotatedBoxToFace/rotatedBoxToFace.C
+SOURCE += $(faceSources)/regionToFace/regionToFace.C
+SOURCE += $(faceSources)/cylinderToFace/cylinderToFace.C
+SOURCE += $(faceSources)/cylinderAnnulusToFace/cylinderAnnulusToFace.C
+
+pointSources = sets/pointSources
+SOURCE += $(pointSources)/labelToPoint/labelToPoint.C
+SOURCE += $(pointSources)/pointToPoint/pointToPoint.C
+SOURCE += $(pointSources)/cellToPoint/cellToPoint.C
+SOURCE += $(pointSources)/faceToPoint/faceToPoint.C
+SOURCE += $(pointSources)/boxToPoint/boxToPoint.C
+SOURCE += $(pointSources)/surfaceToPoint/surfaceToPoint.C
+SOURCE += $(pointSources)/zoneToPoint/zoneToPoint.C
+SOURCE += $(pointSources)/nearestToPoint/nearestToPoint.C
+
+faceZoneSources = sets/faceZoneSources
+SOURCE += $(faceZoneSources)/faceZoneToFaceZone/faceZoneToFaceZone.C
+SOURCE += $(faceZoneSources)/setsToFaceZone/setsToFaceZone.C
+SOURCE += $(faceZoneSources)/setToFaceZone/setToFaceZone.C
+SOURCE += $(faceZoneSources)/setAndNormalToFaceZone/setAndNormalToFaceZone.C
+SOURCE += $(faceZoneSources)/searchableSurfaceToFaceZone/searchableSurfaceToFaceZone.C
+SOURCE += $(faceZoneSources)/planeToFaceZone/planeToFaceZone.C
+
+cellZoneSources = sets/cellZoneSources
+SOURCE += $(cellZoneSources)/setToCellZone/setToCellZone.C
+
+pointZoneSources = sets/pointZoneSources
+SOURCE += $(pointZoneSources)/setToPointZone/setToPointZone.C
+
+SOURCE += sets/polyCellSet/polyCellSet.C
+
+SOURCE += momentOfInertia/momentOfInertia.C
+
+SOURCE += surfaceSets/surfaceSets.C
+
+SOURCE += triSurface/orientedSurface/orientedSurface.C
+SOURCE += triSurface/surfaceLocation/surfaceLocation.C
+
+booleanOps = triSurface/booleanOps
+
+surfaceIntersection = $(booleanOps)/surfaceIntersection
+SOURCE += $(surfaceIntersection)/surfaceIntersection.C
+SOURCE += $(surfaceIntersection)/surfaceIntersectionFuncs.C
+SOURCE += $(surfaceIntersection)/edgeIntersections.C
+
+booleanSurface = $(booleanOps)/booleanSurface
+SOURCE += $(booleanSurface)/booleanSurface.C
+
+intersectedSurface = $(booleanOps)/intersectedSurface
+SOURCE += $(intersectedSurface)/intersectedSurface.C
+SOURCE += $(intersectedSurface)/edgeSurface.C
+
+SOURCE += triSurface/triSurfaceSearch/triSurfaceSearch.C
+SOURCE += triSurface/triSurfaceSearch/triSurfaceRegionSearch.C
+SOURCE += triSurface/triangleFuncs/triangleFuncs.C
+SOURCE += triSurface/surfaceFeatures/surfaceFeatures.C
+SOURCE += triSurface/triSurfaceTools/triSurfaceTools.C
+SOURCE += triSurface/triSurfaceTools/geompack/geompack.C
+SOURCE += triSurface/triSurfaceTools/pointToPointPlanarInterpolation.C
+
+SOURCE += twoDPointCorrector/twoDPointCorrector.C
+
+SOURCE += patchToPatchTools/patchToPatchTools.C
+
+SOURCE += patchToPatch/patchToPatch/patchToPatch.C
+SOURCE += patchToPatch/patchToPatch/patchToPatchParallelOps.C
+SOURCE += patchToPatch/matching/matchingPatchToPatch.C
+SOURCE += patchToPatch/nearby/nearbyPatchToPatch.C
+SOURCE += patchToPatch/nearest/nearestPatchToPatch.C
+SOURCE += patchToPatch/inverseDistance/inverseDistancePatchToPatch.C
+SOURCE += patchToPatch/intersection/intersectionPatchToPatch.C
+SOURCE += patchToPatch/rays/raysPatchToPatch.C
+
+SOURCE += patchToPatch/patchToPatchStabilisation/patchToPatchStabilisation.C
+
+SOURCE += cellsToCells/cellsToCells/cellsToCells.C
+SOURCE += cellsToCells/cellsToCells/cellsToCellsParallelOps.C
+SOURCE += cellsToCells/matching/matchingCellsToCells.C
+SOURCE += cellsToCells/nearest/nearestCellsToCells.C
+SOURCE += cellsToCells/intersection/intersectionCellsToCells.C
+
+SOURCE += cellsToCells/cellsToCellsStabilisation/cellsToCellsStabilisation.C
+
+SOURCE += meshToMesh/meshToMesh.C
+
+SOURCE += mappedPatches/mappedPatchBase/mappedPatchBase.C
+SOURCE += mappedPatches/mappedPolyPatch/mappedPolyPatch.C
+SOURCE += mappedPatches/mappedPolyPatch/mappedWallPolyPatch.C
+SOURCE += mappedPatches/mappedPointPatch/mappedPointPatch.C
+SOURCE += mappedPatches/mappedPointPatch/mappedWallPointPatch.C
+
+SOURCE += mappedPatches/mappedExtrudedPatchBase/mappedExtrudedPatchBase.C
+SOURCE += mappedPatches/mappedExtrudedPolyPatch/mappedExtrudedWallPolyPatch.C
+SOURCE += mappedPatches/mappedExtrudedPointPatch/mappedExtrudedWallPointPatch.C
+
+SOURCE += mappedPatches/mappedInternalPatchBase/mappedInternalPatchBase.C
+SOURCE += mappedPatches/mappedInternalPolyPatch/mappedInternalPolyPatch.C
+SOURCE += mappedPatches/mappedInternalPointPatch/mappedInternalPointPatch.C
+
+SOURCE += meshStructure/meshStructure.C
+SOURCE += meshStructure/topoDistanceData.C
+SOURCE += meshStructure/pointTopoDistanceData.C
+
+SOURCE += tetOverlapVolume/tetOverlapVolume.C
+
+SOURCE += triIntersect/triIntersect.C
+SOURCE += triIntersect/triIntersectLocationIO.C
+
+SOURCE += cutPoly/cellEdgeAddressing.C
+SOURCE += cutPoly/cutPoly.C
+SOURCE += cutPoly/cutPolyIsoSurface.C
+
+SOURCE += nonConformal/polyPatches/nonConformal/nonConformalPolyPatch.C
+SOURCE += nonConformal/polyPatches/nonConformalCoupled/nonConformalCoupledPolyPatch.C
+SOURCE += nonConformal/polyPatches/nonConformalCyclic/nonConformalCyclicPolyPatch.C
+SOURCE += nonConformal/polyPatches/nonConformalError/nonConformalErrorPolyPatch.C
+SOURCE += nonConformal/polyPatches/nonConformalProcessorCyclic/nonConformalProcessorCyclicPolyPatch.C
+
+SOURCE += nonConformal/pointPatches/nonConformalCyclic/nonConformalCyclicPointPatch.C
+SOURCE += nonConformal/pointPatches/nonConformalError/nonConformalErrorPointPatch.C
+SOURCE += nonConformal/pointPatches/nonConformalProcessorCyclic/nonConformalProcessorCyclicPointPatch.C
+
+SOURCE += nonConformal/pointPatchFields/nonConformalCyclic/nonConformalCyclicPointPatchFields.C
+SOURCE += nonConformal/pointPatchFields/nonConformalError/nonConformalErrorPointPatchFields.C
+SOURCE += nonConformal/pointPatchFields/nonConformalProcessorCyclic/nonConformalProcessorCyclicPointPatchFields.C
+
+SOURCE += nonConformal/boundary/nonConformalBoundary.C
+
+LIB = $(FOAM_LIBBIN)/libmeshTools

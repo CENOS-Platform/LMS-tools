@@ -1,0 +1,37 @@
+SOURCE += HeatTransferPhaseSystem/heatTransferPhaseSystem.C
+SOURCE += TwoResistanceHeatTransferPhaseSystem/twoResistanceHeatTransferPhaseSystem.C
+
+SOURCE += diameterModels/IATE/IATEsources/wallBoiling/IATEwallBoiling.C
+
+SOURCE += populationBalanceModel/nucleationModels/wallBoiling/wallBoiling.C
+
+SOURCE += heatTransferModels/wallBoiling/wallBoilingHeatTransfer.C
+
+SOURCE += wallBoilingSubModels/partitioningModels/partitioningModel/partitioningModel.C
+SOURCE += wallBoilingSubModels/partitioningModels/partitioningModel/partitioningModelNew.C
+SOURCE += wallBoilingSubModels/partitioningModels/phaseFraction/phaseFraction.C
+SOURCE += wallBoilingSubModels/partitioningModels/Lavieville/Lavieville.C
+SOURCE += wallBoilingSubModels/partitioningModels/cosine/cosine.C
+SOURCE += wallBoilingSubModels/partitioningModels/linear/linear.C
+
+SOURCE += wallBoilingSubModels/nucleationSiteModels/nucleationSiteModel/nucleationSiteModel.C
+SOURCE += wallBoilingSubModels/nucleationSiteModels/nucleationSiteModel/nucleationSiteModelNew.C
+SOURCE += wallBoilingSubModels/nucleationSiteModels/LemmertChawla/LemmertChawla.C
+SOURCE += wallBoilingSubModels/nucleationSiteModels/KocamustafaogullariIshiiNucleationSite/KocamustafaogullariIshiiNucleationSite.C
+
+SOURCE += wallBoilingSubModels/departureDiameterModels/departureDiameterModel/departureDiameterModel.C
+SOURCE += wallBoilingSubModels/departureDiameterModels/departureDiameterModel/departureDiameterModelNew.C
+SOURCE += wallBoilingSubModels/departureDiameterModels/TolubinskiKostanchuk/TolubinskiKostanchuk.C
+SOURCE += wallBoilingSubModels/departureDiameterModels/KocamustafaogullariIshiiDepartureDiameter/KocamustafaogullariIshiiDepartureDiameter.C
+
+SOURCE += wallBoilingSubModels/departureFrequencyModels/departureFrequencyModel/departureFrequencyModel.C
+SOURCE += wallBoilingSubModels/departureFrequencyModels/departureFrequencyModel/departureFrequencyModelNew.C
+SOURCE += wallBoilingSubModels/departureFrequencyModels/Cole/Cole.C
+SOURCE += wallBoilingSubModels/departureFrequencyModels/KocamustafaogullariIshiiDepartureFrequency/KocamustafaogullariIshiiDepartureFrequency.C
+
+SOURCE += derivedFvPatchFields/alphatPhaseChangeWallFunctionBase/alphatPhaseChangeWallFunctionBase.C
+SOURCE += derivedFvPatchFields/alphatWallBoilingWallFunction/alphatWallBoilingWallFunctionFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/uniformFixedMultiphaseHeatFlux/uniformFixedMultiphaseHeatFluxFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/coupledMultiphaseTemperature/coupledMultiphaseTemperatureFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseThermophysicalTransportModels

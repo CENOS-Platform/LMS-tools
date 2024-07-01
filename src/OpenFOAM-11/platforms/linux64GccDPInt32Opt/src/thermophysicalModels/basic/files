@@ -1,0 +1,20 @@
+SOURCE += basicThermo/basicThermo.C
+
+SOURCE += fluidThermo/fluidThermo.C
+SOURCE += fluidThermo/hydrostaticInitialisation.C
+
+SOURCE += psiThermo/psiThermo.C
+SOURCE += psiThermo/psiThermos.C
+
+SOURCE += rhoThermo/rhoThermo.C
+SOURCE += rhoThermo/rhoThermos.C
+SOURCE += rhoThermo/liquidThermo.C
+
+SOURCE += derivedFvPatchFields/energyJump/energyJumpFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/fixedEnergy/fixedEnergyFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/gradientEnergy/gradientEnergyFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/gradientEnergy/gradientEnergyCalculatedTemperatureFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/mixedEnergy/mixedEnergyFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/mixedEnergy/mixedEnergyCalculatedTemperatureFvPatchScalarField.C
+
+LIB = $(FOAM_LIBBIN)/libfluidThermophysicalModels

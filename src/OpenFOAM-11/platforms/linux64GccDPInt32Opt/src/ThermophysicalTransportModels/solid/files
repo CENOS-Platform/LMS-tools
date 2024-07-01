@@ -1,0 +1,5 @@
+SOURCE += solidThermophysicalTransportModel/solidThermophysicalTransportModel.C
+SOURCE += isotropic/isotropic.C
+SOURCE += anisotropic/anisotropic.C
+
+LIB = $(FOAM_LIBBIN)/libsolidThermophysicalTransportModels

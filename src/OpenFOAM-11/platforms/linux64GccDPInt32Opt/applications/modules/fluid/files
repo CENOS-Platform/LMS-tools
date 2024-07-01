@@ -1,0 +1,4 @@
+SOURCE += fluid.C
+SOURCE += thermophysicalPredictor.C
+
+LIB = $(FOAM_LIBBIN)/libfluid

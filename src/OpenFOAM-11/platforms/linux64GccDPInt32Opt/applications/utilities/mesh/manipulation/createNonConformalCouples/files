@@ -1,0 +1,3 @@
+SOURCE += createNonConformalCouples.C
+
+EXE = $(FOAM_APPBIN)/createNonConformalCouples

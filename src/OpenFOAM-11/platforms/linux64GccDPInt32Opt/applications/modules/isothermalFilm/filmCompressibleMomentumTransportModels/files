@@ -1,0 +1,4 @@
+SOURCE += filmCompressibleMomentumTransportModel.C
+SOURCE += filmCompressibleMomentumTransportModels.C
+
+LIB = $(FOAM_LIBBIN)/libfilmCompressibleMomentumTransportModels

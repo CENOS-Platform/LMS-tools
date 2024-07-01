@@ -1,0 +1,138 @@
+SOURCE += attachDetach/attachDetach.C
+SOURCE += attachDetach/attachInterface.C
+SOURCE += attachDetach/detachInterface.C
+SOURCE += attachDetach/attachDetachPointMatchMap.C
+
+SOURCE += layerAdditionRemoval/layerAdditionRemoval.C
+SOURCE += layerAdditionRemoval/setLayerPairing.C
+SOURCE += layerAdditionRemoval/addCellLayer.C
+SOURCE += layerAdditionRemoval/removeCellLayer.C
+
+enrichedPatch = slidingInterface/enrichedPatch
+SOURCE += $(enrichedPatch)/enrichedPatch.C
+SOURCE += $(enrichedPatch)/enrichedPatchPointMap.C
+SOURCE += $(enrichedPatch)/enrichedPatchFaces.C
+SOURCE += $(enrichedPatch)/enrichedPatchPointPoints.C
+SOURCE += $(enrichedPatch)/enrichedPatchCutFaces.C
+SOURCE += $(enrichedPatch)/enrichedPatchMasterPoints.C
+
+
+polyMeshModifier = polyTopoChange/polyMeshModifier
+SOURCE += $(polyMeshModifier)/polyMeshModifier.C
+SOURCE += $(polyMeshModifier)/polyMeshModifierNew.C
+
+SOURCE += polyTopoChange/polyTopoChange/topoAction/topoActions.C
+SOURCE += polyTopoChange/polyTopoChanger/polyTopoChanger.C
+SOURCE += polyTopoChange/polyTopoChange/polyTopoChange.C
+SOURCE += polyTopoChange/polyTopoChange/addPatchCellLayer.C
+SOURCE += polyTopoChange/polyTopoChange/pointEdgeCollapse/pointEdgeCollapse.C
+SOURCE += polyTopoChange/polyTopoChange/edgeCollapser.C
+SOURCE += polyTopoChange/polyTopoChange/faceCollapser.C
+SOURCE += polyTopoChange/polyTopoChange/removeCells.C
+SOURCE += polyTopoChange/polyTopoChange/removeFaces.C
+SOURCE += polyTopoChange/polyTopoChange/refinementData.C
+SOURCE += polyTopoChange/polyTopoChange/refinementDistanceData.C
+SOURCE += polyTopoChange/polyTopoChange/removePoints.C
+SOURCE += polyTopoChange/polyTopoChange/combineFaces.C
+SOURCE += polyTopoChange/polyTopoChange/duplicatePoints.C
+SOURCE += polyTopoChange/polyTopoChange/tetDecomposer.C
+
+
+hexRef8 = polyTopoChange/polyTopoChange/hexRef8
+
+SOURCE += $(hexRef8)/hexRef8.C
+SOURCE += $(hexRef8)/hexRef8Data.C
+SOURCE += $(hexRef8)/refinementHistory.C
+
+SOURCE += slidingInterface/slidingInterface.C
+SOURCE += slidingInterface/slidingInterfaceProjectPoints.C
+SOURCE += slidingInterface/coupleSlidingInterface.C
+SOURCE += slidingInterface/slidingInterfaceAttachedAddressing.C
+SOURCE += slidingInterface/slidingInterfaceClearCouple.C
+SOURCE += slidingInterface/decoupleSlidingInterface.C
+
+SOURCE += perfectInterface/perfectInterface.C
+
+SOURCE += repatchMesh/repatchMesh.C
+SOURCE += repatchMesh/repatchPatch.C
+
+meshModifiers = meshCut/meshModifiers
+SOURCE += $(meshModifiers)/boundaryCutter/boundaryCutter.C
+SOURCE += $(meshModifiers)/meshCutter/meshCutter.C
+SOURCE += $(meshModifiers)/meshCutAndRemove/meshCutAndRemove.C
+SOURCE += $(meshModifiers)/undoableMeshCutter/undoableMeshCutter.C
+SOURCE += $(meshModifiers)/refinementIterator/refinementIterator.C
+SOURCE += $(meshModifiers)/multiDirRefinement/multiDirRefinement.C
+
+SOURCE += meshCut/cellLooper/cellLooper.C
+SOURCE += meshCut/cellLooper/topoCellLooper.C
+SOURCE += meshCut/cellLooper/geomCellLooper.C
+SOURCE += meshCut/cellLooper/hexCellLooper.C
+SOURCE += meshCut/directions/directions.C
+SOURCE += meshCut/directions/directionInfo/directionInfo.C
+SOURCE += meshCut/edgeVertex/edgeVertex.C
+SOURCE += meshCut/cellCuts/cellCuts.C
+SOURCE += meshCut/splitCell/splitCell.C
+SOURCE += meshCut/refineCell/refineCell.C
+SOURCE += meshCut/wallLayerCells/wallLayerCells.C
+SOURCE += meshCut/wallLayerCells/wallNormalInfo/wallNormalInfo.C
+
+SOURCE += polyTopoChange/attachPolyTopoChanger/attachPolyTopoChanger.C
+SOURCE += polyTopoChange/repatchPolyTopoChanger/repatchPolyTopoChanger.C
+
+SOURCE += fvMeshAdder/fvMeshAdder.C
+SOURCE += fvMeshDistribute/fvMeshDistribute.C
+SOURCE += polyMeshAdder/faceCoupleInfo.C
+SOURCE += polyMeshAdder/polyMeshAdder.C
+
+SOURCE += fvMeshTools/fvMeshTools.C
+
+SOURCE += fvMeshSubset/fvMeshSubset.C
+
+SOURCE += motionSmoother/motionSmoother.C
+SOURCE += motionSmoother/motionSmootherAlgo.C
+SOURCE += motionSmoother/motionSmootherAlgoCheck.C
+SOURCE += motionSmoother/motionSmootherData.C
+SOURCE += motionSmoother/dynamicMeshCheck/dynamicMeshCheck.C
+SOURCE += motionSmoother/badQualityToCell/badQualityToCell.C
+SOURCE += motionSmoother/badQualityToFace/badQualityToFace.C
+
+SOURCE += motionSolvers/motionSolver/motionSolver.C
+SOURCE += motionSolvers/displacement/points0/points0MotionSolver.C
+SOURCE += motionSolvers/displacement/displacement/displacementMotionSolver.C
+SOURCE += motionSolvers/displacement/layeredSolver/displacementLayeredMotionMotionSolver.C
+SOURCE += motionSolvers/displacement/layeredSolver/pointEdgeStructuredWalk.C
+SOURCE += motionSolvers/displacement/linearSolver/displacementLinearMotionMotionSolver.C
+SOURCE += motionSolvers/componentDisplacement/componentDisplacementMotionSolver.C
+SOURCE += motionSolvers/velocity/velocityMotionSolver.C
+SOURCE += motionSolvers/componentVelocity/componentVelocityMotionSolver.C
+SOURCE += motionSolvers/displacement/solidBody/solidBodyMotionSolver/solidBodyMotionSolver.C
+SOURCE += motionSolvers/displacement/solidBody/multiSolidBodyMotionSolver/multiSolidBodyMotionSolver.C
+SOURCE += motionSolvers/displacement/solidBody/interpolatingSolidBodyMotionSolver/interpolatingSolidBodyMotionSolver.C
+SOURCE += motionSolvers/motionSolverList/motionSolverList.C
+
+solidBodyMotionFunctions = motionSolvers/displacement/solidBody/solidBodyMotionFunctions
+SOURCE += $(solidBodyMotionFunctions)/solidBodyMotionFunction/solidBodyMotionFunction.C
+SOURCE += $(solidBodyMotionFunctions)/solidBodyMotionFunction/solidBodyMotionFunctionNew.C
+SOURCE += $(solidBodyMotionFunctions)/SDA/SDA.C
+SOURCE += $(solidBodyMotionFunctions)/sixDoFMotion/sixDoFMotion.C
+SOURCE += $(solidBodyMotionFunctions)/linearMotion/linearMotion.C
+SOURCE += $(solidBodyMotionFunctions)/rotatingMotion/rotatingMotion.C
+SOURCE += $(solidBodyMotionFunctions)/axisRotationMotion/axisRotationMotion.C
+SOURCE += $(solidBodyMotionFunctions)/multiMotion/multiMotion.C
+SOURCE += $(solidBodyMotionFunctions)/oscillatingLinearMotion/oscillatingLinearMotion.C
+SOURCE += $(solidBodyMotionFunctions)/oscillatingRotatingMotion/oscillatingRotatingMotion.C
+
+SOURCE += motionSolvers/displacement/solidBody/pointPatchFields/derived/solidBodyMotionDisplacement/solidBodyMotionDisplacementPointPatchVectorField.C
+
+SOURCE += createShellMesh/createShellMesh.C
+
+SOURCE += polyMeshFilter/polyMeshFilterSettings.C
+SOURCE += polyMeshFilter/polyMeshFilter.C
+
+SOURCE += pointPatchDist/externalPointEdgePoint.C
+SOURCE += pointPatchDist/pointPatchDist.C
+
+SOURCE += pointInterpolator/dynamicMeshPointInterpolator.C
+
+LIB = $(FOAM_LIBBIN)/libdynamicMesh

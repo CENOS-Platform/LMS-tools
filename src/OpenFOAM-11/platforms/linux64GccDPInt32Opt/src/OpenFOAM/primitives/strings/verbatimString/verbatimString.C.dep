@@ -1,0 +1,18 @@
+$(OBJECTS_DIR)/primitives/strings/verbatimString/verbatimString.C.dep: \
+primitives/strings/verbatimString/verbatimString.C \
+primitives/strings/verbatimString/verbatimString.H \
+lnInclude/debug.H \
+lnInclude/string.H \
+primitives/strings/verbatimString/verbatimStringI.H \
+lnInclude/char.H \
+lnInclude/Hasher.H \
+lnInclude/stringI.H \
+
+primitives/strings/verbatimString/verbatimString.H :
+lnInclude/debug.H :
+lnInclude/string.H :
+primitives/strings/verbatimString/verbatimStringI.H :
+lnInclude/char.H :
+lnInclude/Hasher.H :
+lnInclude/stringI.H :
+

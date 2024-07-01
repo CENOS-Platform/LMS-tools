@@ -1,0 +1,22 @@
+SOURCE += mixtures/basicSpecieMixture/basicSpecieMixture.C
+SOURCE += mixtures/basicCombustionMixture/basicCombustionMixture.C
+
+SOURCE += fluidMulticomponentThermo/fluidMulticomponentThermo.C
+
+SOURCE += psiMulticomponentThermo/psiMulticomponentThermo.C
+SOURCE += psiMulticomponentThermo/psiMulticomponentThermos.C
+
+SOURCE += psiuMulticomponentThermo/psiuMulticomponentThermo.C
+SOURCE += psiuMulticomponentThermo/psiuMulticomponentThermos.C
+
+SOURCE += rhoMulticomponentThermo/rhoMulticomponentThermo.C
+SOURCE += rhoMulticomponentThermo/rhoMulticomponentThermos.C
+
+SOURCE += derivedFvPatchFields/fixedUnburntEnthalpy/fixedUnburntEnthalpyFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/gradientUnburntEnthalpy/gradientUnburntEnthalpyFvPatchScalarField.C
+SOURCE += derivedFvPatchFields/mixedUnburntEnthalpy/mixedUnburntEnthalpyFvPatchScalarField.C
+
+SOURCE += functionObjects/moleFractions/moleFractions.C
+SOURCE += functionObjects/massFractions/massFractions.C
+
+LIB = $(FOAM_LIBBIN)/libmulticomponentThermophysicalModels

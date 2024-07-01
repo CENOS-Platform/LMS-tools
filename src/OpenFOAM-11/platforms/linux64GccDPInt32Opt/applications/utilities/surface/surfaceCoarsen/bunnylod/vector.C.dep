@@ -1,0 +1,6 @@
+$(OBJECTS_DIR)/bunnylod/vector.C.dep: \
+bunnylod/vector.C \
+bunnylod/vector.h \
+
+bunnylod/vector.h :
+

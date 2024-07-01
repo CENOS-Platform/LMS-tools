@@ -1,0 +1,106 @@
+SOURCE += phaseModel/phaseModel/phaseModel.C
+SOURCE += phaseModel/phaseModel/phaseModelNew.C
+SOURCE += phaseModel/phaseModel/phaseModels.C
+
+SOURCE += phaseInterface/phaseInterfaceKey/phaseInterfaceKey.C
+SOURCE += phaseInterface/phaseInterface/phaseInterface.C
+SOURCE += phaseInterface/dispersedPhaseInterface/dispersedPhaseInterface.C
+SOURCE += phaseInterface/segregatedPhaseInterface/segregatedPhaseInterface.C
+SOURCE += phaseInterface/displacedPhaseInterface/displacedPhaseInterface.C
+SOURCE += phaseInterface/dispersedDisplacedPhaseInterface/dispersedDisplacedPhaseInterface.C
+SOURCE += phaseInterface/segregatedDisplacedPhaseInterface/segregatedDisplacedPhaseInterface.C
+SOURCE += phaseInterface/sidedPhaseInterface/sidedPhaseInterface.C
+SOURCE += phaseInterface/dispersedSidedPhaseInterface/dispersedSidedPhaseInterface.C
+SOURCE += phaseInterface/segregatedSidedPhaseInterface/segregatedSidedPhaseInterface.C
+SOURCE += phaseInterface/displacedSidedPhaseInterface/displacedSidedPhaseInterface.C
+SOURCE += phaseInterface/dispersedDisplacedSidedPhaseInterface/dispersedDisplacedSidedPhaseInterface.C
+SOURCE += phaseInterface/segregatedDisplacedSidedPhaseInterface/segregatedDisplacedSidedPhaseInterface.C
+
+SOURCE += phaseSystem/phaseSystem.C
+SOURCE += phaseSystem/phaseSystemNew.C
+SOURCE += phaseSystem/phaseSystemSolve.C
+
+SOURCE += diameterModels/diameterModel/diameterModel.C
+SOURCE += diameterModels/diameterModel/diameterModelNew.C
+SOURCE += diameterModels/sphericalDiameter/sphericalDiameter.C
+SOURCE += diameterModels/constantDiameter/constantDiameter.C
+SOURCE += diameterModels/isothermalDiameter/isothermalDiameter.C
+SOURCE += diameterModels/linearTsubDiameter/linearTsubDiameter.C
+SOURCE += diameterModels/noDiameter/noDiameter.C
+SOURCE += diameterModels/residualDiameter/residualDiameter.C
+SOURCE += diameterModels/fixedInterfacialAreaDiameter/fixedInterfacialAreaDiameter.C
+SOURCE += diameterModels/velocityGroup/velocityGroup.C
+
+SOURCE += diameterModels/IATE/IATE.C
+SOURCE += diameterModels/IATE/IATEsources/IATEsource/IATEsource.C
+SOURCE += diameterModels/IATE/IATEsources/wakeEntrainmentCoalescence/IATEwakeEntrainmentCoalescence.C
+SOURCE += diameterModels/IATE/IATEsources/turbulentBreakUp/IATEturbulentBreakUp.C
+SOURCE += diameterModels/IATE/IATEsources/randomCoalescence/IATErandomCoalescence.C
+SOURCE += diameterModels/IATE/IATEsources/phaseChange/IATEphaseChange.C
+
+sizeGroup = diameterModels/velocityGroup/sizeGroup
+SOURCE += $(sizeGroup)/sizeGroup.C
+
+shapeModels = $(sizeGroup)/shapeModels
+SOURCE += $(shapeModels)/shapeModel/shapeModel.C
+SOURCE += $(shapeModels)/spherical/spherical.C
+SOURCE += $(shapeModels)/fractal/fractal.C
+SOURCE += $(shapeModels)/fractal/sinteringModels/sinteringModel/sinteringModel.C
+SOURCE += $(shapeModels)/fractal/sinteringModels/KochFriedlander/KochFriedlander.C
+SOURCE += $(shapeModels)/fractal/sinteringModels/noSintering/noSintering.C
+
+SOURCE += populationBalanceModel/populationBalanceModel/populationBalanceModel.C
+
+coalescenceModels = populationBalanceModel/coalescenceModels
+SOURCE += $(coalescenceModels)/coalescenceModel/coalescenceModel.C
+SOURCE += $(coalescenceModels)/AdachiStuartFokkink/AdachiStuartFokkink.C
+SOURCE += $(coalescenceModels)/ballisticCollisions/ballisticCollisions.C
+SOURCE += $(coalescenceModels)/BrownianCollisions/BrownianCollisions.C
+SOURCE += $(coalescenceModels)/constantCoalescence/constantCoalescence.C
+SOURCE += $(coalescenceModels)/CoulaloglouTavlarides/CoulaloglouTavlarides.C
+SOURCE += $(coalescenceModels)/DahnekeInterpolation/DahnekeInterpolation.C
+SOURCE += $(coalescenceModels)/hydrodynamic/hydrodynamic.C
+SOURCE += $(coalescenceModels)/LehrMilliesMewesCoalescence/LehrMilliesMewesCoalescence.C
+SOURCE += $(coalescenceModels)/LiaoCoalescence/LiaoCoalescence.C
+SOURCE += $(coalescenceModels)/Luo/Luo.C
+SOURCE += $(coalescenceModels)/PrinceBlanch/PrinceBlanch.C
+SOURCE += $(coalescenceModels)/turbulentShear/turbulentShear.C
+
+binaryBreakupModels = populationBalanceModel/binaryBreakupModels
+SOURCE += $(binaryBreakupModels)/binaryBreakupModel/binaryBreakupModel.C
+SOURCE += $(binaryBreakupModels)/LehrMilliesMewes/LehrMilliesMewes.C
+SOURCE += $(binaryBreakupModels)/Liao/LiaoBase.C
+SOURCE += $(binaryBreakupModels)/Liao/Liao.C
+SOURCE += $(binaryBreakupModels)/LuoSvendsen/LuoSvendsen.C
+SOURCE += $(binaryBreakupModels)/powerLawUniformBinary/powerLawUniformBinary.C
+
+breakupModels = populationBalanceModel/breakupModels
+SOURCE += $(breakupModels)/breakupModel/breakupModel.C
+SOURCE += $(breakupModels)/exponential/exponential.C
+SOURCE += $(breakupModels)/Kusters/Kusters.C
+SOURCE += $(breakupModels)/Laakkonen/Laakkonen.C
+SOURCE += $(breakupModels)/powerLaw/powerLaw.C
+
+daughterSizeDistributionModels = populationBalanceModel/daughterSizeDistributionModels
+SOURCE += $(daughterSizeDistributionModels)/daughterSizeDistributionModel/daughterSizeDistributionModel.C
+SOURCE += $(daughterSizeDistributionModels)/LaakkonenDaughterSizeDistribution/LaakkonenDaughterSizeDistribution.C
+SOURCE += $(daughterSizeDistributionModels)/uniformBinary/uniformBinary.C
+
+driftModels = populationBalanceModel/driftModels
+SOURCE += $(driftModels)/driftModel/driftModel.C
+SOURCE += $(driftModels)/constantDrift/constantDrift.C
+SOURCE += $(driftModels)/densityChange/densityChange.C
+SOURCE += $(driftModels)/phaseChange/phaseChange.C
+
+nucleationModels = populationBalanceModel/nucleationModels
+SOURCE += $(nucleationModels)/nucleationModel/nucleationModel.C
+SOURCE += $(nucleationModels)/reactionDriven/reactionDriven.C
+
+SOURCE += BlendedInterfacialModel/blendingMethods/blendingMethod/blendingMethod.C
+SOURCE += BlendedInterfacialModel/blendingMethods/blendingMethod/blendingMethodNew.C
+SOURCE += BlendedInterfacialModel/blendingMethods/linear/linear.C
+SOURCE += BlendedInterfacialModel/blendingMethods/hyperbolic/hyperbolic.C
+SOURCE += BlendedInterfacialModel/blendingMethods/continuous/continuous.C
+SOURCE += BlendedInterfacialModel/blendingMethods/segregatedBlendingMethod/segregatedBlendingMethod.C
+
+LIB = $(FOAM_LIBBIN)/libphaseSystem

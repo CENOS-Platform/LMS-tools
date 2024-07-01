@@ -1,0 +1,38 @@
+triSurfaceTools                       = triSurface/triSurfaceTools
+geometricSurfacePatch                 = triSurface/geometricSurfacePatch
+
+SOURCE += meshTriangulation/meshTriangulation.C
+
+SOURCE += triSurface/triSurface.C
+SOURCE += triSurface/triSurfaceAddressing.C
+SOURCE += triSurface/stitchTriangles.C
+
+interfaces = triSurface/interfaces
+SOURCE += $(interfaces)/STL/writeSTL.C
+SOURCE += $(interfaces)/STL/readSTL.C
+SOURCE += $(interfaces)/STL/readSTLASCII.L
+SOURCE += $(interfaces)/STL/readSTLBINARY.C
+SOURCE += $(interfaces)/GTS/writeGTS.C
+SOURCE += $(interfaces)/GTS/readGTS.C
+SOURCE += $(interfaces)/OBJ/readOBJ.C
+SOURCE += $(interfaces)/OBJ/writeOBJ.C
+SOURCE += $(interfaces)/SMESH/writeSMESH.C
+SOURCE += $(interfaces)/OFF/readOFF.C
+SOURCE += $(interfaces)/OFF/writeOFF.C
+SOURCE += $(interfaces)/TRI/writeTRI.C
+SOURCE += $(interfaces)/TRI/readTRI.C
+SOURCE += $(interfaces)/AC3D/readAC.C
+SOURCE += $(interfaces)/AC3D/writeAC.C
+SOURCE += $(interfaces)/VTK/readVTK.C
+SOURCE += $(interfaces)/VTK/writeVTK.C
+SOURCE += $(interfaces)/NAS/readNAS.C
+
+SOURCE += triSurface/geometricSurfacePatch/geometricSurfacePatch.C
+SOURCE += triSurface/surfacePatch/surfacePatch.C
+SOURCE += triSurface/surfacePatch/surfacePatchIOList.C
+
+SOURCE += tools/labelledTri/sortLabelledTri.C
+
+SOURCE += triSurfaceFields/triSurfaceFields.C
+
+LIB = $(FOAM_LIBBIN)/libtriSurface

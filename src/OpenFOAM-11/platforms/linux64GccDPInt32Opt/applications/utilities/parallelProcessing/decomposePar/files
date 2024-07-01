@@ -1,0 +1,7 @@
+SOURCE += decomposePar.C
+SOURCE += dimFieldDecomposer.C
+SOURCE += fvFieldDecomposer.C
+SOURCE += pointFieldDecomposer.C
+SOURCE += lagrangianFieldDecomposer.C
+
+EXE = $(FOAM_APPBIN)/decomposePar

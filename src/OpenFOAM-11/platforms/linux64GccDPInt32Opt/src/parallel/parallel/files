@@ -1,0 +1,6 @@
+SOURCE += processorRunTimes.C
+SOURCE += domainDecomposition.C
+SOURCE += domainDecompositionDecompose.C
+SOURCE += domainDecompositionReconstruct.C
+
+LIB = $(FOAM_LIBBIN)/libparallel

@@ -1,0 +1,4 @@
+SOURCE += genericPolyPatch/genericPolyPatch.C
+SOURCE += genericPointPatch/genericPointPatch.C
+
+LIB = $(FOAM_LIBBIN)/libgenericPatches

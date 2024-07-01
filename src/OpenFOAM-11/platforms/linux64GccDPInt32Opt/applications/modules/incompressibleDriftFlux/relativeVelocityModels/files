@@ -1,0 +1,6 @@
+SOURCE += relativeVelocityModel/relativeVelocityModel.C
+SOURCE += simple/simple.C
+SOURCE += general/general.C
+SOURCE += MichaelsBolger/MichaelsBolger.C
+
+LIB = $(FOAM_LIBBIN)/libincompressibleDriftFluxRelativeVelocityModels

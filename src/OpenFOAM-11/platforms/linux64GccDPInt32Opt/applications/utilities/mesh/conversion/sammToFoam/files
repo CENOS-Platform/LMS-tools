@@ -1,0 +1,17 @@
+SOURCE += sammMesh.C
+SOURCE += fillSammCellShapeTable.C
+SOURCE += fillSammAddressingTable.C
+SOURCE += readPoints.C
+SOURCE += readCells.C
+SOURCE += readBoundary.C
+SOURCE += fixCollapsedEdges.C
+SOURCE += readCouples.C
+SOURCE += calcPointCells.C
+SOURCE += createPolyCells.C
+SOURCE += createBoundaryFaces.C
+SOURCE += createPolyBoundary.C
+SOURCE += purgeCellShapes.C
+SOURCE += writeMesh.C
+SOURCE += sammToFoam.C
+
+EXE = $(FOAM_APPBIN)/sammToFoam

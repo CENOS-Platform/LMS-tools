@@ -1,0 +1,9 @@
+SOURCE += renumberMethod/renumberMethod.C
+SOURCE += manualRenumber/manualRenumber.C
+SOURCE += CuthillMcKeeRenumber/CuthillMcKeeRenumber.C
+SOURCE += randomRenumber/randomRenumber.C
+SOURCE += springRenumber/springRenumber.C
+SOURCE += structuredRenumber/structuredRenumber.C
+SOURCE += structuredRenumber/OppositeFaceCellWaveName.C
+
+LIB = $(FOAM_LIBBIN)/librenumberMethods

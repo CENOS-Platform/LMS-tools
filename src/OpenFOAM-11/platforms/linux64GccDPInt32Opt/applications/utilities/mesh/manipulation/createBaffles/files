@@ -1,0 +1,7 @@
+SOURCE += faceSelection/faceSelection.C
+SOURCE += faceSelection/faceZoneSelection.C
+SOURCE += faceSelection/searchableSurfaceSelection.C
+
+SOURCE += createBaffles.C
+
+EXE = $(FOAM_APPBIN)/createBaffles

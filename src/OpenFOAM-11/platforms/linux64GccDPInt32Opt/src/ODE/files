@@ -1,0 +1,23 @@
+SOURCE += ODESolvers/ODESolver/ODESolver.C
+SOURCE += ODESolvers/ODESolver/ODESolverNew.C
+
+SOURCE += ODESolvers/adaptiveSolver/adaptiveSolver.C
+SOURCE += ODESolvers/Euler/Euler.C
+SOURCE += ODESolvers/EulerSI/EulerSI.C
+SOURCE += ODESolvers/Trapezoid/Trapezoid.C
+SOURCE += ODESolvers/RKF45/RKF45.C
+SOURCE += ODESolvers/RKCK45/RKCK45.C
+SOURCE += ODESolvers/RKDP45/RKDP45.C
+SOURCE += ODESolvers/Rosenbrock12/Rosenbrock12.C
+SOURCE += ODESolvers/Rosenbrock23/Rosenbrock23.C
+SOURCE += ODESolvers/Rosenbrock34/Rosenbrock34.C
+SOURCE += ODESolvers/rodas23/rodas23.C
+SOURCE += ODESolvers/rodas34/rodas34.C
+SOURCE += ODESolvers/SIBS/SIBS.C
+SOURCE += ODESolvers/SIBS/SIMPR.C
+SOURCE += ODESolvers/SIBS/polyExtrapolate.C
+SOURCE += ODESolvers/seulex/seulex.C
+
+SOURCE += ODESystem/ODESystem.C
+
+LIB = $(FOAM_LIBBIN)/libODE

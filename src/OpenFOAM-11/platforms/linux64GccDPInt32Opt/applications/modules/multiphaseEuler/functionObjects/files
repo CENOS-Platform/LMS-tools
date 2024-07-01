@@ -1,0 +1,7 @@
+SOURCE += populationBalanceMoments/populationBalanceMoments.C
+SOURCE += populationBalanceSizeDistribution/populationBalanceSizeDistribution.C
+SOURCE += phaseForces/phaseForces.C
+SOURCE += phaseMap/phaseMap.C
+SOURCE += wallBoilingProperties/wallBoilingProperties.C
+
+LIB = $(FOAM_LIBBIN)/libmultiphaseEulerFoamFunctionObjects

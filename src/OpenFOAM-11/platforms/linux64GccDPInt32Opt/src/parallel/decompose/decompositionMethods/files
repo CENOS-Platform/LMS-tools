@@ -1,0 +1,21 @@
+SOURCE += decompositionMethod/decompositionMethod.C
+SOURCE += geomDecomp/geomDecomp.C
+SOURCE += simpleGeomDecomp/simpleGeomDecomp.C
+SOURCE += hierarchGeomDecomp/hierarchGeomDecomp.C
+SOURCE += manualDecomp/manualDecomp.C
+SOURCE += multiLevelDecomp/multiLevelDecomp.C
+SOURCE += structuredDecomp/structuredDecomp.C
+SOURCE += randomDecomp/randomDecomp.C
+SOURCE += noDecomp/noDecomp.C
+
+decompositionConstraints = decompositionConstraints
+
+SOURCE += $(decompositionConstraints)/decompositionConstraint/decompositionConstraint.C
+SOURCE += $(decompositionConstraints)/preserveBaffles/preserveBafflesConstraint.C
+SOURCE += $(decompositionConstraints)/preserveFaceZones/preserveFaceZonesConstraint.C
+SOURCE += $(decompositionConstraints)/preservePatches/preservePatchesConstraint.C
+SOURCE += $(decompositionConstraints)/singleProcessorFaceSets/singleProcessorFaceSetsConstraint.C
+SOURCE += $(decompositionConstraints)/refinementHistory/refinementHistoryConstraint.C
+
+
+LIB = $(FOAM_LIBBIN)/libdecompositionMethods

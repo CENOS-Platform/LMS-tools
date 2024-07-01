@@ -1,0 +1,5 @@
+SOURCE += writeFluentScalarField.C
+SOURCE += writeFluentVectorField.C
+SOURCE += foamDataToFluent.C
+
+EXE = $(FOAM_APPBIN)/foamDataToFluent

@@ -1,0 +1,28 @@
+SOURCE += ensight/file/ensightFile.C
+SOURCE += ensight/file/ensightGeoFile.C
+SOURCE += ensight/part/ensightPart.C
+SOURCE += ensight/part/ensightPartIO.C
+SOURCE += ensight/part/ensightPartCells.C
+SOURCE += ensight/part/ensightPartFaces.C
+SOURCE += ensight/part/ensightParts.C
+
+SOURCE += mergedCyclic/mergedCyclicPolyPatch.C
+SOURCE += mergedCyclic/polyMeshUnMergeCyclics.C
+
+SOURCE += meshTables/boundaryRegion.C
+SOURCE += meshTables/cellTable.C
+SOURCE += meshTables/dictionaryIOMap.C
+
+SOURCE += meshReader/meshReader.C
+SOURCE += meshReader/meshReaderAux.C
+SOURCE += meshReader/calcPointCells.C
+SOURCE += meshReader/createPolyCells.C
+SOURCE += meshReader/createPolyBoundary.C
+SOURCE += meshReader/starcd/STARCDMeshReader.C
+
+SOURCE += meshWriter/meshWriter.C
+SOURCE += meshWriter/starcd/STARCDMeshWriter.C
+
+SOURCE += polyDualMesh/polyDualMesh.C
+
+LIB = $(FOAM_LIBBIN)/libconversion

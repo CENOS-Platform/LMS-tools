@@ -1,0 +1,4 @@
+SOURCE += mirrorFvMesh.C
+SOURCE += mirrorMesh.C
+
+EXE = $(FOAM_APPBIN)/mirrorMesh
