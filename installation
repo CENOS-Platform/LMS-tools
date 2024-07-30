@@ -11,12 +11,6 @@ rm -rf OpenFOAM-11/wmake/platforms
 cp -r src/OpenFOAM-11/wmake/platforms OpenFOAM-11/wmake/platforms
 rm -rf OpenFOAM-11/platforms
 cp -r src/OpenFOAM-11/platforms OpenFOAM-11/platforms
-#Rebuild MHDsolvers
-cd MHDsolvers
-git checkout -b CP-6344_improved_multi_region_solvers
-./Allwmake
-cd ../
-. etc/rebuild-OpenFOAM
 #Install EOF-Library and MHDsolvers
 source OpenFOAM-11/etc/bashrc
 [ ! -d "$FOAM_USER_LIBBIN" ] && mkdir -p "$FOAM_USER_LIBBIN"

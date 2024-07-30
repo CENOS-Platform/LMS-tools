@@ -10,5 +10,6 @@ export LD_LIBRARY_PATH=$EOF_SRC:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
 ELMER_LIBBIN=$(pwd)/src/elmer-install/lib/elmersolver
 cd MHDsolvers
+git checkout CP-6344_improved_multi_region_solvers
 ./Allwmake
 cd ../
