@@ -1,0 +1,14 @@
+#Note: Run from LMS-tools directory
+#Install MHDsolvers
+export ELMER_HOME=$(pwd)/src/elmer-install/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
+export PATH=$PATH:$ELMER_HOME/bin
+FOAM_USER_LIBBIN=$(pwd)/src/OpenFOAM-11/lib
+FOAM_USER_APPBIN=$(pwd)/src/OpenFOAM-11/bin
+EOF_SRC=$(pwd)/EOF-Library/libs
+export LD_LIBRARY_PATH=$EOF_SRC:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
+ELMER_LIBBIN=$(pwd)/src/elmer-install/lib/elmersolver
+cd MHDsolvers
+./Allwmake
+cd ../

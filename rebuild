@@ -1,42 +1,5 @@
 #Note: Run from LMS-tools directory
-threads=$(nproc)
-#Install Elmer
-sudo rm -rf src
-mkdir src
-cd src
-mkdir elmer-build
-cd elmer-build
-cmake -Wno-dev -DWITH_MPI=TRUE -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../elmer-install ../../elmerfem
-make -j $threads install
-cd ../
-#Cleanup
-rm -rf elmer-build
-cd ../
-#Install ThirdParty-11 and OpenFOAM-11
-source $(pwd)/OpenFOAM-11/etc/bashrc
-cd ThirdParty-11
-./Allwmake
-cd ../
-cp -r ThirdParty-11/platforms src/ThirdParty-11/platforms
-cd OpenFOAM-11
-./Allwmake -j
-cd ../
-cp -r OpenFOAM-11/wmake/platforms src/OpenFOAM-11/wmake/platforms
-cp -r OpenFOAM-11/platforms src/OpenFOAM-11/platforms
-#Install EOF-Library
-export ELMER_HOME=$(pwd)/src/elmer-install/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib
-export PATH=$PATH:$ELMER_HOME/bin
-FOAM_USER_LIBBIN=$(pwd)/src/OpenFOAM-11/lib
-FOAM_USER_APPBIN=$(pwd)/src/OpenFOAM-11/bin
-EOF_SRC=$(pwd)/EOF-Library/libs
-export LD_LIBRARY_PATH=$EOF_SRC:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
-wmake $EOF_SRC/coupleElmer
-ELMER_LIBBIN=$(pwd)/src/elmer-install/lib/elmersolver
-elmerf90 -o $ELMER_LIBBIN/Elmer2OpenFOAM.so -J$EOF_SRC $EOF_SRC/Elmer2OpenFOAM.F90
-elmerf90 -o $ELMER_LIBBIN/OpenFOAM2Elmer.so -J$EOF_SRC $EOF_SRC/OpenFOAM2Elmer.F90
-#Install MHDsolvers
-cd MHDsolvers
-./Allwmake
-cd ../
+. etc/rebuild-Elmer
+. etc/rebuild-OpenFOAM
+. etc/rebuild-EOF
+. etc/rebuild-MHDsolvers

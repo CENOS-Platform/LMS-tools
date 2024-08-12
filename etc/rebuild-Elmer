@@ -1,0 +1,14 @@
+#Note: Run from LMS-tools directory
+threads=$(nproc)
+#Install Elmer
+sudo rm -rf src
+mkdir src
+cd src
+mkdir elmer-build
+cd elmer-build
+cmake -Wno-dev -DWITH_MPI=TRUE -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../elmer-install ../../elmerfem
+make -j $threads install
+cd ../
+#Cleanup
+rm -rf elmer-build
+cd ../
