@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - EMS-*
-      
   release:
     types: [published]
   pull_request:
@@ -30,6 +29,7 @@ jobs:
           git tag "$tag_name"
           git push origin "$tag_name"
       - name: Set filenames
+        if: ${{ github.event_name == 'release' }}
         run: |
           echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
           tag="${PT_GITHUB_REF#refs/tags/}"
@@ -38,6 +38,7 @@ jobs:
           echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
           echo "PT_RELEASE_FILE=LMS-tools-$tag.tar.gz" >> "$GITHUB_ENV"
       - name: Create source distribution
+        if: ${{ github.event_name == 'release' }}
         run: |
             # Create new folder with specified name so extracting the archive yields that
             rm -rf "/tmp/$PT_RELEASE_NAME"
