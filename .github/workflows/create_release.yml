@@ -3,7 +3,6 @@ name: Create Release
 on:
   push:
     branches:
-      - main
       - EMS-*
       
   release:
@@ -19,6 +18,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Create tag
+        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
+        run: |
+          tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-.*$#\1#p')
+          git tag "$tag_name"
+          git push origin "$tag_name"
       - uses: malfet/checkout@silent-checkout
         with:
           submodules: 'recursive'
