@@ -25,23 +25,17 @@ jobs:
       - name: Create tag
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
         run: |
-          tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-.*$#\1#p')
+          tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-feature-freeze$#\1#p')
           git tag "$tag_name"
           git push origin "$tag_name"
-      - name: Fake name for PRs
-        if: ${{ github.event_name == 'pull_request' }}
-        run: echo "PT_GITHUB_REF=refs/tags/pr-tag" >> "$GITHUB_ENV"
-      - name: Real name for non-PRs
-        if: ${{ github.event_name != 'pull_request' }}
-        run: echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
+          echo "PT_GITHUB_REF=$tag_name" >> "$GITHUB_ENV"
       - name: Set filenames
         run: |
-          tag_or_branch="${PT_GITHUB_REF#refs/tags/}"
-          tag_or_branch="${tag_or_branch#refs/heads/}"
+          tag="$PT_GITHUB_REF"
           # replace directory separators with _ in branch name
           tag_or_branch="${tag_or_branch//\//_}"
-          echo "PT_RELEASE_NAME=LMS-tools-$tag_or_branch" >> "$GITHUB_ENV"
-          echo "PT_RELEASE_FILE=LMS-tools-$tag_or_branch.tar.gz" >> "$GITHUB_ENV"
+          echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
+          echo "PT_RELEASE_FILE=LMS-tools-$tag.tar.gz" >> "$GITHUB_ENV"
       - name: Create source distribution
         run: |
             # Create new folder with specified name so extracting the archive yields that
