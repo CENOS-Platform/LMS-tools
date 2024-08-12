@@ -10,8 +10,20 @@ on:
     paths: [.github/workflows/create_release.yml]
 
 jobs:
+  tag:
+    name: Create Tag
+    if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create tag
+        run: |
+          tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-feature-freeze$#\1#p')
+          git push --delete origin "$tag_name"
+          git tag "$tag_name"
+          git push origin "$tag_name"
   release:
     name: Create Release
+    if: ${{ github.event_name == 'release' }}
     runs-on: ubuntu-latest
     # https://github.com/softprops/action-gh-release?tab=readme-ov-file#permissions
     permissions:
@@ -21,15 +33,7 @@ jobs:
         with:
           submodules: 'recursive'
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
-      - name: Create tag
-        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
-        run: |
-          tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-feature-freeze$#\1#p')
-          git push --delete origin "$tag_name"
-          git tag "$tag_name"
-          git push origin "$tag_name"
       - name: Set filenames
-        if: ${{ github.event_name == 'release' }}
         run: |
           echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
           tag="${PT_GITHUB_REF#refs/tags/}"
@@ -38,7 +42,6 @@ jobs:
           echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
           echo "PT_RELEASE_FILE=LMS-tools-$tag.tar.gz" >> "$GITHUB_ENV"
       - name: Create source distribution
-        if: ${{ github.event_name == 'release' }}
         run: |
             # Create new folder with specified name so extracting the archive yields that
             rm -rf "/tmp/$PT_RELEASE_NAME"
@@ -51,7 +54,6 @@ jobs:
             tar -czf "$PT_RELEASE_FILE" "$PT_RELEASE_NAME"
             echo "Created source archive $PT_RELEASE_FILE with content: $(ls -a "$PT_RELEASE_NAME")"
       - name: Upload source distribution
-        if: ${{ github.event_name == 'release' }}
         uses: softprops/action-gh-release@v1
         with:
           files: ${{env.PT_RELEASE_FILE}}
