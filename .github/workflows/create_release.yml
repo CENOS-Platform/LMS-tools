@@ -28,10 +28,10 @@ jobs:
           tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-feature-freeze$#\1#p')
           git tag "$tag_name"
           git push origin "$tag_name"
-          echo "PT_GITHUB_REF=$tag_name" >> "$GITHUB_ENV"
       - name: Set filenames
         run: |
-          tag="$PT_GITHUB_REF"
+          echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
+          tag="${PT_GITHUB_REF#refs/tags/}"
           # replace directory separators with _ in branch name
           tag_or_branch="${tag_or_branch//\//_}"
           echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
