@@ -26,6 +26,7 @@ jobs:
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
         run: |
           tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-feature-freeze$#\1#p')
+          git push --delete origin "$tag_name"
           git tag "$tag_name"
           git push origin "$tag_name"
       - name: Set filenames
@@ -33,7 +34,7 @@ jobs:
           echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
           tag="${PT_GITHUB_REF#refs/tags/}"
           # replace directory separators with _ in branch name
-          tag_or_branch="${tag_or_branch//\//_}"
+          tag="${tag//\//_}"
           echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
           echo "PT_RELEASE_FILE=LMS-tools-$tag.tar.gz" >> "$GITHUB_ENV"
       - name: Create source distribution
