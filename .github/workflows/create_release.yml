@@ -18,16 +18,16 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: malfet/checkout@silent-checkout
+        with:
+          submodules: 'recursive'
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       - name: Create tag
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/EMS-') }}
         run: |
           tag_name=$(echo "${{ github.ref }}" | sed -n 's#^refs/heads/EMS-\(.*\)-.*$#\1#p')
           git tag "$tag_name"
           git push origin "$tag_name"
-      - uses: malfet/checkout@silent-checkout
-        with:
-          submodules: 'recursive'
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       - name: Fake name for PRs
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "PT_GITHUB_REF=refs/tags/pr-tag" >> "$GITHUB_ENV"
