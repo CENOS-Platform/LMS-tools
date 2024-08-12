@@ -41,11 +41,12 @@ jobs:
       - name: Set filenames
         run: |
           echo "PT_GITHUB_REF=$GITHUB_REF" >> "$GITHUB_ENV"
-          tag="${PT_GITHUB_REF#refs/tags/}"
+          tag_name="${PT_GITHUB_REF#refs/tags/}"
+          tag_name="${tag_name#refs/heads/}"
           # replace directory separators with _ in branch name
-          tag="${tag//\//_}"
-          echo "PT_RELEASE_NAME=LMS-tools-$tag" >> "$GITHUB_ENV"
-          echo "PT_RELEASE_FILE=LMS-tools-$tag.tar.gz" >> "$GITHUB_ENV"
+          tag_name="${tag_name//\//_}"
+          echo "PT_RELEASE_NAME=LMS-tools-$tag_name" >> "$GITHUB_ENV"
+          echo "PT_RELEASE_FILE=LMS-tools-$tag_name.tar.gz" >> "$GITHUB_ENV"
       - name: Create source distribution
         run: |
             # Create new folder with specified name so extracting the archive yields that
